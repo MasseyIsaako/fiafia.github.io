@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Home",
+        "slug": "/index.html"
+    },
+    {"title": "About Us",
+        "slug": "/about-us.html"
+    },
+    {"title": "Contact Us",
+        "slug": "/contact-us.html"
+    }
+]

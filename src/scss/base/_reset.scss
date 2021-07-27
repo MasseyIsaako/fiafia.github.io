@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: $font-weight-light;
+}
+
+html,
+body {
+    background-color: $color-grey-light;
+}
+
+body {
+    overflow-x: hidden !important;
+}

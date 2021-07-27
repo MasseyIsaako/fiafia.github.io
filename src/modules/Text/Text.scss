@@ -1,0 +1,22 @@
+.text {
+    background-color: $color-grey-light;
+    padding: 200px 0;
+    text-align: center;
+
+    &__heading {
+        color: $color-pink;
+        font-weight: $font-weight-light;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up ('lg') {
+            font-size: 40px;
+        }
+    }
+
+    &__paragraph {
+        @include media-breakpoint-up ('lg') {
+            font-size: 22px;
+        }
+    }
+}

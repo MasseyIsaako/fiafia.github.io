@@ -1,0 +1,57 @@
+body > div:first-child {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 110;
+}
+
+.navigation {
+    transition: 0.2s background-color ease;
+
+    .navbar {
+        padding: 20px 0;
+    }
+
+    .nav-item {
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .nav-link {
+        color: $color-white;
+        font-size: 18px;
+        position: relative;
+
+        &::after {
+            background-color: $color-white;
+            bottom: 0;
+            content: '';
+            height: 2px;
+            left: 0;
+            position: absolute;
+            transition: 0.2s width ease;
+            width: 0;
+        }
+
+        &:focus::after,
+        &:hover::after {
+            width: 100%;
+        }
+    }
+
+    &--scrolled {
+        background-color: $color-grey-light;
+        box-shadow: rgba($color-charcoal, 0.5) 0px 0px 10px;
+
+        .nav-link {
+            color: $color-pink;
+
+            &::after {
+                background-color: $color-pink;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.landing-hero {
+    background-position: center;
+    background-size: cover;
+    padding: 200px 0;
+    position: relative;
+
+    &::before {
+        background-color: rgba($color-black, 0.2);
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    &__heading {
+        color: $color-white;
+        text-align: center;
+
+        @include media-breakpoint-up ('md') {
+            font-size: 50px;
+        }
+    }
+}

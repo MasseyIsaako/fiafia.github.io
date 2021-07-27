@@ -1,0 +1,100 @@
+.faq {
+    padding: 200px 0;
+
+    &__heading {
+        color: $color-pink;
+        font-weight: $font-weight-light;
+        margin-bottom: 40px;
+        text-align: center;;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up ('lg') {
+            font-size: 40px;
+        }
+    }
+}
+
+.faq-accordion {
+    padding: 15px 0;
+
+    &__header {
+        color: $color-charcoal;
+        font-size: 22px;
+        font-weight: 600;
+
+        @include media-breakpoint-up ('md') {
+            font-size: 24px;
+        }
+    }
+
+    &__item {
+        border: 1px solid $color-charcoal;
+        border-bottom: none;
+        overflow: hidden;
+        position: relative;
+
+        &:last-child {
+            border-bottom: 1px solid $color-charcoal;
+        }
+    }
+
+    &__number {
+        color: lighten($color-charcoal, 10%);
+        margin-right: 20px;
+    }
+
+    &__link {
+        background: transparent;
+        border: none;
+        color: $color-charcoal;
+        display: flex;
+        font-size: 22px;
+        padding: 15px;
+        text-align: left;
+        text-decoration: none;
+        width: 100%;
+
+        @include media-breakpoint-up ('md') {
+        &::after {
+            top: 44px;
+        }
+        }
+    }
+
+    &__target {
+        color: #666;
+        font-size: 14px;
+        height: 0;
+        letter-spacing: -0.3px;
+        transition: 0.5s height;
+
+        @include media-breakpoint-up ('md') {
+            font-size: 16px;
+        }
+
+        p,
+        ul,
+        ol {
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+    &__content {
+        font-size: 22px;
+        padding: 0 20px 20px;
+
+        @include media-breakpoint-up ('md') {
+            padding: 0 35px 35px;
+        }
+    }
+}

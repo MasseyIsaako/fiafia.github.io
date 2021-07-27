@@ -1,0 +1,28 @@
+// Import thirdparty scripts
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+@import '../../node_modules/react-glidejs/dist/index.css';
+@import '../../node_modules/@glidejs/glide/dist/css/glide.core.min.css';
+@import '../../node_modules/@glidejs/glide/dist/css/glide.theme.min.css';
+
+@import './base/_variables';
+@import './base/_reset';
+@import './base/_animations';
+
+// Import modules
+@import '../modules/ImageText/ImageText';
+@import '../modules/ItemsSlider/ItemsSlider';
+@import '../modules/LandingHero/LandingHero';
+@import '../modules/Navigation/Navigation';
+@import '../modules/Profiles/Profiles';
+@import '../modules/Text/Text';
+@import '../modules/Translate/Translate';
+
+@import './modules/faq';
+@import './modules/loading';
+@import './modules/hero';
+@import './modules/register-form';
+@import './modules/video';
