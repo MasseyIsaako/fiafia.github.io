@@ -51,16 +51,41 @@
         &:focus,
         &:hover {
             transform: scale(105%);
+
+            .profiles__card-img {
+                transform: rotate(10deg);
+            }
         }
     }
 
     &__card-img {
         border-radius: 50%;
         display: block;
-        height: 300px;
+        height: 250px;
         margin: auto;
         object-fit: cover;
-        width: 300px;
+        transition: 0.2s transform ease;
+        width: 250px;
+
+        @include media-breakpoint-up ('sm') {
+            height: 350px;
+            width: 350px;
+        }
+
+        @include media-breakpoint-up ('md') {
+            height: 300px;
+            width: 300px;
+        }
+
+        @include media-breakpoint-up ('lg') {
+            height: 250px;
+            width: 250px;
+        }
+
+        @include media-breakpoint-up ('xl') {
+            height: 300px;
+            width: 300px;
+        }
     }
 
     &__card-content {

@@ -55765,8 +55765,8 @@ var Navigation = /*#__PURE__*/function (_React$Component) {
         "aria-controls": "navbarNav",
         "aria-expanded": "false",
         "aria-label": "Toggle navigation"
-      }, /*#__PURE__*/_react.default.createElement("span", {
-        className: "navbar-toggler-icon"
+      }, /*#__PURE__*/_react.default.createElement("i", {
+        className: "fa fa-bars"
       })), /*#__PURE__*/_react.default.createElement("div", {
         className: "collapse navbar-collapse",
         id: "navbarNav"
@@ -55783,38 +55783,38 @@ var _default = Navigation;
 exports.default = _default;
 },{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","../Translate/Translate":"src/modules/Translate/Translate.jsx","./Navigation.json":"src/modules/Navigation/Navigation.json"}],"src/images/Profiles/annie.jpeg":[function(require,module,exports) {
 module.exports = "/annie.f9699f19.jpeg";
-},{}],"src/images/Profiles/chise.jpeg":[function(require,module,exports) {
-module.exports = "/chise.4fc1d5f2.jpeg";
 },{}],"src/images/Profiles/freida.jpeg":[function(require,module,exports) {
 module.exports = "/freida.25ead968.jpeg";
+},{}],"src/images/Profiles/chise.jpeg":[function(require,module,exports) {
+module.exports = "/chise.4fc1d5f2.jpeg";
 },{}],"src/images/Profiles/lasi.jpeg":[function(require,module,exports) {
 module.exports = "/lasi.8a81c6f6.jpeg";
-},{}],"src/images/Profiles/manu.jpeg":[function(require,module,exports) {
-module.exports = "/manu.f6b79cbb.jpeg";
 },{}],"src/images/Profiles/placeholder.jpeg":[function(require,module,exports) {
 module.exports = "/placeholder.7fbee703.jpeg";
+},{}],"src/images/Profiles/manu.jpeg":[function(require,module,exports) {
+module.exports = "/manu.f6b79cbb.jpeg";
 },{}],"src/images/Profiles/*.*":[function(require,module,exports) {
 module.exports = {
   "annie": {
     "jpeg": require("./annie.jpeg")
   },
-  "chise": {
-    "jpeg": require("./chise.jpeg")
-  },
   "freida": {
     "jpeg": require("./freida.jpeg")
+  },
+  "chise": {
+    "jpeg": require("./chise.jpeg")
   },
   "lasi": {
     "jpeg": require("./lasi.jpeg")
   },
-  "manu": {
-    "jpeg": require("./manu.jpeg")
-  },
   "placeholder": {
     "jpeg": require("./placeholder.jpeg")
+  },
+  "manu": {
+    "jpeg": require("./manu.jpeg")
   }
 };
-},{"./annie.jpeg":"src/images/Profiles/annie.jpeg","./chise.jpeg":"src/images/Profiles/chise.jpeg","./freida.jpeg":"src/images/Profiles/freida.jpeg","./lasi.jpeg":"src/images/Profiles/lasi.jpeg","./manu.jpeg":"src/images/Profiles/manu.jpeg","./placeholder.jpeg":"src/images/Profiles/placeholder.jpeg"}],"src/modules/Profiles/Profiles.json":[function(require,module,exports) {
+},{"./annie.jpeg":"src/images/Profiles/annie.jpeg","./freida.jpeg":"src/images/Profiles/freida.jpeg","./chise.jpeg":"src/images/Profiles/chise.jpeg","./lasi.jpeg":"src/images/Profiles/lasi.jpeg","./placeholder.jpeg":"src/images/Profiles/placeholder.jpeg","./manu.jpeg":"src/images/Profiles/manu.jpeg"}],"src/modules/Profiles/Profiles.json":[function(require,module,exports) {
 module.exports = [{
   "name": "Cochise Avei",
   "role": "Coordinator",
@@ -57365,7 +57365,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54605" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52407" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

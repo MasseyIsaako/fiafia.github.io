@@ -81,8 +81,15 @@ class Navigation extends React.Component {
                     <Row>
                         <Col>
                             <div className="navbar navbar-expand-lg">
-                                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span className="navbar-toggler-icon"></span>
+                                <button className="navbar-toggler"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#navbarNav"
+                                    aria-controls="navbarNav"
+                                    aria-expanded="false"
+                                    aria-label="Toggle navigation"
+                                >
+                                    <i className="fa fa-bars"></i>
                                 </button>
                                 <div className="collapse navbar-collapse" id="navbarNav">
                                     <ul className="navbar-nav">

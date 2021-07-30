@@ -48,16 +48,18 @@
         border: none;
         color: $color-charcoal;
         display: flex;
-        font-size: 22px;
+        font-size: 16px;
         padding: 15px;
         text-align: left;
         text-decoration: none;
         width: 100%;
 
         @include media-breakpoint-up ('md') {
-        &::after {
-            top: 44px;
-        }
+            font-size: 22px;
+
+            &::after {
+                top: 44px;
+            }
         }
     }
 
@@ -90,7 +92,7 @@
     }
 
     &__content {
-        font-size: 22px;
+        font-size: 16px;
         padding: 0 20px 20px;
 
         @include media-breakpoint-up ('md') {
