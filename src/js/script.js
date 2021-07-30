@@ -1,6 +1,7 @@
 import ReactHabitat from 'react-habitat';
 
 // React components
+import Authentication from '../modules/Authentication/Authentication';
 import ImageText from '../modules/ImageText/ImageText';
 import ItemsSlider from '../modules/ItemsSlider/ItemsSlider';
 import LandingHero from '../modules/LandingHero/LandingHero';
@@ -71,6 +72,7 @@ class App extends ReactHabitat.Bootstrapper {
         const containerBuilder = new ReactHabitat.ContainerBuilder();
 
         // Register our components that we want to expose to the DOM
+        containerBuilder.register(Authentication).as('Authentication');
         containerBuilder.register(ImageText).as('ImageText');
         containerBuilder.register(ItemsSlider).as('ItemsSlider');
         containerBuilder.register(LandingHero).as('LandingHero');

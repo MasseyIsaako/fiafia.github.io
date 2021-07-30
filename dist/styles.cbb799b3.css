@@ -10830,6 +10830,48 @@ body {
     transform: translateY(0) translateX(-50%) rotate(45deg);
   }
 }
+.authentication {
+  background-color: #333333;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 99999;
+}
+.authentication__inner {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.authentication__form-wrapper {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 50px;
+}
+@media (min-width: 992px) {
+  .authentication__form-wrapper {
+    width: 50%;
+  }
+}
+.authentication__heading {
+  color: #fe0f53;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.authentication__form-label {
+  margin-bottom: 5px;
+}
+.authentication__form-submit {
+  background-color: #fe0f53;
+  border-color: #fe0f53;
+}
+.authentication__form-submit:focus, .authentication__form-submit:hover {
+  background-color: #d9013e;
+  border-color: #d9013e;
+}
+
 .image-text {
   background-color: #fcfbfc;
   padding: 0 0 50px 0;
