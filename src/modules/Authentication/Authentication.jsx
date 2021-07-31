@@ -103,8 +103,10 @@ class Authentication extends React.Component {
     }
 
     render () {
+        const env = AuthenticationData.env;
+
         return (
-            !this.state.bypassLogin &&
+            (!this.state.bypassLogin && env === 'stage') &&
             <section className="authentication">
                 <Container>
                     <Row>
