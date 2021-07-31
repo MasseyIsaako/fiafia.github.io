@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "clear && clear && parcel build index.html about-us.html",
     "watch": "clear && clear && parcel index.html about-us.html"
   },
   "keywords": [],
