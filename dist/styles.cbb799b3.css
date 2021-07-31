@@ -10849,6 +10849,7 @@ body {
   background-color: #ffffff;
   border-radius: 15px;
   padding: 50px;
+  width: calc(100% - 40px);
 }
 @media (min-width: 992px) {
   .authentication__form-wrapper {

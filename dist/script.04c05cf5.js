@@ -47572,7 +47572,12 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Accordion":"node_modules/react-bootstrap/esm/Accordion.js","./AccordionContext":"node_modules/react-bootstrap/esm/AccordionContext.js","./AccordionCollapse":"node_modules/react-bootstrap/esm/AccordionCollapse.js","./AccordionToggle":"node_modules/react-bootstrap/esm/AccordionToggle.js","./Alert":"node_modules/react-bootstrap/esm/Alert.js","./Badge":"node_modules/react-bootstrap/esm/Badge.js","./Breadcrumb":"node_modules/react-bootstrap/esm/Breadcrumb.js","./BreadcrumbItem":"node_modules/react-bootstrap/esm/BreadcrumbItem.js","./Button":"node_modules/react-bootstrap/esm/Button.js","./ButtonGroup":"node_modules/react-bootstrap/esm/ButtonGroup.js","./ButtonToolbar":"node_modules/react-bootstrap/esm/ButtonToolbar.js","./Card":"node_modules/react-bootstrap/esm/Card.js","./CardColumns":"node_modules/react-bootstrap/esm/CardColumns.js","./CardDeck":"node_modules/react-bootstrap/esm/CardDeck.js","./CardImg":"node_modules/react-bootstrap/esm/CardImg.js","./CardGroup":"node_modules/react-bootstrap/esm/CardGroup.js","./Carousel":"node_modules/react-bootstrap/esm/Carousel.js","./CarouselItem":"node_modules/react-bootstrap/esm/CarouselItem.js","./CloseButton":"node_modules/react-bootstrap/esm/CloseButton.js","./Col":"node_modules/react-bootstrap/esm/Col.js","./Collapse":"node_modules/react-bootstrap/esm/Collapse.js","./Dropdown":"node_modules/react-bootstrap/esm/Dropdown.js","./DropdownButton":"node_modules/react-bootstrap/esm/DropdownButton.js","./Fade":"node_modules/react-bootstrap/esm/Fade.js","./Form":"node_modules/react-bootstrap/esm/Form.js","./FormControl":"node_modules/react-bootstrap/esm/FormControl.js","./FormCheck":"node_modules/react-bootstrap/esm/FormCheck.js","./FormFile":"node_modules/react-bootstrap/esm/FormFile.js","./FormGroup":"node_modules/react-bootstrap/esm/FormGroup.js","./FormLabel":"node_modules/react-bootstrap/esm/FormLabel.js","./FormText":"node_modules/react-bootstrap/esm/FormText.js","./Container":"node_modules/react-bootstrap/esm/Container.js","./Image":"node_modules/react-bootstrap/esm/Image.js","./Figure":"node_modules/react-bootstrap/esm/Figure.js","./InputGroup":"node_modules/react-bootstrap/esm/InputGroup.js","./Jumbotron":"node_modules/react-bootstrap/esm/Jumbotron.js","./ListGroup":"node_modules/react-bootstrap/esm/ListGroup.js","./ListGroupItem":"node_modules/react-bootstrap/esm/ListGroupItem.js","./Media":"node_modules/react-bootstrap/esm/Media.js","./Modal":"node_modules/react-bootstrap/esm/Modal.js","./ModalBody":"node_modules/react-bootstrap/esm/ModalBody.js","./ModalDialog":"node_modules/react-bootstrap/esm/ModalDialog.js","./ModalFooter":"node_modules/react-bootstrap/esm/ModalFooter.js","./ModalTitle":"node_modules/react-bootstrap/esm/ModalTitle.js","./Nav":"node_modules/react-bootstrap/esm/Nav.js","./Navbar":"node_modules/react-bootstrap/esm/Navbar.js","./NavbarBrand":"node_modules/react-bootstrap/esm/NavbarBrand.js","./NavDropdown":"node_modules/react-bootstrap/esm/NavDropdown.js","./NavItem":"node_modules/react-bootstrap/esm/NavItem.js","./NavLink":"node_modules/react-bootstrap/esm/NavLink.js","./Overlay":"node_modules/react-bootstrap/esm/Overlay.js","./OverlayTrigger":"node_modules/react-bootstrap/esm/OverlayTrigger.js","./PageItem":"node_modules/react-bootstrap/esm/PageItem.js","./Pagination":"node_modules/react-bootstrap/esm/Pagination.js","./Popover":"node_modules/react-bootstrap/esm/Popover.js","./PopoverTitle":"node_modules/react-bootstrap/esm/PopoverTitle.js","./PopoverContent":"node_modules/react-bootstrap/esm/PopoverContent.js","./ProgressBar":"node_modules/react-bootstrap/esm/ProgressBar.js","./ResponsiveEmbed":"node_modules/react-bootstrap/esm/ResponsiveEmbed.js","./Row":"node_modules/react-bootstrap/esm/Row.js","./SafeAnchor":"node_modules/react-bootstrap/esm/SafeAnchor.js","./Spinner":"node_modules/react-bootstrap/esm/Spinner.js","./SplitButton":"node_modules/react-bootstrap/esm/SplitButton.js","./Tab":"node_modules/react-bootstrap/esm/Tab.js","./TabContainer":"node_modules/react-bootstrap/esm/TabContainer.js","./TabContent":"node_modules/react-bootstrap/esm/TabContent.js","./Table":"node_modules/react-bootstrap/esm/Table.js","./TabPane":"node_modules/react-bootstrap/esm/TabPane.js","./Tabs":"node_modules/react-bootstrap/esm/Tabs.js","./ThemeProvider":"node_modules/react-bootstrap/esm/ThemeProvider.js","./Toast":"node_modules/react-bootstrap/esm/Toast.js","./ToastBody":"node_modules/react-bootstrap/esm/ToastBody.js","./ToastHeader":"node_modules/react-bootstrap/esm/ToastHeader.js","./ToggleButton":"node_modules/react-bootstrap/esm/ToggleButton.js","./ToggleButtonGroup":"node_modules/react-bootstrap/esm/ToggleButtonGroup.js","./Tooltip":"node_modules/react-bootstrap/esm/Tooltip.js"}],"src/modules/Authentication/Authentication.jsx":[function(require,module,exports) {
+},{"./Accordion":"node_modules/react-bootstrap/esm/Accordion.js","./AccordionContext":"node_modules/react-bootstrap/esm/AccordionContext.js","./AccordionCollapse":"node_modules/react-bootstrap/esm/AccordionCollapse.js","./AccordionToggle":"node_modules/react-bootstrap/esm/AccordionToggle.js","./Alert":"node_modules/react-bootstrap/esm/Alert.js","./Badge":"node_modules/react-bootstrap/esm/Badge.js","./Breadcrumb":"node_modules/react-bootstrap/esm/Breadcrumb.js","./BreadcrumbItem":"node_modules/react-bootstrap/esm/BreadcrumbItem.js","./Button":"node_modules/react-bootstrap/esm/Button.js","./ButtonGroup":"node_modules/react-bootstrap/esm/ButtonGroup.js","./ButtonToolbar":"node_modules/react-bootstrap/esm/ButtonToolbar.js","./Card":"node_modules/react-bootstrap/esm/Card.js","./CardColumns":"node_modules/react-bootstrap/esm/CardColumns.js","./CardDeck":"node_modules/react-bootstrap/esm/CardDeck.js","./CardImg":"node_modules/react-bootstrap/esm/CardImg.js","./CardGroup":"node_modules/react-bootstrap/esm/CardGroup.js","./Carousel":"node_modules/react-bootstrap/esm/Carousel.js","./CarouselItem":"node_modules/react-bootstrap/esm/CarouselItem.js","./CloseButton":"node_modules/react-bootstrap/esm/CloseButton.js","./Col":"node_modules/react-bootstrap/esm/Col.js","./Collapse":"node_modules/react-bootstrap/esm/Collapse.js","./Dropdown":"node_modules/react-bootstrap/esm/Dropdown.js","./DropdownButton":"node_modules/react-bootstrap/esm/DropdownButton.js","./Fade":"node_modules/react-bootstrap/esm/Fade.js","./Form":"node_modules/react-bootstrap/esm/Form.js","./FormControl":"node_modules/react-bootstrap/esm/FormControl.js","./FormCheck":"node_modules/react-bootstrap/esm/FormCheck.js","./FormFile":"node_modules/react-bootstrap/esm/FormFile.js","./FormGroup":"node_modules/react-bootstrap/esm/FormGroup.js","./FormLabel":"node_modules/react-bootstrap/esm/FormLabel.js","./FormText":"node_modules/react-bootstrap/esm/FormText.js","./Container":"node_modules/react-bootstrap/esm/Container.js","./Image":"node_modules/react-bootstrap/esm/Image.js","./Figure":"node_modules/react-bootstrap/esm/Figure.js","./InputGroup":"node_modules/react-bootstrap/esm/InputGroup.js","./Jumbotron":"node_modules/react-bootstrap/esm/Jumbotron.js","./ListGroup":"node_modules/react-bootstrap/esm/ListGroup.js","./ListGroupItem":"node_modules/react-bootstrap/esm/ListGroupItem.js","./Media":"node_modules/react-bootstrap/esm/Media.js","./Modal":"node_modules/react-bootstrap/esm/Modal.js","./ModalBody":"node_modules/react-bootstrap/esm/ModalBody.js","./ModalDialog":"node_modules/react-bootstrap/esm/ModalDialog.js","./ModalFooter":"node_modules/react-bootstrap/esm/ModalFooter.js","./ModalTitle":"node_modules/react-bootstrap/esm/ModalTitle.js","./Nav":"node_modules/react-bootstrap/esm/Nav.js","./Navbar":"node_modules/react-bootstrap/esm/Navbar.js","./NavbarBrand":"node_modules/react-bootstrap/esm/NavbarBrand.js","./NavDropdown":"node_modules/react-bootstrap/esm/NavDropdown.js","./NavItem":"node_modules/react-bootstrap/esm/NavItem.js","./NavLink":"node_modules/react-bootstrap/esm/NavLink.js","./Overlay":"node_modules/react-bootstrap/esm/Overlay.js","./OverlayTrigger":"node_modules/react-bootstrap/esm/OverlayTrigger.js","./PageItem":"node_modules/react-bootstrap/esm/PageItem.js","./Pagination":"node_modules/react-bootstrap/esm/Pagination.js","./Popover":"node_modules/react-bootstrap/esm/Popover.js","./PopoverTitle":"node_modules/react-bootstrap/esm/PopoverTitle.js","./PopoverContent":"node_modules/react-bootstrap/esm/PopoverContent.js","./ProgressBar":"node_modules/react-bootstrap/esm/ProgressBar.js","./ResponsiveEmbed":"node_modules/react-bootstrap/esm/ResponsiveEmbed.js","./Row":"node_modules/react-bootstrap/esm/Row.js","./SafeAnchor":"node_modules/react-bootstrap/esm/SafeAnchor.js","./Spinner":"node_modules/react-bootstrap/esm/Spinner.js","./SplitButton":"node_modules/react-bootstrap/esm/SplitButton.js","./Tab":"node_modules/react-bootstrap/esm/Tab.js","./TabContainer":"node_modules/react-bootstrap/esm/TabContainer.js","./TabContent":"node_modules/react-bootstrap/esm/TabContent.js","./Table":"node_modules/react-bootstrap/esm/Table.js","./TabPane":"node_modules/react-bootstrap/esm/TabPane.js","./Tabs":"node_modules/react-bootstrap/esm/Tabs.js","./ThemeProvider":"node_modules/react-bootstrap/esm/ThemeProvider.js","./Toast":"node_modules/react-bootstrap/esm/Toast.js","./ToastBody":"node_modules/react-bootstrap/esm/ToastBody.js","./ToastHeader":"node_modules/react-bootstrap/esm/ToastHeader.js","./ToggleButton":"node_modules/react-bootstrap/esm/ToggleButton.js","./ToggleButtonGroup":"node_modules/react-bootstrap/esm/ToggleButtonGroup.js","./Tooltip":"node_modules/react-bootstrap/esm/Tooltip.js"}],"src/modules/Authentication/Authentication.json":[function(require,module,exports) {
+module.exports = {
+  "username": "thenightbeforeproductions",
+  "password": "fiafia2021"
+};
+},{}],"src/modules/Authentication/Authentication.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -47584,56 +47589,205 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactBootstrap = require("react-bootstrap");
 
+var _Authentication = _interopRequireDefault(require("./Authentication.json"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Import dependencies
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-/**
- * Consctruct the component.
- *
- * @param {Object} props
- */
-var Authentication = function Authentication(props) {
-  return /*#__PURE__*/_react.default.createElement("section", {
-    className: "authentication"
-  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, null, /*#__PURE__*/_react.default.createElement("div", {
-    className: "authentication__inner"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "authentication__form-wrapper"
-  }, /*#__PURE__*/_react.default.createElement("h1", {
-    className: "authentication__heading"
-  }, "Login"), /*#__PURE__*/_react.default.createElement("form", {
-    className: "authentication__form"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "form-group mb-4"
-  }, /*#__PURE__*/_react.default.createElement("label", {
-    className: "authentication__form-label",
-    htmlFor: "username"
-  }, "Username"), /*#__PURE__*/_react.default.createElement("input", {
-    type: "text",
-    className: "form-control",
-    id: "username",
-    "aria-describedby": "usernameHelp",
-    placeholder: "Enter username"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "form-group mb-4"
-  }, /*#__PURE__*/_react.default.createElement("label", {
-    className: "authentication__form-label",
-    htmlFor: "exampleInputPassword1"
-  }, "Password"), /*#__PURE__*/_react.default.createElement("input", {
-    type: "password",
-    className: "form-control",
-    id: "exampleInputPassword1",
-    placeholder: "Password"
-  })), /*#__PURE__*/_react.default.createElement("button", {
-    type: "submit",
-    className: "btn btn-primary authentication__form-submit"
-  }, "Submit"))))))));
-};
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Authentication = /*#__PURE__*/function (_React$Component) {
+  _inherits(Authentication, _React$Component);
+
+  var _super = _createSuper(Authentication);
+
+  function Authentication(props) {
+    var _this;
+
+    _classCallCheck(this, Authentication);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      username: '',
+      password: '',
+      rememberMe: false,
+      bypassLogin: true
+    };
+    _this.handleInputChange = _this.handleInputChange.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(Authentication, [{
+    key: "handleInputChange",
+    value: function handleInputChange(e) {
+      var target = e.target;
+      var value = target.type === 'checkbox' ? target.checked : target.value;
+      var name = target.id;
+      this.setState(_defineProperty({}, name, value));
+    }
+  }, {
+    key: "handleErrors",
+    value: function handleErrors() {
+      var username = document.querySelector('#username');
+      var password = document.querySelector('#password');
+
+      if (username instanceof HTMLElement) {
+        if (this.state.username !== _Authentication.default.username) {
+          username.classList.remove('is-valid');
+          username.classList.add('is-invalid');
+        } else {
+          username.classList.remove('is-invalid');
+          username.classList.add('is-valid');
+        }
+      }
+
+      if (password instanceof HTMLElement) {
+        if (this.state.password !== _Authentication.default.password) {
+          password.classList.remove('is-valid');
+          password.classList.add('is-invalid');
+        } else {
+          password.classList.remove('is-invalid');
+          password.classList.add('is-valid');
+        }
+      }
+    }
+  }, {
+    key: "setBypassLogin",
+    value: function setBypassLogin(bypass) {
+      var localStorage = window.localStorage;
+      localStorage.setItem('bypassLogin', bypass ? bypass : 'temp');
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+
+      if (this.state.username === _Authentication.default.username && this.state.password === _Authentication.default.password) {
+        this.setBypassLogin(this.state.rememberMe);
+        location.reload();
+      } else {
+        this.handleErrors();
+      }
+    }
+  }, {
+    key: "getBypassLogin",
+    value: function getBypassLogin() {
+      var localStorage = window.localStorage;
+      var savedBypass = localStorage.getItem('bypassLogin');
+      var bypassLogin = false;
+
+      if (savedBypass == 'true' || savedBypass == 'temp') {
+        bypassLogin = true;
+      }
+
+      return {
+        bypassLogin: bypassLogin,
+        tempBypass: savedBypass == 'temp'
+      };
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this$getBypassLogin = this.getBypassLogin(),
+          bypassLogin = _this$getBypassLogin.bypassLogin,
+          tempBypass = _this$getBypassLogin.tempBypass;
+
+      if (!bypassLogin) {
+        this.setState({
+          bypassLogin: false
+        });
+      } else if (tempBypass) {
+        window.localStorage.setItem('bypassLogin', false);
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return !this.state.bypassLogin && /*#__PURE__*/_react.default.createElement("section", {
+        className: "authentication"
+      }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, null, /*#__PURE__*/_react.default.createElement("div", {
+        className: "authentication__inner"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "authentication__form-wrapper"
+      }, /*#__PURE__*/_react.default.createElement("h1", {
+        className: "authentication__heading"
+      }, "Login"), /*#__PURE__*/_react.default.createElement("form", {
+        className: "authentication__form"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-group mb-4"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        className: "authentication__form-label",
+        htmlFor: "username"
+      }, "Username"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "text",
+        className: "form-control",
+        id: "username",
+        placeholder: "Enter username",
+        autoComplete: "true",
+        onChange: this.handleInputChange
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-group mb-4"
+      }, /*#__PURE__*/_react.default.createElement("label", {
+        className: "authentication__form-label",
+        htmlFor: "password"
+      }, "Password"), /*#__PURE__*/_react.default.createElement("input", {
+        type: "password",
+        className: "form-control",
+        id: "password",
+        placeholder: "Password",
+        autoComplete: "true",
+        onChange: this.handleInputChange
+      })), /*#__PURE__*/_react.default.createElement("div", {
+        className: "form-check mb-4"
+      }, /*#__PURE__*/_react.default.createElement("input", {
+        type: "checkbox",
+        className: "form-check-input",
+        id: "rememberMe",
+        onChange: this.handleInputChange
+      }), /*#__PURE__*/_react.default.createElement("label", {
+        className: "form-check-label",
+        htmlFor: "rememberMe",
+        "aria-describedby": "rememberMeHelp"
+      }, "Bypass login"), /*#__PURE__*/_react.default.createElement("small", {
+        id: "rememberMeHelp",
+        className: "d-block form-text text-muted"
+      }, "Bypass this login the next time I visit.")), /*#__PURE__*/_react.default.createElement("button", {
+        type: "submit",
+        className: "btn btn-primary authentication__form-submit",
+        onClick: this.handleSubmit
+      }, "Submit"))))))));
+    }
+  }]);
+
+  return Authentication;
+}(_react.default.Component);
+
+;
 var _default = Authentication;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js"}],"src/modules/ImageText/ImageText.jsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","./Authentication.json":"src/modules/Authentication/Authentication.json"}],"src/modules/ImageText/ImageText.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55842,7 +55996,9 @@ var Navigation = /*#__PURE__*/function (_React$Component) {
 
 var _default = Navigation;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","../Translate/Translate":"src/modules/Translate/Translate.jsx","./Navigation.json":"src/modules/Navigation/Navigation.json"}],"src/images/Profiles/chise.jpeg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","../Translate/Translate":"src/modules/Translate/Translate.jsx","./Navigation.json":"src/modules/Navigation/Navigation.json"}],"src/images/Profiles/annie.jpeg":[function(require,module,exports) {
+module.exports = "/annie.f9699f19.jpeg";
+},{}],"src/images/Profiles/chise.jpeg":[function(require,module,exports) {
 module.exports = "/chise.4fc1d5f2.jpeg";
 },{}],"src/images/Profiles/freida.jpeg":[function(require,module,exports) {
 module.exports = "/freida.25ead968.jpeg";
@@ -55850,12 +56006,13 @@ module.exports = "/freida.25ead968.jpeg";
 module.exports = "/lasi.8a81c6f6.jpeg";
 },{}],"src/images/Profiles/manu.jpeg":[function(require,module,exports) {
 module.exports = "/manu.f6b79cbb.jpeg";
-},{}],"src/images/Profiles/annie.jpeg":[function(require,module,exports) {
-module.exports = "/annie.f9699f19.jpeg";
 },{}],"src/images/Profiles/placeholder.jpeg":[function(require,module,exports) {
 module.exports = "/placeholder.7fbee703.jpeg";
 },{}],"src/images/Profiles/*.*":[function(require,module,exports) {
 module.exports = {
+  "annie": {
+    "jpeg": require("./annie.jpeg")
+  },
   "chise": {
     "jpeg": require("./chise.jpeg")
   },
@@ -55868,14 +56025,11 @@ module.exports = {
   "manu": {
     "jpeg": require("./manu.jpeg")
   },
-  "annie": {
-    "jpeg": require("./annie.jpeg")
-  },
   "placeholder": {
     "jpeg": require("./placeholder.jpeg")
   }
 };
-},{"./chise.jpeg":"src/images/Profiles/chise.jpeg","./freida.jpeg":"src/images/Profiles/freida.jpeg","./lasi.jpeg":"src/images/Profiles/lasi.jpeg","./manu.jpeg":"src/images/Profiles/manu.jpeg","./annie.jpeg":"src/images/Profiles/annie.jpeg","./placeholder.jpeg":"src/images/Profiles/placeholder.jpeg"}],"src/modules/Profiles/Profiles.json":[function(require,module,exports) {
+},{"./annie.jpeg":"src/images/Profiles/annie.jpeg","./chise.jpeg":"src/images/Profiles/chise.jpeg","./freida.jpeg":"src/images/Profiles/freida.jpeg","./lasi.jpeg":"src/images/Profiles/lasi.jpeg","./manu.jpeg":"src/images/Profiles/manu.jpeg","./placeholder.jpeg":"src/images/Profiles/placeholder.jpeg"}],"src/modules/Profiles/Profiles.json":[function(require,module,exports) {
 module.exports = [{
   "name": "Cochise Avei",
   "role": "Coordinator",
@@ -57429,7 +57583,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61692" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63429" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
