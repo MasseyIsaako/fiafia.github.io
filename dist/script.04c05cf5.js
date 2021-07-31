@@ -55840,9 +55840,6 @@ module.exports = [{
 }, {
   "title": "About Us",
   "slug": "/about-us.html"
-}, {
-  "title": "Contact Us",
-  "slug": "/contact-us.html"
 }];
 },{}],"src/modules/Navigation/Navigation.jsx":[function(require,module,exports) {
 "use strict";
@@ -55998,12 +55995,8 @@ var Navigation = /*#__PURE__*/function (_React$Component) {
 
 var _default = Navigation;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","../Translate/Translate":"src/modules/Translate/Translate.jsx","./Navigation.json":"src/modules/Navigation/Navigation.json"}],"src/images/Profiles/annie.jpeg":[function(require,module,exports) {
-module.exports = "/annie.f9699f19.jpeg";
-},{}],"src/images/Profiles/chise.jpeg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","../Translate/Translate":"src/modules/Translate/Translate.jsx","./Navigation.json":"src/modules/Navigation/Navigation.json"}],"src/images/Profiles/chise.jpeg":[function(require,module,exports) {
 module.exports = "/chise.4fc1d5f2.jpeg";
-},{}],"src/images/Profiles/freida.jpeg":[function(require,module,exports) {
-module.exports = "/freida.25ead968.jpeg";
 },{}],"src/images/Profiles/lasi.jpeg":[function(require,module,exports) {
 module.exports = "/lasi.8a81c6f6.jpeg";
 },{}],"src/images/Profiles/manu.jpeg":[function(require,module,exports) {
@@ -56012,14 +56005,8 @@ module.exports = "/manu.f6b79cbb.jpeg";
 module.exports = "/placeholder.7fbee703.jpeg";
 },{}],"src/images/Profiles/*.*":[function(require,module,exports) {
 module.exports = {
-  "annie": {
-    "jpeg": require("./annie.jpeg")
-  },
   "chise": {
     "jpeg": require("./chise.jpeg")
-  },
-  "freida": {
-    "jpeg": require("./freida.jpeg")
   },
   "lasi": {
     "jpeg": require("./lasi.jpeg")
@@ -56031,7 +56018,7 @@ module.exports = {
     "jpeg": require("./placeholder.jpeg")
   }
 };
-},{"./annie.jpeg":"src/images/Profiles/annie.jpeg","./chise.jpeg":"src/images/Profiles/chise.jpeg","./freida.jpeg":"src/images/Profiles/freida.jpeg","./lasi.jpeg":"src/images/Profiles/lasi.jpeg","./manu.jpeg":"src/images/Profiles/manu.jpeg","./placeholder.jpeg":"src/images/Profiles/placeholder.jpeg"}],"src/modules/Profiles/Profiles.json":[function(require,module,exports) {
+},{"./chise.jpeg":"src/images/Profiles/chise.jpeg","./lasi.jpeg":"src/images/Profiles/lasi.jpeg","./manu.jpeg":"src/images/Profiles/manu.jpeg","./placeholder.jpeg":"src/images/Profiles/placeholder.jpeg"}],"src/modules/Profiles/Profiles.json":[function(require,module,exports) {
 module.exports = [{
   "name": "Cochise Avei",
   "role": "Coordinator",
@@ -56084,7 +56071,7 @@ module.exports = [{
     "sm": "O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa."
   },
   "img": {
-    "slug": "freida",
+    "slug": "placeholder",
     "position": "right"
   }
 }, {
@@ -56095,7 +56082,7 @@ module.exports = [{
     "sm": "O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa."
   },
   "img": {
-    "slug": "annie",
+    "slug": "placeholder",
     "position": "right"
   }
 }, {
@@ -57585,7 +57572,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63429" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54884" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
