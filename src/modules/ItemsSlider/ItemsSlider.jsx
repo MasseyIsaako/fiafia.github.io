@@ -3,7 +3,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
 import Glide from 'react-glidejs';
-import ReactPlayer from 'react-player/youtube';
+import ItemsSliderData from './ItemsSlider.json';
+// import ReactPlayer from 'react-player/youtube';
 
 /**
  * Create the component.
@@ -15,65 +16,84 @@ import ReactPlayer from 'react-player/youtube';
 class ItemsSlider extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            slides: ItemsSliderData.slides
+        };
+    }
+
+    buildSlides () {
+        let slides = false;
+
+        if (this.state.slides.length > 0) {
+            slides = [];
+
+            this.state.slides.forEach((data, index) => {
+                slides.push(
+                    <div className="items-slider__slide-inner video-button" data-src={data.video} key={index}>
+                        <div
+                            className="items-slider__slide-image"
+                            style={{ backgroundImage: `url(${data.image})` }}
+                            role="img"
+                        ><i className="items-slider__slide-play"></i></div>
+                        <div className="items-slider__slide-content">
+                            <p className="items-slider__slide-heading">{data.title}</p>
+                        </div>
+                    </div>
+                );
+            });
+        }
+
+        return slides;
     }
 
     render() {
-        const standardSliderConfig = {
+        const slides = this.buildSlides();
+
+        const mobile = {
+            className: 'glide',
+            perView: 1,
+            startAt: 0,
+            type: 'carousel',
+        };
+
+        const tablet = {
             className: 'glide',
             perView: 2,
-            slideClassName: 'slider__frame',
             startAt: 0,
-            throttle: 0,
+            type: 'carousel',
+        };
+
+        const desktop = {
+            className: 'glide',
+            perView: 3,
+            startAt: 0,
             type: 'carousel',
         };
 
         const sliderSettings = {
-            ...standardSliderConfig,
+            ...desktop,
             breakpoints: {
-                300: { ...standardSliderConfig },
-                500: { ...standardSliderConfig },
-                700: { ...standardSliderConfig },
-                900: { ...standardSliderConfig },
-                1000: { ...standardSliderConfig },
-                1100: { ...standardSliderConfig },
-                1200: { ...standardSliderConfig },
-                1400: { ...standardSliderConfig },
-                1600: { ...standardSliderConfig },
-                1800: { ...standardSliderConfig },
-                2000: { ...standardSliderConfig },
-                2200: { ...standardSliderConfig }
+                576: { ...mobile },
+                768: { ...mobile },
+                992: { ...tablet },
+                1200: { ...desktop },
+                1400: { ...desktop }
             }
         };
 
-        const videoSettings = {
-            className: 'items-slider__slide-video',
-            light: true,
-            height: '100%',
-            width: '100%'
-        };
-
         return (
+            slides !== false &&
             <section className="items-slider">
                 <Container>
                     <Row>
                         <Col>
-                            <h2 className="items-slider__heading">Need ideas for an item?</h2>
-                            <h3 className="items-slider__intro">Check out these awesome examples below!</h3>
+                            <h2 className="items-slider__heading">{ItemsSliderData.heading}</h2>
+                            <h3 className="items-slider__intro">{ItemsSliderData.intro}</h3>
                         </Col>
                         <Col>
                             <Glide {...sliderSettings}>
-                                <div className="items-slider__slide-inner">
-                                    <p>Text</p>
-                                    <ReactPlayer {...videoSettings} url='https://www.youtube.com/embed/nWwpyclIEu4' />
-                                </div>
-                                <div className="items-slider__slide-inner">
-                                    <p>Text</p>
-                                    <ReactPlayer {...videoSettings} url='https://www.youtube.com/embed/nWwpyclIEu4' />
-                                </div>
-                                <div className="items-slider__slide-inner">
-                                    <p>Text</p>
-                                    <ReactPlayer {...videoSettings} url='https://www.youtube.com/embed/nWwpyclIEu4' />
-                                </div>
+                                {slides}
                             </Glide>
                         </Col>
                     </Row>

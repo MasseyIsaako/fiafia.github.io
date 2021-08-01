@@ -88,16 +88,18 @@ const CreateVideo = options => {
      * @returns {void}
      */
     const init = () => {
-        const videoButtons = Array.from(
-            document.querySelectorAll(options.selectors.videoButtons)
-        );
-        const videoClose = document.querySelector(options.selectors.videoClose);
-        const videoIframe = document.querySelector(options.selectors.videoIframe)
-        const videoWrapper = document.querySelector(options.selectors.videoWrapper);
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoButtons = Array.from(
+                document.querySelectorAll(options.selectors.videoButtons)
+            );
+            const videoClose = document.querySelector(options.selectors.videoClose);
+            const videoIframe = document.querySelector(options.selectors.videoIframe)
+            const videoWrapper = document.querySelector(options.selectors.videoWrapper);
 
-        if (videoButtons.length && videoWrapper && videoClose && videoIframe) {
-            __mountVideoButton(videoButtons, videoWrapper, videoClose, videoIframe);
-        }
+            if (videoButtons.length && videoWrapper && videoClose && videoIframe) {
+                __mountVideoButton(videoButtons, videoWrapper, videoClose, videoIframe);
+            }
+        });
     };
 
     /**
