@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
 import Glide from 'react-glidejs';
 import ItemsSliderData from './ItemsSlider.json';
-// import ReactPlayer from 'react-player/youtube';
 
 /**
  * Create the component.
@@ -18,7 +17,8 @@ class ItemsSlider extends React.Component {
         super(props);
 
         this.state = {
-            slides: ItemsSliderData.slides
+            slides: ItemsSliderData.slides,
+            ready: false
         };
     }
 
@@ -45,14 +45,21 @@ class ItemsSlider extends React.Component {
                     </div>
                 );
             });
-        }
 
-        return slides;
+            this.setState({
+                slides: slides,
+                ready: !this.state.ready
+            });
+        }
+    }
+
+    componentDidMount () {
+        document.addEventListener('DOMContentLoaded', () => {
+            this.buildSlides();
+        });
     }
 
     render() {
-        const slides = this.buildSlides();
-
         const mobile = {
             className: 'glide',
             peek: {
@@ -98,7 +105,7 @@ class ItemsSlider extends React.Component {
         };
 
         return (
-            slides !== false &&
+            this.state.ready &&
             <section className="items-slider">
                 <Container>
                     <Row>
@@ -114,7 +121,7 @@ class ItemsSlider extends React.Component {
                         </Col>
                         <Col>
                             <Glide {...sliderSettings}>
-                                {slides}
+                                {this.state.slides}
                             </Glide>
                         </Col>
                     </Row>
