@@ -6,9 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "clear && clear && parcel build index.html about-us.html",
-    "watch": "clear && clear && parcel index.html about-us.html",
-    "deploy:stage": "clear && clear && npm run build && git add dist && git commit -m 'env/stage: Deploying assets to stage.' && git subtree push --prefix dist origin env/stage",
-    "deploy:prod": "clear && clear && npm run build && git add dist && git commit -m 'env/prod: Deploying assets to prod.' && git subtree push --prefix dist origin env/prod"
+    "watch": "clear && clear && parcel index.html about-us.html"
   },
   "keywords": [],
   "author": "",
