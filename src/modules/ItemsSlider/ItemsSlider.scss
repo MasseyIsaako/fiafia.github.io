@@ -128,23 +128,23 @@
     }
 
     [data-glide-el="controls"] {
-        display: flex;
+        display: none;
         height: 0px;
         justify-content: space-between;
         left: 0;
         position: absolute;
         top: 50%;
         width: 100%;
+
+        @include media-breakpoint-up ('md') {
+            display: flex;
+        }
     }
 
     [aria-label="left-arrow"],
     [aria-label="right-arrow"] {
         background-color: $color-white;
-        display: none;
-
-        @include media-breakpoint-up ('md') {
-            display: inline-block;
-        }
+        display: inline-block;
 
         svg polyline {
             fill: $color-white;

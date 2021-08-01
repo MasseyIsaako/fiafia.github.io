@@ -142,7 +142,7 @@ ImageText.defaultProps = {
  */
 ImageText.propTypes = {
     color: PropTypes.oneOf(COLORS),
-    reverse: PropTypes.boolean,
+    reverse: PropTypes.bool,
     heading: PropTypes.object,
     image: PropTypes.object,
     paragraph: PropTypes.object,

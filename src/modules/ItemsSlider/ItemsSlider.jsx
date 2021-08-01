@@ -37,7 +37,10 @@ class ItemsSlider extends React.Component {
                             role="img"
                         ><i className="items-slider__slide-play"></i></div>
                         <div className="items-slider__slide-content">
-                            <p className="items-slider__slide-heading">{data.title}</p>
+                            <p className="items-slider__slide-heading">
+                                <span className="english">{data.title.en}</span>
+                                <span className="samoan">{data.title.sm}</span>
+                            </p>
                         </div>
                     </div>
                 );
@@ -52,6 +55,10 @@ class ItemsSlider extends React.Component {
 
         const mobile = {
             className: 'glide',
+            peek: {
+                before: 0,
+                after: 50
+            },
             perView: 1,
             startAt: 0,
             type: 'carousel',
@@ -59,6 +66,10 @@ class ItemsSlider extends React.Component {
 
         const tablet = {
             className: 'glide',
+            peek: {
+                before: 0,
+                after: 0
+            },
             perView: 2,
             startAt: 0,
             type: 'carousel',
@@ -66,6 +77,10 @@ class ItemsSlider extends React.Component {
 
         const desktop = {
             className: 'glide',
+            peek: {
+                before: 0,
+                after: 0
+            },
             perView: 3,
             startAt: 0,
             type: 'carousel',
@@ -88,8 +103,14 @@ class ItemsSlider extends React.Component {
                 <Container>
                     <Row>
                         <Col>
-                            <h2 className="items-slider__heading">{ItemsSliderData.heading}</h2>
-                            <h3 className="items-slider__intro">{ItemsSliderData.intro}</h3>
+                            <h2 className="items-slider__heading">
+                                <span className="english">{ItemsSliderData.heading.en}</span>
+                                <span className="samoan">{ItemsSliderData.heading.sm}</span>
+                            </h2>
+                            <h3 className="items-slider__intro">
+                                <span className="english">{ItemsSliderData.intro.en}</span>
+                                <span className="samoan">{ItemsSliderData.intro.sm}</span>
+                            </h3>
                         </Col>
                         <Col>
                             <Glide {...sliderSettings}>
