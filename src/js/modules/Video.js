@@ -88,17 +88,21 @@ const CreateVideo = options => {
      * @returns {void}
      */
     const init = () => {
+        // Allow the content to load in the DOM wait for other
+        // components to load for 3s before mounting the triggers.
         document.addEventListener('DOMContentLoaded', () => {
-            const videoButtons = Array.from(
-                document.querySelectorAll(options.selectors.videoButtons)
-            );
-            const videoClose = document.querySelector(options.selectors.videoClose);
-            const videoIframe = document.querySelector(options.selectors.videoIframe)
-            const videoWrapper = document.querySelector(options.selectors.videoWrapper);
+            setTimeout(() => {
+                const videoButtons = Array.from(
+                    document.querySelectorAll(options.selectors.videoButtons)
+                );
+                const videoClose = document.querySelector(options.selectors.videoClose);
+                const videoIframe = document.querySelector(options.selectors.videoIframe)
+                const videoWrapper = document.querySelector(options.selectors.videoWrapper);
 
-            if (videoButtons.length && videoWrapper && videoClose && videoIframe) {
-                __mountVideoButton(videoButtons, videoWrapper, videoClose, videoIframe);
-            }
+                if (videoButtons.length && videoWrapper && videoClose && videoIframe) {
+                    __mountVideoButton(videoButtons, videoWrapper, videoClose, videoIframe);
+                }
+            }, 3000);
         });
     };
 
