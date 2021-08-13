@@ -83,20 +83,16 @@ class Slider extends React.Component {
                 768: { ...mobile },
                 992: { ...tablet },
                 1200: { ...desktop },
-                1400: { ...desktop }
+                1400: { ...desktop },
+                2000: { ...desktop }
             }
         };
     }
 
     componentDidMount() {
+        // We mount the carousel after React has rendered it in the DOM.
         const carousel = new Glide('.glide', this.getSliderConfig());
-
-        // We need a double mount because initial mount doesn't take
-        // full effect.
-        document.addEventListener('DOMContentLoaded', () => {
-            carousel.mount();
-            carousel.mount();
-        });
+        carousel.mount();
     }
 
     render() {

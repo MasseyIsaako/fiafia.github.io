@@ -22,7 +22,7 @@ class ItemsSlider extends React.Component {
             <section className="items-slider">
                 <Container>
                     <Row>
-                        <Col>
+                        <Col sm={12}>
                             <h2 className="items-slider__heading">
                                 <span className="english">{ItemsSliderData.heading.en}</span>
                                 <span className="samoan">{ItemsSliderData.heading.sm}</span>
@@ -32,7 +32,7 @@ class ItemsSlider extends React.Component {
                                 <span className="samoan">{ItemsSliderData.intro.sm}</span>
                             </h3>
                         </Col>
-                        <Col>
+                        <Col sm={12}>
                             <Slider slides={ItemsSliderData.slides} />
                         </Col>
                     </Row>

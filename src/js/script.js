@@ -36,8 +36,12 @@ const AnimatedHero = new CreateAnimatedHero({
 });
 
 const FaqAccordions = new CreateFaqAccordions({
-    activeAccordionClass: 'js-accordion-active',
-    accordionLink: '.faq-accordion__link',
+    selectors: {
+        accordionLink: '.faq-accordion__link',
+    },
+    toggleClasses: {
+        active: 'active',
+    },
     timing: 500
 });
 

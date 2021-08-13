@@ -28,18 +28,19 @@
     }
 
     &__item {
-        border: 1px solid $color-charcoal;
+        border: 2px solid rgba($color-black, 0.1);
+        border-width: 2px 0;
         border-bottom: none;
         overflow: hidden;
         position: relative;
 
         &:last-child {
-            border-bottom: 1px solid $color-charcoal;
+            border-bottom: 2px solid rgba($color-black, 0.1);
         }
     }
 
     &__number {
-        color: lighten($color-charcoal, 10%);
+        color: lighten($color-pink, 10%);
         margin-right: 20px;
     }
 
@@ -49,17 +50,33 @@
         color: $color-charcoal;
         display: flex;
         font-size: 16px;
-        padding: 15px;
+        padding: 15px 0;
+        position: relative;
         text-align: left;
         text-decoration: none;
         width: 100%;
 
-        @include media-breakpoint-up ('md') {
-            font-size: 22px;
+        &.active::after {
+            transform: rotate(225deg);
+        }
 
-            &::after {
-                top: 44px;
-            }
+        &::after {
+            background-color: $color-white;
+            border: 0 solid $color-pink;
+            border-width: 0 2px 2px 0;
+            content: '';
+            display: inline-block;
+            height: 12px;
+            position: absolute;
+            right: 5px;
+            top: calc(100% - 40px);
+            transform: rotate(45deg);
+            transition: 0.2s transform ease-in;
+            width: 12px;
+        }
+
+        @include media-breakpoint-up ('md') {
+            font-size: 18px;
         }
     }
 
@@ -93,10 +110,6 @@
 
     &__content {
         font-size: 16px;
-        padding: 0 20px 20px;
-
-        @include media-breakpoint-up ('md') {
-            padding: 0 35px 35px;
-        }
+        padding: 0 30px 30px;
     }
 }
