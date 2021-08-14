@@ -2,15 +2,14 @@
 const tl = gsap.timeline();
 
 const CreateRegisterForm = options => {
-    const form  = document.querySelector(options.selectors.form);
-    const open = document.querySelector(options.selectors.open);
     const close = document.querySelector(options.selectors.close);
+    const form  = document.querySelector(options.selectors.form);
 
     /**
      * Toggle the window scroll, depending on whether the video panel
      * is opening or closing.
      * 
-     * @param {*} toggle 
+     * @param {string} toggle 
      * 
      * @returns {void}
      */
@@ -27,14 +26,16 @@ const CreateRegisterForm = options => {
      * 
      * @returns {void}
      */
-    const __mountRegisterForm = () => {
+    const __mountRegisterForm = openButtons => {
         // Open the form
-        open.addEventListener('click', () => {
-            tl.to(form, 1, {
-                left: '0',
+        openButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tl.to(form, 1, {
+                    left: '0',
+                });
+    
+                __toggleWindowScroll('hidden');
             });
-
-            __toggleWindowScroll('hidden');
         });
 
         // Close the form
@@ -51,9 +52,18 @@ const CreateRegisterForm = options => {
      * Public init function.
      */
     const init = () => {
-        if (form && open && close) {
-            __mountRegisterForm();
-        }
+        window.addEventListener('load', () => {
+            const openButtons = Array.from(
+                document.querySelectorAll(options.selectors.openButtons)
+            );
+
+            if (close instanceof HTMLElement &&
+                form instanceof HTMLElement &&
+                openButtons.length > 0
+            ) {
+                __mountRegisterForm(openButtons);
+            }
+        });
     };
 
     /**

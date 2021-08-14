@@ -7,6 +7,7 @@ import ItemsSlider from '../modules/ItemsSlider/ItemsSlider';
 import LandingHero from '../modules/LandingHero/LandingHero';
 import Navigation from '../modules/Navigation/Navigation';
 import Profiles from '../modules/Profiles/Profiles';
+import RSVPBanner from '../modules/RSVPBanner/RSVPBanner';
 import Text from '../modules/Text/Text';
 
 // Vanilla components
@@ -55,7 +56,7 @@ const RegisterForm = new CreateRegisterForm({
     selectors: {
         form: '.register-form',
         close: '.register-form__close',
-        open: '.register-form-open'
+        openButtons: '.register-form-open'
     }
 });
 
@@ -82,6 +83,7 @@ class App extends ReactHabitat.Bootstrapper {
         containerBuilder.register(LandingHero).as('LandingHero');
         containerBuilder.register(Navigation).as('Navigation');
         containerBuilder.register(Profiles).as('Profiles');
+        containerBuilder.register(RSVPBanner).as('RSVPBanner');
         containerBuilder.register(Text).as('Text');
 
         // Set the DOM container
