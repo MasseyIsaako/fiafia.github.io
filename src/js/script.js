@@ -7,15 +7,15 @@ import ItemsSlider from '../modules/ItemsSlider/ItemsSlider';
 import LandingHero from '../modules/LandingHero/LandingHero';
 import Navigation from '../modules/Navigation/Navigation';
 import Profiles from '../modules/Profiles/Profiles';
+import RegisterForm from '../modules/RegisterForm/RegisterForm';
 import RSVPBanner from '../modules/RSVPBanner/RSVPBanner';
 import Text from '../modules/Text/Text';
+import Video from '../modules/Video/Video';
 
 // Vanilla components
 import CreateAnimatedHero from './modules/AnimatedHero';
 import CreateFaqAccordions from './modules/FaqAccordions';
 import CreateParallaxImages from './modules/ParallaxImages';
-import CreateRegisterForm from './modules/RegisterForm';
-import CreateVideo from './modules/Video';
 
 const AnimatedHero = new CreateAnimatedHero({
     selectors: {
@@ -52,23 +52,6 @@ const ParallaxImages = new CreateParallaxImages({
     }
 });
 
-const RegisterForm = new CreateRegisterForm({
-    selectors: {
-        form: '.register-form',
-        close: '.register-form__close',
-        openButtons: '.register-form-open'
-    }
-});
-
-const Video = new CreateVideo({
-    selectors: {
-        videoButtons: '.video-button',
-        videoWrapper: '.video',
-        videoClose: '.video__close',
-        videoIframe: '.video__iframe',
-    }
-});
-
 class App extends ReactHabitat.Bootstrapper {
     constructor() {
         super();
@@ -83,8 +66,10 @@ class App extends ReactHabitat.Bootstrapper {
         containerBuilder.register(LandingHero).as('LandingHero');
         containerBuilder.register(Navigation).as('Navigation');
         containerBuilder.register(Profiles).as('Profiles');
+        containerBuilder.register(RegisterForm).as('RegisterForm');
         containerBuilder.register(RSVPBanner).as('RSVPBanner');
         containerBuilder.register(Text).as('Text');
+        containerBuilder.register(Video).as('Video');
 
         // Set the DOM container
         this.setContainer(containerBuilder.build());
@@ -103,5 +88,3 @@ window.scrollTo(0, 0);
 AnimatedHero.init();
 FaqAccordions.init();
 ParallaxImages.init();
-RegisterForm.init();
-Video.init();

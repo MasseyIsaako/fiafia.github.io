@@ -18,7 +18,12 @@
             &:hover {
                 background-color: $color-white;
                 color: $color-brown;
+
+                svg path {
+                    fill: $color-brown;
+                }
             }
+
         }
     }
 
@@ -38,7 +43,12 @@
             &:hover {
                 background-color: $color-white;
                 color: $color-gold;
+
+                svg path {
+                    fill: $color-gold;
+                }
             }
+
         }
     }
 
@@ -58,7 +68,12 @@
             &:hover {
                 background-color: $color-white;
                 color: $color-pink;
+
+                svg path {
+                    fill: $color-pink;
+                }
             }
+
         }
     }
 
@@ -78,7 +93,12 @@
             &:hover {
                 background-color: $color-white;
                 color: $color-purple;
+
+                svg path {
+                    fill: $color-purple;
+                }
             }
+
         }
     }
 
@@ -133,11 +153,27 @@
     }
 
     &__cta {
+        align-items: center;
         background-color: $color-white;
+        display: flex;
         font-size: 16px;
 
         @include media-breakpoint-up ('md') {
             font-size: 20px;
+        }
+    }
+
+    &__cta-icon {
+        background-position: center;
+        background-size: cover;
+        content: '';
+        display: inline-block;
+        height: 20px;
+        margin-right: 10px;
+        width: 20px;
+
+        svg path {
+            transition: 0.2s fill ease-in;
         }
     }
 
