@@ -1,7 +1,11 @@
 .text {
     background-color: $color-white;
-    padding: 200px 0;
+    padding: 100px 0;
     text-align: center;
+
+    @include media-breakpoint-up ('lg') {
+        padding: 150px 0;
+    }
 
     &__heading {
         color: $color-pink;

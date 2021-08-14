@@ -12,8 +12,9 @@
 @import './base/_reset';
 @import './base/_animations';
 
-// Import modules
+// Import react modules
 @import '../modules/Authentication/Authentication';
+@import '../modules/FaqAccordions/FaqAccordions';
 @import '../modules/ImageText/ImageText';
 @import '../modules/ItemsSlider/ItemsSlider';
 @import '../modules/LandingHero/LandingHero';
@@ -25,6 +26,6 @@
 @import '../modules/Translate/Translate';
 @import '../modules/Video/Video';
 
-@import './modules/faq';
+// Import vanilla modules
 @import './modules/loading';
 @import './modules/hero';

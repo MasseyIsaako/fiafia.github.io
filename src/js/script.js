@@ -2,6 +2,7 @@ import ReactHabitat from 'react-habitat';
 
 // React components
 import Authentication from '../modules/Authentication/Authentication';
+import FaqAccordions from '../modules/FaqAccordions/FaqAccordions';
 import ImageText from '../modules/ImageText/ImageText';
 import ItemsSlider from '../modules/ItemsSlider/ItemsSlider';
 import LandingHero from '../modules/LandingHero/LandingHero';
@@ -14,7 +15,6 @@ import Video from '../modules/Video/Video';
 
 // Vanilla components
 import CreateAnimatedHero from './modules/AnimatedHero';
-import CreateFaqAccordions from './modules/FaqAccordions';
 import CreateParallaxImages from './modules/ParallaxImages';
 
 const AnimatedHero = new CreateAnimatedHero({
@@ -36,16 +36,6 @@ const AnimatedHero = new CreateAnimatedHero({
     }
 });
 
-const FaqAccordions = new CreateFaqAccordions({
-    selectors: {
-        accordionLink: '.faq-accordion__link',
-    },
-    toggleClasses: {
-        active: 'active',
-    },
-    timing: 500
-});
-
 const ParallaxImages = new CreateParallaxImages({
     selectors: {
         images: '.parallax'
@@ -61,6 +51,7 @@ class App extends ReactHabitat.Bootstrapper {
 
         // Register our components that we want to expose to the DOM
         containerBuilder.register(Authentication).as('Authentication');
+        containerBuilder.register(FaqAccordions).as('FaqAccordions');
         containerBuilder.register(ImageText).as('ImageText');
         containerBuilder.register(ItemsSlider).as('ItemsSlider');
         containerBuilder.register(LandingHero).as('LandingHero');
@@ -82,9 +73,5 @@ const instance = new App();
 // Export the instance
 export default instance;
 
-// Force the user to go to the top of the page
-window.scrollTo(0, 0);
-
 AnimatedHero.init();
-FaqAccordions.init();
 ParallaxImages.init();

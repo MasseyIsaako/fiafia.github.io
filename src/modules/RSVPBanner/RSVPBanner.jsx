@@ -8,9 +8,7 @@ class RSVPBanner extends React.Component {
     constructor() {
         super();
 
-        this.state = {
-            ...RSVPBannerData
-        }
+        this.state = { ...RSVPBannerData };
     }
 
     getHeading () {

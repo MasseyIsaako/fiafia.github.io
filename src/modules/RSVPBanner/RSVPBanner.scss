@@ -181,11 +181,16 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 400px;
+        height: 200px;
         margin-left: -12px;
         width: 100vw;
 
+        @include media-breakpoint-up ('xs') {
+            height: 300px;
+        }
+
         @include media-breakpoint-up ('sm') {
+            height: 400px;
             margin-left: calc(((100vw - 516px) / 2) * -1);
         }
 

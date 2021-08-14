@@ -1,0 +1,38 @@
+{
+    "heading": {
+        "en": "Frequently Asked Questions",
+        "sm": "Fesili e Masani Ona Lāgā"
+    },
+    "accordions": [
+        {
+            "question": {
+                "en": "A frequently asked question?",
+                "sm": "Se fesili matagofie lava"
+            },
+            "answer": {
+                "en": "<p>Lorem ipsum Culpa aliquip dolor aliquip laboris Ut ea laboris consequat sit incididunt proident proident voluptate est elit labore Ut id cillum et irure.</p>",
+                "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+            }
+        },
+        {
+            "question": {
+                "en": "A frequently asked question?",
+                "sm": "Se fesili matagofie lava"
+            },
+            "answer": {
+                "en": "<p>Lorem ipsum Culpa aliquip dolor aliquip laboris Ut ea laboris consequat sit incididunt proident proident voluptate est elit labore Ut id cillum et irure.</p>",
+                "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+            }
+        },
+        {
+            "question": {
+                "en": "A frequently asked question?",
+                "sm": "Se fesili matagofie lava"
+            },
+            "answer": {
+                "en": "<p>Lorem ipsum Culpa aliquip dolor aliquip laboris Ut ea laboris consequat sit incididunt proident proident voluptate est elit labore Ut id cillum et irure.</p>",
+                "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+            }
+        }
+    ]
+}
