@@ -2,6 +2,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import FaqAccordionsData from './FaqAccordions.json';
+import { translator } from '../../js/utils/utils.js';
 
 class FaqAccordions extends React.Component {
     constructor () {
@@ -80,12 +81,9 @@ class FaqAccordions extends React.Component {
         }
     }
 
-    getHeading ({ sm, en }) {
+    getHeading (heading) {
         return (
-            <h2 className="faq__heading">
-                <span className="english">{en}</span>
-                <span className="samoan">{sm}</span>
-            </h2>
+            <h2 className="faq__heading" dangerouslySetInnerHTML={{ __html: translator(heading) }}></h2>
         );
     }
 
@@ -99,12 +97,9 @@ class FaqAccordions extends React.Component {
         );
     }
 
-    getAnswer ({ en, sm }) {
+    getAnswer (answer) {
         return (
-            <div className="faq-accordion__content">
-                <span className="english" dangerouslySetInnerHTML={{ __html: en }}></span>
-                <span className="samoan" dangerouslySetInnerHTML={{ __html: sm }}></span>
-            </div>
+            <div className="faq-accordion__content" dangerouslySetInnerHTML={{ __html: translator(answer) }}></div>
         );
     }
 

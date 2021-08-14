@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Glide from '@glidejs/glide';
+import { translator } from '../../js/utils/utils';
 
 /**
  * Create the component.
@@ -11,7 +12,7 @@ import Glide from '@glidejs/glide';
  * @returns {jsx}
  */
 class Slider extends React.Component {
-    constructor(props) {
+    constructor (props) {
         super(props);
     }
 
@@ -31,10 +32,7 @@ class Slider extends React.Component {
                                 role="img"
                             ><i className="items-slider__slide-play"></i></div>
                             <div className="items-slider__slide-content">
-                                <p className="items-slider__slide-heading">
-                                    <span className="english">{data.title.en}</span>
-                                    <span className="samoan">{data.title.sm}</span>
-                                </p>
+                                <p className="items-slider__slide-heading" dangerouslySetInnerHTML={{ __html: translator(data.title) }}></p>
                             </div>
                         </div>
                     </li>

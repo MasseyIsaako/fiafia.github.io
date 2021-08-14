@@ -3,6 +3,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import RSVPBannerData from './RSVPBanner.json';
 import { ReactComponent as RSVPIcon } from '../../svg/form-icon-white.svg';
+import { translator } from '../../js/utils/utils';
 
 class RSVPBanner extends React.Component {
     constructor() {
@@ -13,19 +14,13 @@ class RSVPBanner extends React.Component {
 
     getHeading () {
         return (
-            <h1 className="rsvp-banner__heading">
-                <span className="english">{this.state.heading.en}</span>
-                <span className="samoan">{this.state.heading.sm}</span>
-            </h1>
+            <h1 className="rsvp-banner__heading" dangerouslySetInnerHTML={{ __html: translator(this.state.heading) }}></h1>
         );
     }
 
     getSummary () {
         return (
-            <p className="rsvp-banner__summary">
-                <span className="english">{this.state.summary.en}</span>
-                <span className="samoan">{this.state.summary.sm}</span>
-            </p>
+            <p className="rsvp-banner__summary" dangerouslySetInnerHTML={{ __html: translator(this.state.summary) }}></p>
         );
     }
 

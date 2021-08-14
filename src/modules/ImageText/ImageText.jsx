@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
+import { translator } from '../../js/utils/utils.js';
 
 // Only allow the below color options.
 const COLORS = [
@@ -43,10 +44,7 @@ const __getThemeClasses = (color, reverse) => {
  * @returns {jsx}
  */
 const Heading = ({ heading }) => (
-    <h2 className="image-text__heading">
-        <span className="english">{heading.en}</span>
-        <span className="samoan">{heading.sm}</span>
-    </h2>
+    <h2 className="image-text__heading" dangerouslySetInnerHTML={{ __html: translator(heading) }}></h2>
 );
 
 /**
@@ -57,10 +55,7 @@ const Heading = ({ heading }) => (
  * @returns {jsx}
  */
 const Paragraph = ({ paragraph }) => (
-    <p className="image-text__paragraph">
-        <span className="english">{paragraph.en}</span>
-        <span className="samoan">{paragraph.sm}</span>
-    </p>
+    <p className="image-text__paragraph" dangerouslySetInnerHTML={{ __html: translator(paragraph) }}></p>
 );
 
 /**

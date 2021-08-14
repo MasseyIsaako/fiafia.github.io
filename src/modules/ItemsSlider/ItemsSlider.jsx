@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
 import ItemsSliderData from './ItemsSlider.json';
 import Slider from './Slider';
+import { translator } from '../../js/utils/utils.js';
 
 /**
  * Create the component.
@@ -13,51 +14,44 @@ import Slider from './Slider';
  * @returns {jsx}
  */
 class ItemsSlider extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
+
+        this.state = { ...ItemsSliderData };
+    }
+
+    getHeading () {
+        return (
+            <h2 className="items-slider__heading" dangerouslySetInnerHTML={{ __html: translator(this.state.heading) }}></h2>
+        );
+    }
+
+    getIntro () {
+        return (
+            <h3 className="items-slider__intro" dangerouslySetInnerHTML={{ __html: translator(this.state.intro) }}></h3>
+        );
     }
 
     render() {
+        const heading = this.getHeading();
+        const intro = this.getIntro();
+
         return (
             <section className="items-slider">
                 <Container>
                     <Row>
                         <Col sm={12}>
-                            <h2 className="items-slider__heading">
-                                <span className="english">{ItemsSliderData.heading.en}</span>
-                                <span className="samoan">{ItemsSliderData.heading.sm}</span>
-                            </h2>
-                            <h3 className="items-slider__intro">
-                                <span className="english">{ItemsSliderData.intro.en}</span>
-                                <span className="samoan">{ItemsSliderData.intro.sm}</span>
-                            </h3>
+                            {heading}
+                            {intro}
                         </Col>
                         <Col sm={12}>
-                            <Slider slides={ItemsSliderData.slides} />
+                            <Slider slides={this.state.slides} />
                         </Col>
                     </Row>
                 </Container>
             </section>
         );
     }
-};
-
-/**
- * Defining the default props for the component.
- *
- * @type {Object}
- */
-ItemsSlider.defaultProps = {
-    slides: [{}],
-};
-
-/**
- * Define the prop property types.
- *
- * @type {Object}
- */
-ItemsSlider.propTypes = {
-    slides: PropTypes.array
 };
 
 export default ItemsSlider;

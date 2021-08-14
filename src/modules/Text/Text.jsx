@@ -2,19 +2,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
+import { translator } from '../../js/utils/utils';
 
 const Heading = ({ heading }) => (
-    <h2 className="text__heading">
-        <span className="english">{heading.en}</span>
-        <span className="samoan">{heading.sm}</span>
-    </h2>
+    <h2 className="text__heading" dangerouslySetInnerHTML={{ __html: translator(heading) }}></h2>
 );
 
 const Paragraph = ({ paragraph }) => (
-    <p className="text__paragraph">
-        <span className="english">{paragraph.en}</span>
-        <span className="samoan">{paragraph.sm}</span>
-    </p>
+    <p className="text__paragraph" dangerouslySetInnerHTML={{ __html: translator(paragraph) }}></p>
 );
 
 /**

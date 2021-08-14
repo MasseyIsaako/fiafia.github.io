@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
 import ProfileImages from '../../images/Profiles/*.*';
 import ProfilesData from './Profiles.json';
+import { translator } from '../../js/utils/utils';
 
 class Profiles extends React.Component {
     constructor () {
@@ -75,10 +76,7 @@ class Profiles extends React.Component {
                             <div className="profiles__card-content">
                                 <h4 className="profiles__card-name">{profile.name}</h4>
                                 <p className="profiles__card-role">{profile.role}</p>
-                                <p className="profiles__card-blurb">
-                                    <span className="english">{profile.blurb.en}</span>
-                                    <span className="samoan">{profile.blurb.sm}</span>
-                                </p>
+                                <p className="profiles__card-blurb" dangerouslySetInnerHTML={{ __html: translator(profile.blurb) }}></p>
                             </div>
                         </div>
                     </Col>
