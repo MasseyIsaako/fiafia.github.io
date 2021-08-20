@@ -39,7 +39,7 @@
         "name": "Tufulasi Isa'ako",
         "role": "MC and Zoom Event Planner",
         "blurb": {
-            "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis beatae earum assumenda, quod, ratione unde commodi laudantium dicta eligendi voluptates culpa possimus! Nemo ab cum a assumenda sint inventore saepe! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis beatae earum assumenda, quod, ratione unde commodi laudantium dicta eligendi voluptates culpa possimus!",
+            "en": "Talofa lava friends! My name is Lasi and I'll be working to help facilitate the evening.",
             "sm": "O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa."
         },
         "img": {
@@ -55,8 +55,8 @@
             "sm": "O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa."
         },
         "img": {
-            "slug": "placeholder",
-            "position": "right"
+            "slug": "freida",
+            "position": "center"
         }
     },
     {
@@ -67,8 +67,8 @@
             "sm": "O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa."
         },
         "img": {
-            "slug": "placeholder",
-            "position": "right"
+            "slug": "annie",
+            "position": "center"
         }
     },
     {
@@ -79,7 +79,7 @@
             "sm": "O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa."
         },
         "img": {
-            "slug": "placeholder",
+            "slug": "tumema",
             "position": "center"
         }
     },
@@ -91,7 +91,7 @@
             "sm": "O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa."
         },
         "img": {
-            "slug": "placeholder",
+            "slug": "thomas",
             "position": "center"
         }
     },
@@ -115,7 +115,7 @@
             "sm": "O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa."
         },
         "img": {
-            "slug": "placeholder",
+            "slug": "valasi",
             "position": "center"
         }
     },
