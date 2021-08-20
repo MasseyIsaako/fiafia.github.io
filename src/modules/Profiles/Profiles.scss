@@ -55,7 +55,7 @@
             transform: scale(105%);
 
             .profiles__card-img {
-                transform: rotate(10deg);
+                filter: none;
             }
         }
     }
@@ -105,10 +105,13 @@
     &__card-img {
         border-radius: 50%;
         display: block;
+        filter: grayscale(1);
         height: 250px;
         margin: auto;
         object-fit: cover;
-        transition: 0.2s transform ease;
+        transition: 0.2s transform ease-in,
+            0.2s filter ease-in
+        ;
         width: 250px;
 
         @include media-breakpoint-up ('sm') {
@@ -213,6 +216,7 @@
 
     .profiles__card-img {
         background-size: cover;
+        filter: none;
         position: relative;
         z-index: 1;
     }

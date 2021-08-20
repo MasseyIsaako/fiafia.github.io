@@ -10,18 +10,18 @@
         }
 
         .rsvp-banner__cta {
-            background-color: $color-brown;
+            background-color: $color-white;
             border-color: $color-white;
-            color: $color-white;
+            color: $color-brown;
+
+            svg path {
+                fill: $color-brown;
+            }
             
             &:focus,
             &:hover {
-                background-color: $color-white;
-                color: $color-brown;
-
-                svg path {
-                    fill: $color-brown;
-                }
+                color: $color-white;
+                background-color: $color-brown;
             }
 
         }
@@ -35,18 +35,18 @@
         }
 
         .rsvp-banner__cta {
-            background-color: $color-gold;
+            background-color: $color-white;
             border-color: $color-white;
-            color: $color-white;
+            color: $color-gold;
+
+            svg path {
+                fill: $color-gold;
+            }
             
             &:focus,
             &:hover {
-                background-color: $color-white;
-                color: $color-gold;
-
-                svg path {
-                    fill: $color-gold;
-                }
+                color: $color-white;
+                background-color: $color-gold;
             }
 
         }
@@ -60,18 +60,18 @@
         }
 
         .rsvp-banner__cta {
-            background-color: $color-pink;
+            background-color: $color-white;
             border-color: $color-white;
-            color: $color-white;
+            color: $color-pink;
+
+            svg path {
+                fill: $color-pink;
+            }
             
             &:focus,
             &:hover {
-                background-color: $color-white;
-                color: $color-pink;
-
-                svg path {
-                    fill: $color-pink;
-                }
+                color: $color-white;
+                background-color: $color-pink;
             }
 
         }
@@ -85,18 +85,18 @@
         }
 
         .rsvp-banner__cta {
-            background-color: $color-purple;
+            background-color: $color-white;
             border-color: $color-white;
-            color: $color-white;
+            color: $color-purple;
+
+            svg path {
+                fill: $color-purple;
+            }
             
             &:focus,
             &:hover {
-                background-color: $color-white;
-                color: $color-purple;
-
-                svg path {
-                    fill: $color-purple;
-                }
+                color: $color-white;
+                background-color: $color-purple;
             }
 
         }
@@ -157,6 +157,11 @@
         background-color: $color-white;
         display: flex;
         font-size: 16px;
+
+        &:focus svg path,
+        &:hover svg path {
+            fill: $color-white;
+        }
 
         @include media-breakpoint-up ('md') {
             font-size: 20px;
