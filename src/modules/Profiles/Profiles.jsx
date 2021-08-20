@@ -1,43 +1,33 @@
 // Import dependencies
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
 import ProfileImages from '../../images/Profiles/*.*';
 import ProfilesData from './Profiles.json';
-import { translator } from '../../js/utils/utils';
+import ProfilePopup from './ProfilePopup';
+import { getProfilePic } from '../../js/utils/utils';
 
 class Profiles extends React.Component {
     constructor () {
         super();
-    }
 
-    getProfilePic (img) {
-        let pfp = false;
+        this.closeProfile = this.closeProfile.bind(this);
 
-        if (ProfileImages[img.slug]) {
-            pfp = {
-                position: '',
-                slug: ''
-            };
-
-            if (ProfileImages[img.slug].jpeg &&
-                ProfileImages[img.slug].jpeg.length > 0
-            ) {
-                pfp.slug = ProfileImages[img.slug].jpeg;
-            } else if (ProfileImages[img.slug].png &&
-                ProfileImages[img.slug].png.length > 0
-            ) {
-                pfp.slug = ProfileImages[img.slug].png;
-            }
-
-            pfp.position = img.position;
-        }
-
-        return pfp;
+        this.state = {
+            profile: ''
+        };
     }
 
     sortProfiles () {
         return ProfilesData.sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    openProfile (profile) {
+        const body = document.querySelector('body');
+        body.classList.add('profiles-popup-open');
+
+        this.setState({
+            profile: profile
+        });
     }
 
     getCards () {
@@ -48,7 +38,7 @@ class Profiles extends React.Component {
             cards = [];
 
             orderedProfiles.forEach((profile, i) => {
-                const pfp = this.getProfilePic(profile.img);
+                const pfp = getProfilePic(profile.img, ProfileImages);
                 const colProps = {
                     sm: 12,
                     md: 6,
@@ -65,7 +55,7 @@ class Profiles extends React.Component {
                         data-name={searchParams.name}
                         data-role={searchParams.role}
                     >
-                        <div className="profiles__card">
+                        <div className="profiles__card" onClick={() => { this.openProfile(profile) }}>
                             <img src={pfp.slug ? pfp.slug : undefined}
                                 alt={profile.name}
                                 className="profiles__card-img"
@@ -76,7 +66,6 @@ class Profiles extends React.Component {
                             <div className="profiles__card-content">
                                 <h4 className="profiles__card-name">{profile.name}</h4>
                                 <p className="profiles__card-role">{profile.role}</p>
-                                <p className="profiles__card-blurb" dangerouslySetInnerHTML={{ __html: translator(profile.blurb) }}></p>
                             </div>
                         </div>
                     </Col>
@@ -123,11 +112,19 @@ class Profiles extends React.Component {
                     <button type="button"
                         className="btn btn-md profiles__search-reset"
                         onClick={() => (this.clearSearch())}
-                        // onClick={() => {console.log('hello')}}
                     >Reset</button>
                 </div>
             </div>
         );
+    }
+
+    closeProfile () {
+        const body = document.querySelector('body');
+        body.classList.remove('profiles-popup-open');
+
+        this.setState({
+            profile: ''
+        });
     }
 
     componentDidMount () {
@@ -146,18 +143,25 @@ class Profiles extends React.Component {
 
         return (
             cards &&
-            <section className="profiles">
-                <Container>
-                    <Row>
-                        <Col sm={12} md={5}>
-                            {search}
-                        </Col>
-                    </Row>
-                    <Row>
-                        {cards}
-                    </Row>
-                </Container>
-            </section>
+            <>
+                <section className="profiles">
+                    <Container>
+                        <Row>
+                            <Col sm={12} md={5}>
+                                {search}
+                            </Col>
+                        </Row>
+                        <Row>
+                            {cards}
+                        </Row>
+                    </Container>
+                </section>
+                <ProfilePopup
+                    closeProfile={this.closeProfile}
+                    profile={this.state.profile}
+                    profileImages={ProfileImages}
+                />
+            </>
         );
     }
 }
