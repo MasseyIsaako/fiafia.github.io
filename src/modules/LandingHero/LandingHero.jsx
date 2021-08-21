@@ -2,6 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
+import LandingHeroData from './LandingHero.json';
+import { translator } from '../../js/utils/utils';
 
 /**
  * Create the component.
@@ -15,20 +17,34 @@ class LandingHero extends React.Component {
         super(props);
     }
 
+    getLandingContent () {
+        let landing = false;
+
+        if (LandingHeroData) {
+            LandingHeroData.forEach(data => {
+                if (data.option === this.props.option) {
+                    landing = data;
+                }
+            });
+        }
+
+        return landing;
+    }
+
     render() {
-        const {
-            heading,
-            backgroundImage
-        } = this.props;
+        const landing = this.getLandingContent();
 
         return (
+            landing &&
             <div className="landing-hero" style={{
-                backgroundImage: `url(${backgroundImage})`
+                backgroundImage: `url(${landing.backgroundImage})`
             }}>
                 <Container>
                     <Row>
                         <Col>
-                            <h1 className="landing-hero__heading">{heading}</h1>
+                            <h1 className="landing-hero__heading"
+                                dangerouslySetInnerHTML={{ __html: translator(landing.title) }}
+                            ></h1>
                         </Col>
                     </Row>
                 </Container>
@@ -43,8 +59,7 @@ class LandingHero extends React.Component {
  * @type {Object}
  */
 LandingHero.defaultProps = {
-    backgroundImage: '',
-    heading: ''
+    option: ''
 };
 
 /**
@@ -53,8 +68,7 @@ LandingHero.defaultProps = {
  * @type {Object}
  */
 LandingHero.propTypes = {
-    backgroundImage: PropTypes.string,
-    heading: PropTypes.string,
+    option: PropTypes.string
 };
 
 export default LandingHero;

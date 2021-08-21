@@ -12,5 +12,12 @@
             "sm": "Faamatalaga Atili"
         },
         "slug": "/about-us.html"
+    },
+    {
+        "title": {
+            "en": "Tips and Tricks",
+            "sm": "Fautuaga"
+        },
+        "slug": "/tips-and-tricks.html"
     }
 ]

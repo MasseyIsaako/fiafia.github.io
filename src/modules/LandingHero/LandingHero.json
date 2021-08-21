@@ -1,0 +1,18 @@
+[
+    {
+        "option": "aboutus",
+        "title": {
+            "en": "About Us",
+            "sm": "Faamatalaga Atili"
+        },
+        "backgroundImage": "https://images.unsplash.com/photo-1574614671614-95100635613c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+    },
+    {
+        "option": "tipsandtricks",
+        "title": {
+            "en": "Tips and Tricks",
+            "sm": "Fautuaga"
+        },
+        "backgroundImage": "https://images.unsplash.com/photo-1628412891357-1746831ec24d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+    }
+]
