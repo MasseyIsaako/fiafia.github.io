@@ -60,7 +60,7 @@ class Profiles extends React.Component {
                                 alt={profile.name}
                                 className="profiles__card-img"
                                 style={{
-                                    backgroundPosition: pfp.position
+                                    objectPosition: pfp.position
                                 }}
                             />
                             <div className="profiles__card-content">

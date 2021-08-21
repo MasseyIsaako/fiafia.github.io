@@ -44,7 +44,7 @@
         },
         "img": {
             "slug": "lasi",
-            "position": "center"
+            "position": "center top"
         }
     },
     {
@@ -56,7 +56,7 @@
         },
         "img": {
             "slug": "freida",
-            "position": "center"
+            "position": "top center"
         }
     },
     {
@@ -103,7 +103,7 @@
             "sm": "O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa."
         },
         "img": {
-            "slug": "placeholder",
+            "slug": "taase",
             "position": "center"
         }
     },

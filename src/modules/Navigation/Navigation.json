@@ -1,10 +1,16 @@
 [
     {
-        "title": "Home",
+        "title": {
+            "en": "Home",
+            "sm": "Itulau Autū"
+        },
         "slug": "/index.html"
     },
     {
-        "title": "About Us",
+        "title": {
+            "en": "About Us",
+            "sm": "Faamatalaga Atili"
+        },
         "slug": "/about-us.html"
     }
 ]

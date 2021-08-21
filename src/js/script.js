@@ -75,3 +75,8 @@ export default instance;
 
 AnimatedHero.init();
 ParallaxImages.init();
+
+// Force user to scroll to the top on load
+window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+});

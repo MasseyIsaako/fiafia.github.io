@@ -16,6 +16,10 @@ export const getProfilePic = (img, images) => {
             images[img.slug].jpeg.length > 0
         ) {
             pfp.slug = images[img.slug].jpeg;
+        } else if (images[img.slug].jpg &&
+            images[img.slug].jpg.length > 0
+        ) {
+            pfp.slug = images[img.slug].jpg;
         } else if (images[img.slug].png &&
             images[img.slug].png.length > 0
         ) {

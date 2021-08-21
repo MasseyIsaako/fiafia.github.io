@@ -6,10 +6,18 @@ import { ReactComponent as RSVPIcon } from '../../svg/form-icon-white.svg';
 import { translator } from '../../js/utils/utils';
 
 class RSVPBanner extends React.Component {
-    constructor() {
-        super();
+    constructor (props) {
+        super(props);
 
-        this.state = { ...RSVPBannerData };
+        if (RSVPBannerData.length > 0) {
+            RSVPBannerData.forEach(data => {
+                if (data.option === this.props.option) {
+                    this.state = { ...data };
+                }
+            });
+            
+        }
+
     }
 
     getHeading () {

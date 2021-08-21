@@ -3,6 +3,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Translate from '../Translate/Translate';
 import NavigationLinks from './Navigation.json';
+import { translator } from '../../js/utils/utils';
 
 // https://greensock.com/docs/v3/GSAP/Timeline/fromTo()
 const tl = gsap.timeline();
@@ -56,12 +57,12 @@ class Navigation extends React.Component {
             links = [];
 
             NavigationLinks.forEach((item, index) => {
-                if (item.slug.length > 0 && item.title.length > 0) {
+                if (item.slug.length > 0 && item.title) {
                     const link = `${window.location.origin}${item.slug}`;
 
                     links.push(
                         <li key={index} className="nav-item">
-                            <a className="nav-link" href={link}>{item.title}</a>
+                            <a className="nav-link" href={link} dangerouslySetInnerHTML={{ __html: translator(item.title) }}></a>
                         </li>
                     );
                 }
