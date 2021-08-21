@@ -8,7 +8,7 @@ import ItemsSlider from '../modules/ItemsSlider/ItemsSlider';
 import LandingHero from '../modules/LandingHero/LandingHero';
 import Navigation from '../modules/Navigation/Navigation';
 import Profiles from '../modules/Profiles/Profiles';
-import RegisterForm from '../modules/RegisterForm/RegisterForm';
+import Form from '../modules/Form/Form';
 import RSVPBanner from '../modules/RSVPBanner/RSVPBanner';
 import Text from '../modules/Text/Text';
 import Video from '../modules/Video/Video';
@@ -57,7 +57,7 @@ class App extends ReactHabitat.Bootstrapper {
         containerBuilder.register(LandingHero).as('LandingHero');
         containerBuilder.register(Navigation).as('Navigation');
         containerBuilder.register(Profiles).as('Profiles');
-        containerBuilder.register(RegisterForm).as('RegisterForm');
+        containerBuilder.register(Form).as('Form');
         containerBuilder.register(RSVPBanner).as('RSVPBanner');
         containerBuilder.register(Text).as('Text');
         containerBuilder.register(Video).as('Video');

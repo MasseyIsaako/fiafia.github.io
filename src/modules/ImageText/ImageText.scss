@@ -5,19 +5,71 @@
     &--brown {
         background-color: $color-brown;
         color: $color-white;
+
+        .image-text__cta {
+            color: $color-brown;
+
+            &:focus,
+            &:hover {
+                background-color: $color-brown;
+
+                &::before {
+                    color: $color-white;
+                }
+            }
+
+            &::before {
+                color: $color-brown;
+            }
+        }
     }
 
     &--gold {
         background-color: $color-gold;
         color: $color-white;
+
+        .image-text__cta {
+            color: $color-gold;
+
+            &:focus,
+            &:hover {
+                background-color: $color-gold;
+
+                &::before {
+                    color: $color-white;
+                }
+            }
+
+            &::before {
+                color: $color-gold;
+            }
+        }
     }
 
     &--pink {
         background-color: $color-pink;
         color: $color-white;
+
+        .image-text__cta {
+            color: $color-pink;
+
+            &:focus,
+            &:hover {
+                background-color: $color-pink;
+
+                &::before {
+                    color: $color-white;
+                }
+            }
+
+            &::before {
+                color: $color-pink;
+            }
+        }
     }
 
     &__content {
+        align-items: flex-start;
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -35,8 +87,28 @@
     }
 
     &__paragraph {
+        a {
+            color: $color-white;
+        }
+
         @include media-breakpoint-up ('lg') {
             font-size: 22px;
+        }
+    }
+
+    &__cta {
+        background-color: $color-white;
+        border-color: $color-white;
+        color: $color-charcoal;
+        display: flex;
+
+        &:focus,
+        &:hover {
+            color: $color-white;
+        }
+
+        &::before {
+            margin-right: 10px;
         }
     }
 

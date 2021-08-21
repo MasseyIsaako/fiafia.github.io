@@ -73,6 +73,14 @@ const Image = ({ image }) => (
     </div>
 );
 
+const CTA = ({ cta }) => (
+    cta !== false &&
+    <a className={`${cta.iconClasses} btn image-text__cta`}
+        dangerouslySetInnerHTML={{ __html: translator(cta.title) }}
+        href={cta.link}
+    ></a>
+);
+
 /**
  * Consctruct the component.
  *
@@ -84,7 +92,8 @@ const ImageText = props => {
         reverse,
         heading,
         image,
-        paragraph
+        paragraph,
+        cta
     } = props;
 
     const theme = __getThemeClasses(color, reverse);
@@ -97,6 +106,7 @@ const ImageText = props => {
                         <div className="image-text__content">
                             <Heading heading={heading} />
                             <Paragraph paragraph={paragraph} />
+                            <CTA cta={cta} />
                         </div>
                     </Col>
                     <Col lg={7}>
@@ -116,18 +126,10 @@ const ImageText = props => {
 ImageText.defaultProps = {
     color: '',
     reverse: false,
-    heading: {
-        en: '',
-        sm: ''
-    },
-    image: {
-        src: '',
-        credit: '',
-    },
-    paragraph: {
-        en: '',
-        sm: ''
-    },
+    heading: {},
+    image: {},
+    paragraph: {},
+    cta: false
 };
 
 /**
@@ -141,6 +143,10 @@ ImageText.propTypes = {
     heading: PropTypes.object,
     image: PropTypes.object,
     paragraph: PropTypes.object,
+    cta: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.object
+    ]),
 };
 
 export default ImageText;

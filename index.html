@@ -38,7 +38,11 @@
                                     <span class="english">Watch the Teaser</span>
                                     <span class="samoan">Maimoa i le Vitiō</span>
                                 </button>
-                                <button type="button" class="btn btn-primary btn-lg hero__button hero__button--register register-form-open">
+                                <button
+                                    type="button"
+                                    class="btn btn-primary btn-lg hero__button hero__button--register form-open"
+                                    data-type="register"
+                                >
                                     <span class="hero__button-icon hero__button-icon--register"></span>
                                     <span class="english">RSVP</span>
                                     <span class="samoan">RSVP</span>
@@ -65,11 +69,11 @@
         <div data-component="ImageText"
             data-prop-color="gold"
             data-prop-heading="{
-                &quot;en&quot;: &quot;Hello there peoples&quot;,
-                &quot;sm&quot;: &quot;O le matua ua faaliliuina i le gagana faasamoa&quot;
+                &quot;en&quot;: &quot;Ready to submit an item?&quot;,
+                &quot;sm&quot;: &quot;Ua uma ona sauni sau item?&quot;
             }"
             data-prop-paragraph="{
-                &quot;en&quot;: &quot;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis beatae earum assumenda, quod, ratione unde commodi laudantium dicta eligendi voluptates culpa possimus! Nemo ab cum a assumenda sint inventore saepe!&quot;,
+                &quot;en&quot;: &quot;Upload your item here! Did you RSVP already? If not, please <a href='#' class='form-open'>RSVP</a> before uploading your item.&quot;,
                 &quot;sm&quot;: &quot;O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania.&quot;
             }"
             data-prop-image="{
@@ -77,6 +81,7 @@
                 &quot;credit&quot;: &quot;Photo by Gabriel Griego on Unsplash&quot;
             }"
             data-prop-reverse="true"
+            data-prop-cta="{&quot;link&quot;: &quot;https://forms.gle/rSUTwvybTmFKrknFA&quot;,&quot;title&quot;:{&quot;en&quot;: &quot;Upload item&quot;,&quot;sm&quot;: &quot;Upload item&quot;},&quot;iconClasses&quot;: &quot;fa fa-upload&quot;}"
         ></div>
         <div data-component="FaqAccordions"></div>
         <div data-component="ImageText"
@@ -94,7 +99,7 @@
                 &quot;credit&quot;: &quot;Photo by Gabriel Griego on Unsplash&quot;
             }"
         ></div>
-        <div data-component="RegisterForm"></div>
+        <div data-component="Form"></div>
         <div data-component="Video"></div>
         <div data-component="Authentication"></div>
 

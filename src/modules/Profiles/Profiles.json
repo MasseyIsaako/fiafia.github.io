@@ -8,7 +8,7 @@
         },
         "img": {
             "slug": "chise",
-            "position": "center"
+            "position": "top"
         }
     },
     {
@@ -20,7 +20,7 @@
         },
         "img": {
             "slug": "manu",
-            "position": "center"
+            "position": "top"
         }
     },
     {
@@ -39,7 +39,7 @@
         "name": "Tufulasi Isa'ako",
         "role": "MC and Zoom Event Planner",
         "blurb": {
-            "en": "Talofa lava friends! My name is Lasi and I'll be working to help facilitate the evening.",
+            "en": "Talofa lava friends! My name is Lasi and I'll be working to help facilitate the evening. Please forward all applications to Tumanu Avei lol",
             "sm": "O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa."
         },
         "img": {
@@ -68,7 +68,7 @@
         },
         "img": {
             "slug": "annie",
-            "position": "center"
+            "position": "top center"
         }
     },
     {
@@ -109,7 +109,7 @@
     },
     {
         "name": "Valasi Avei",
-        "role": "Role",
+        "role": "Communication Coordinator",
         "blurb": {
             "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis beatae earum assumenda, quod, ratione unde commodi laudantium dicta eligendi voluptates culpa possimus! Nemo ab cum a assumenda sint inventore saepe! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis beatae earum assumenda, quod, ratione unde commodi laudantium dicta eligendi voluptates culpa possimus!",
             "sm": "O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa. O le blurb ua liliuina i le faasamoa."
