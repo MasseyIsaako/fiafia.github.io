@@ -70,7 +70,7 @@ class RSVPBanner extends React.Component {
 
         return (
             <button type="button"
-                className="btn btn-primary btn-lg rsvp-banner__cta form-open"
+                className="btn btn-primary btn-lg rsvp-banner__cta rsvp-form-open"
             >
                 <span className="rsvp-banner__cta-icon">
                     { rsvpIcon }

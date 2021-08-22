@@ -8,8 +8,8 @@ import ItemsSlider from '../modules/ItemsSlider/ItemsSlider';
 import LandingHero from '../modules/LandingHero/LandingHero';
 import Navigation from '../modules/Navigation/Navigation';
 import Profiles from '../modules/Profiles/Profiles';
-import Form from '../modules/Form/Form';
 import RSVPBanner from '../modules/RSVPBanner/RSVPBanner';
+import RSVPForm from '../modules/RSVPForm/RSVPForm';
 import Text from '../modules/Text/Text';
 import Video from '../modules/Video/Video';
 
@@ -57,8 +57,8 @@ class App extends ReactHabitat.Bootstrapper {
         containerBuilder.register(LandingHero).as('LandingHero');
         containerBuilder.register(Navigation).as('Navigation');
         containerBuilder.register(Profiles).as('Profiles');
-        containerBuilder.register(Form).as('Form');
         containerBuilder.register(RSVPBanner).as('RSVPBanner');
+        containerBuilder.register(RSVPForm).as('RSVPForm');
         containerBuilder.register(Text).as('Text');
         containerBuilder.register(Video).as('Video');
 
@@ -73,10 +73,10 @@ const instance = new App();
 // Export the instance
 export default instance;
 
-AnimatedHero.init();
-ParallaxImages.init();
-
 // Force user to scroll to the top on load
 window.addEventListener('load', () => {
     window.scrollTo(0, 0);
+
+    AnimatedHero.init();
+    ParallaxImages.init();
 });

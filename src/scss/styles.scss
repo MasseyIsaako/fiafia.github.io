@@ -1,6 +1,6 @@
 // Import thirdparty scripts
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap');
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
@@ -20,8 +20,8 @@
 @import '../modules/LandingHero/LandingHero';
 @import '../modules/Navigation/Navigation';
 @import '../modules/Profiles/Profiles';
-@import '../modules/Form/Form';
 @import '../modules/RSVPBanner/RSVPBanner';
+@import '../modules/RSVPForm/RSVPForm';
 @import '../modules/Text/Text';
 @import '../modules/Translate/Translate';
 @import '../modules/Video/Video';

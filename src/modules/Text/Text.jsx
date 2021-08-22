@@ -3,14 +3,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
 import { translator } from '../../js/utils/utils';
+import TextData from './Text.json';
 
-const Heading = ({ heading }) => (
-    <h2 className="text__heading" dangerouslySetInnerHTML={{ __html: translator(heading) }}></h2>
+const Title = ({ title }) => (
+    <h2 className="text__title" dangerouslySetInnerHTML={{ __html: translator(title) }}></h2>
 );
 
 const Paragraph = ({ paragraph }) => (
     <p className="text__paragraph" dangerouslySetInnerHTML={{ __html: translator(paragraph) }}></p>
 );
+
+const __getTextContent = ({ option }) => {
+    let data = false;
+
+    TextData.forEach(item => {
+        if (item.option === option) {
+            data = item;
+        }
+    });
+
+    return data;
+};
 
 /**
  * Consctruct the component.
@@ -18,18 +31,16 @@ const Paragraph = ({ paragraph }) => (
  * @param {Object} props
  */
 const Text = props => {
-    const {
-        heading,
-        paragraph
-    } = props;
+    const data = __getTextContent(props);
 
     return (
+        data &&
         <section className="text">
             <Container>
                 <Row>
                     <Col lg={{ span: 8, offset: 2 }}>    
-                        <Heading heading={heading} />
-                        <Paragraph paragraph={paragraph} />
+                        <Title title={data.title} />
+                        <Paragraph paragraph={data.paragraph} />
                     </Col>
                 </Row>
             </Container>
@@ -43,14 +54,7 @@ const Text = props => {
  * @type {Object}
  */
 Text.defaultProps = {
-    heading: {
-        en: '',
-        sm: ''
-    },
-    paragraph: {
-        en: '',
-        sm: ''
-    }
+    option: 'test'
 };
 
 /**
@@ -59,8 +63,7 @@ Text.defaultProps = {
  * @type {Object}
  */
 Text.propTypes = {
-    heading: PropTypes.object,
-    paragraph: PropTypes.object
+    option: PropTypes.string
 };
 
 export default Text;

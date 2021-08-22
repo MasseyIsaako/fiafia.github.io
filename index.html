@@ -40,7 +40,7 @@
                                 </button>
                                 <button
                                     type="button"
-                                    class="btn btn-primary btn-lg hero__button hero__button--register form-open"
+                                    class="btn btn-primary btn-lg hero__button hero__button--register rsvp-form-open"
                                     data-type="register"
                                 >
                                     <span class="hero__button-icon hero__button-icon--register"></span>
@@ -54,54 +54,19 @@
             </div>
             <button class="hero__down"></button>
         </section>
-        <div data-component="Text"
-            data-prop-heading="{
-                &quot;en&quot;: &quot;Mark 6:31&quot;,
-                &quot;sm&quot;: &quot;Mareko 6:31&quot;
-            }"
-            data-prop-paragraph="{
-                &quot;en&quot;: &quot;“Come, you yourselves, privately into an isolated place and rest up a little.”&quot;,
-                &quot;sm&quot;: &quot;“Seʻi o tatou ō na o i tatou i se mea tuufua ma fai ai sina mālōlōga.”&quot;
-            }"
-        ></div>
+        <div data-component="Text" data-prop-option="scripture"></div>
         <div data-component="RSVPBanner" data-prop-option="home"></div>
         <div data-component="ItemsSlider"></div>
-        <div data-component="ImageText"
-            data-prop-color="gold"
-            data-prop-heading="{
-                &quot;en&quot;: &quot;Ready to submit an item?&quot;,
-                &quot;sm&quot;: &quot;Ua uma ona sauni sau item?&quot;
-            }"
-            data-prop-paragraph="{
-                &quot;en&quot;: &quot;Upload your item here! Did you RSVP already? If not, please <a href='#' class='form-open'>RSVP</a> before uploading your item.&quot;,
-                &quot;sm&quot;: &quot;O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania.&quot;
-            }"
-            data-prop-image="{
-                &quot;src&quot;: &quot;https://images.unsplash.com/photo-1585834406350-744aaeaf491c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1481&q=80&quot;,
-                &quot;credit&quot;: &quot;Photo by Gabriel Griego on Unsplash&quot;
-            }"
-            data-prop-reverse="true"
-            data-prop-cta="{&quot;link&quot;: &quot;https://forms.gle/rSUTwvybTmFKrknFA&quot;,&quot;title&quot;:{&quot;en&quot;: &quot;Upload item&quot;,&quot;sm&quot;: &quot;Upload item&quot;},&quot;iconClasses&quot;: &quot;fa fa-upload&quot;}"
-        ></div>
+        <div data-component="ImageText" data-prop-option="submit"></div>
         <div data-component="FaqAccordions"></div>
-        <div data-component="ImageText"
-            data-prop-color="pink"
-            data-prop-heading="{
-                &quot;en&quot;: &quot;Hello there peoples&quot;,
-                &quot;sm&quot;: &quot;O le matua ua faaliliuina i le gagana faasamoa&quot;
-            }"
-            data-prop-paragraph="{
-                &quot;en&quot;: &quot;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis beatae earum assumenda, quod, ratione unde commodi laudantium dicta eligendi voluptates culpa possimus! Nemo ab cum a assumenda sint inventore saepe!&quot;,
-                &quot;sm&quot;: &quot;O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania.&quot;
-            }"
-            data-prop-image="{
-                &quot;src&quot;: &quot;https://images.unsplash.com/photo-1539470090907-7cc242c37af5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80&quot;,
-                &quot;credit&quot;: &quot;Photo by Gabriel Griego on Unsplash&quot;
-            }"
-        ></div>
-        <div data-component="Form"></div>
+        <div data-component="ImageText" data-prop-option="test"></div>
+        <div data-component="RSVPForm"></div>
         <div data-component="Video"></div>
         <div data-component="Authentication"></div>
+        <div class="container" id="ff-compose"></div>
+        <script async defer
+            src="https://formfacade.com/include/107715893633229583315/form/1FAIpQLSeonv0ii6ScYc63mDI88NYHOKVDJgUpURX-w65f10N39JH8Ew/bootstrap.js?div=ff-compose"
+        ></script>
 
         <!-- Footer scripts -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

@@ -3,21 +3,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
 import { translator } from '../../js/utils/utils.js';
+import ImageTextData from './ImageText.json';
 
-// Only allow the below color options.
-const COLORS = [
-    'gold',
-    'brown',
-    'pink'
-];
-
-/**
- * Get the base theme for the component.
- * 
- * @param {string} color The theme color for the component
- * 
- * @returns {string}
- */
 const __getThemeClasses = (color, reverse) => {
     let themeClasses = {
         wrapper: 'image-text',
@@ -36,39 +23,32 @@ const __getThemeClasses = (color, reverse) => {
     return themeClasses;
 };
 
-/**
- * Create the heading component for the image text.
- * 
- * @param {string} heading 
- * 
- * @returns {jsx}
- */
-const Heading = ({ heading }) => (
-    <h2 className="image-text__heading" dangerouslySetInnerHTML={{ __html: translator(heading) }}></h2>
+const __getImageTextContent = option => {
+    let data = false;
+
+    if (ImageTextData.length > 0) {
+        ImageTextData.forEach(item => {
+            if (item.option === option) {
+                data = item;
+            }
+        });
+    }
+
+    return data;
+};
+
+const Title = ({ title }) => (
+    <h2 className="image-text__title" dangerouslySetInnerHTML={{ __html: translator(title) }}></h2>
 );
 
-/**
- * Create the paragraph component for the image text.
- * 
- * @param {string} paragraph 
- * 
- * @returns {jsx}
- */
 const Paragraph = ({ paragraph }) => (
     <p className="image-text__paragraph" dangerouslySetInnerHTML={{ __html: translator(paragraph) }}></p>
 );
 
-/**
- * Create the image component for the image text.
- *
- * @param {string} image
- *
- * @returns {jsx}
- */
 const Image = ({ image }) => (
     <div className="image-text__image">
         <div className="image-text__image-inner">
-            <img src={image.src} alt={image.credit} />
+            <img src={image} alt="" />
         </div>
     </div>
 );
@@ -81,21 +61,15 @@ const CTA = ({ cta }) => (
     ></a>
 );
 
-/**
- * Consctruct the component.
- *
- * @param {Object} props
- */
 const ImageText = props => {
     const {
         color,
-        reverse,
-        heading,
+        cta,
         image,
         paragraph,
-        cta
-    } = props;
-
+        reverse,
+        title
+    } = __getImageTextContent(props.option);
     const theme = __getThemeClasses(color, reverse);
 
     return (
@@ -104,7 +78,7 @@ const ImageText = props => {
                 <Row className={theme.row}>
                     <Col lg={5}>
                         <div className="image-text__content">
-                            <Heading heading={heading} />
+                            <Title title={title} />
                             <Paragraph paragraph={paragraph} />
                             <CTA cta={cta} />
                         </div>
@@ -124,12 +98,7 @@ const ImageText = props => {
  * @type {Object}
  */
 ImageText.defaultProps = {
-    color: '',
-    reverse: false,
-    heading: {},
-    image: {},
-    paragraph: {},
-    cta: false
+    option: 'test'
 };
 
 /**
@@ -138,15 +107,7 @@ ImageText.defaultProps = {
  * @type {Object}
  */
 ImageText.propTypes = {
-    color: PropTypes.oneOf(COLORS),
-    reverse: PropTypes.bool,
-    heading: PropTypes.object,
-    image: PropTypes.object,
-    paragraph: PropTypes.object,
-    cta: PropTypes.oneOfType([
-        PropTypes.bool,
-        PropTypes.object
-    ]),
+    option: PropTypes.string
 };
 
 export default ImageText;

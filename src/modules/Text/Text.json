@@ -1,0 +1,35 @@
+[
+    {
+        "option": "test",
+        "title": {
+            "en": "Heading",
+            "sm": "Matua"
+        },
+        "paragraph": {
+            "en": "Bacon ipsum dolor amet boudin chislic prosciutto pig strip steak pastrami hamburger landjaeger.  Sirloin meatloaf spare ribs t-bone ham beef ribs.  Kielbasa chuck bacon, shoulder burgdoggen tenderloin tri-tip filet mignon.  Biltong sausage chuck, spare ribs fatback venison hamburger.",
+            "sm": "O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa."
+        }
+    },
+    {
+        "option": "scripture",
+        "title": {
+            "en": "MARK 6:31",
+            "sm": "Mareko 6:31"
+        },
+        "paragraph": {
+            "en": "\"Come, you yourselves, privately into an isolated place and rest up a little.\"",
+            "sm": "\"Seʻi o tatou ō na o i tatou i se mea tuufua ma fai ai sina mālōlōga.\""
+        }
+    },
+    {
+        "option": "aboutus",
+        "title": {
+            "en": "The Night Before Productions",
+            "sm": "The Night Before Productions"
+        },
+        "paragraph": {
+            "en": "Bacon ipsum dolor amet boudin chislic prosciutto pig strip steak pastrami hamburger landjaeger.  Sirloin meatloaf spare ribs t-bone ham beef ribs.  Kielbasa chuck bacon, shoulder burgdoggen tenderloin tri-tip filet mignon.  ",
+            "sm": "O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa. O le gagana faasamoa."
+        }
+    }
+]

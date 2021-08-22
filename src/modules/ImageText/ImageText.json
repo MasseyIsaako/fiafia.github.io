@@ -1,0 +1,39 @@
+[
+    {
+        "option": "test",
+        "color": "pink",
+        "title": {
+            "en": "Title",
+            "sm": "Matua"
+        },
+        "paragraph": {
+            "en": "Bacon ipsum dolor amet short ribs ribeye swine cow buffalo spare ribs picanha.  Chicken pastrami beef, pork ham hock drumstick pork loin.",
+            "sm": "O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania."
+        },
+        "image": "https://images.unsplash.com/photo-1539470090907-7cc242c37af5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80",
+        "reverse": false,
+        "cta": false
+    },
+    {
+        "option": "submit",
+        "color": "gold",
+        "title": {
+            "en": "Ready to submit an item?",
+            "sm": "Ua uma ona sauni sau item?"
+        },
+        "paragraph": {
+            "en": "Upload your item here! Did you RSVP already? If not, please <a href='#' class='rsvp-form-open'>RSVP</a> before uploading your item.",
+            "sm": "O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania."
+        },
+        "image": "https://images.unsplash.com/photo-1585834406350-744aaeaf491c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1481&q=80",
+        "reverse": true,
+        "cta": {
+            "link": "https://forms.gle/rSUTwvybTmFKrknFA",
+            "title": {
+                "en": "Upload item",
+                "sm": "Upload item"
+            },
+            "iconClasses": "fa fa-upload"
+        }
+    }
+]

@@ -5,7 +5,7 @@ const tl = gsap.timeline();
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 
-class Form extends React.Component {
+class RSVPForm extends React.Component {
     constructor () {
         super();
     }
@@ -43,10 +43,10 @@ class Form extends React.Component {
 
     componentDidMount () {
         window.addEventListener('load', () => {
-            const close = document.querySelector('.form__close');
-            const form = document.querySelector('.form');
+            const close = document.querySelector('.rsvp-form__close');
+            const form = document.querySelector('.rsvp-form');
             const openButtons = Array.from(
-                document.querySelectorAll('.form-open')
+                document.querySelectorAll('.rsvp-form-open')
             );
 
             if (close instanceof HTMLElement &&
@@ -60,15 +60,15 @@ class Form extends React.Component {
 
     render() {
         return (
-            <section className="form">
+            <section className="rsvp-form">
                 <Container>
                     <Row>
                         <Col sm={12} className="d-flex justify-content-end">
-                            <span className="form__close"></span>
+                            <span className="rsvp-form__close"></span>
                         </Col>
                         <Col sm={12}>
-                            <div className="form__inner">
-                                <iframe className="form__iframe"
+                            <div className="rsvp-form__inner">
+                                <iframe className="rsvp-form__iframe"
                                     src="https://docs.google.com/forms/d/e/1FAIpQLSe_XAwoG9v5JDc2LhtkFIeS0W2CfoJGZQcT6Gqv1Ygf9ewUsg/viewform?embedded=true"
                                     frameBorder="0"
                                     marginHeight="0"
@@ -83,4 +83,4 @@ class Form extends React.Component {
     }
 };
 
-export default Form;
+export default RSVPForm;
