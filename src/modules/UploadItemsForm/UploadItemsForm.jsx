@@ -19,22 +19,24 @@ class UploadItemsForm extends React.Component {
         document.body.appendChild(s);
     }
 
-    toggleWindowScroll (e) {
+    toggleWindowScroll () {
         const body = document.querySelector('body');
 
         body.classList.toggle('upload-items-form-active');
     }
 
-    toggleUploadForm (e) {
-        if (e.target.classList.contains('upload-items-form-open') ||
-            e.target.parentNode.classList.contains('upload-items-form-open') ||
-            e.target.classList.contains('upload-items-form-close')
+    toggleUploadForm (action) {
+        console.log(action);
+        if (action === 'toggle' ||
+            action.target.classList.contains('upload-items-form-open') ||
+            action.target.parentNode.classList.contains('upload-items-form-open') ||
+            action.target.classList.contains('upload-items-form-close')
         ) {
             this.setState({
                 active: !this.state.active
             });
 
-            this.toggleWindowScroll(e);
+            this.toggleWindowScroll();
         }
     }
 
@@ -57,7 +59,7 @@ class UploadItemsForm extends React.Component {
     }
 
     openForm () {
-        console.log('here');
+        this.toggleUploadForm('toggle');
         window.open(UploadItemsFormData.btn.link);
     }
 
@@ -94,7 +96,8 @@ class UploadItemsForm extends React.Component {
                                     }}
                                     onClick={() => { this.openForm(); }}
                                 ></button>
-                                <button className="btn btn-lg upload-items-form-close upload-items-form__btn upload-items-form__btn--no"
+                                <button className="btn btn-lg upload-items-form__btn upload-items-form__btn--no"
+                                    onClick={() => { this.toggleUploadForm('toggle'); }}
                                     dangerouslySetInnerHTML={{
                                         __html: translator(UploadItemsFormData.btn.no)
                                     }}

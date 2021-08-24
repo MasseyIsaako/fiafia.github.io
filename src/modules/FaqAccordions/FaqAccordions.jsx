@@ -139,7 +139,7 @@ class FaqAccordions extends React.Component {
                         <Col sm={12}>
                             { heading }
                         </Col>
-                        <Col sm={12} md={{ span: 8, offset: 2}}>
+                        <Col sm={12}>
                             <div className="faq-accordion">
                                 { accordions }
                             </div>
