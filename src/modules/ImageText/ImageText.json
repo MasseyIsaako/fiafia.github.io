@@ -33,7 +33,7 @@
                 "en": "Upload item",
                 "sm": "Upload item"
             },
-            "iconClasses": "fa fa-upload"
+            "buttonClasses": "fa fa-upload upload-items-form-open"
         }
     }
 ]

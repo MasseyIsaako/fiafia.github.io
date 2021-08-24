@@ -55,7 +55,7 @@ const Image = ({ image }) => (
 
 const CTA = ({ cta }) => (
     cta !== false &&
-    <a className={`${cta.iconClasses} btn image-text__cta`}
+    <a className={`${cta.buttonClasses} btn image-text__cta`}
         dangerouslySetInnerHTML={{ __html: translator(cta.title) }}
         href={cta.link}
     ></a>

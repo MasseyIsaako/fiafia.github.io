@@ -11,6 +11,7 @@ import Profiles from '../modules/Profiles/Profiles';
 import RSVPBanner from '../modules/RSVPBanner/RSVPBanner';
 import RSVPForm from '../modules/RSVPForm/RSVPForm';
 import Text from '../modules/Text/Text';
+import UploadItemsForm from '../modules/UploadItemsForm/UploadItemsForm';
 import Video from '../modules/Video/Video';
 
 // Vanilla components
@@ -60,6 +61,7 @@ class App extends ReactHabitat.Bootstrapper {
         containerBuilder.register(RSVPBanner).as('RSVPBanner');
         containerBuilder.register(RSVPForm).as('RSVPForm');
         containerBuilder.register(Text).as('Text');
+        containerBuilder.register(UploadItemsForm).as('UploadItemsForm');
         containerBuilder.register(Video).as('Video');
 
         // Set the DOM container
