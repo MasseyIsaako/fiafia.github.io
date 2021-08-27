@@ -40,10 +40,12 @@ class ItemsSlider extends React.Component {
             <section className="items-slider">
                 <Container>
                     <Row>
-                        <Col sm={12}>
+                        <Col lg={{ span: 8, offset: 2 }}>
                             {heading}
                             {intro}
                         </Col>
+                    </Row>
+                    <Row>
                         <Col sm={12}>
                             <Slider slides={this.state.slides} />
                         </Col>

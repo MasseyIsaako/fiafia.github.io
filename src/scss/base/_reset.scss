@@ -1,7 +1,13 @@
 * {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    font-size: 18px;
     font-weight: $font-weight-light;
+}
+
+i,
+strong {
+    font-size: inherit;
 }
 
 html,

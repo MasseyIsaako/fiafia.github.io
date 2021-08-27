@@ -38,7 +38,7 @@ const Text = props => {
         <section className="text">
             <Container>
                 <Row>
-                    <Col lg={{ span: 8, offset: 2 }}>    
+                    <Col lg={{ span: 8, offset: 2 }}>
                         <Title title={data.title} />
                         <Paragraph paragraph={data.paragraph} />
                     </Col>

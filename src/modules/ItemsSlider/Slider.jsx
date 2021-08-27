@@ -28,8 +28,9 @@ class Slider extends React.Component {
                         <div className="items-slider__slide-inner video-button" data-src={data.video}>
                             <div
                                 className="items-slider__slide-image"
-                                style={{ backgroundImage: `url(${data.image})` }}
+                                style={{ backgroundImage: `url(${data.image.src})` }}
                                 role="img"
+                                aria-label={data.image.alt}
                             ><i className="items-slider__slide-play"></i></div>
                             <div className="items-slider__slide-content">
                                 <p className="items-slider__slide-heading" dangerouslySetInnerHTML={{ __html: translator(data.title) }}></p>

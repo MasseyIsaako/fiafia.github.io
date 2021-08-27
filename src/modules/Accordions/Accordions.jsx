@@ -1,14 +1,22 @@
 // Import dependencies
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import FaqAccordionsData from './FaqAccordions.json';
+import AccordionsData from './Accordions.json';
 import { translator } from '../../js/utils/utils.js';
+import PropTypes from 'prop-types';
+import { data } from 'jquery';
 
-class FaqAccordions extends React.Component {
-    constructor () {
-        super();
+class Accordions extends React.Component {
+    constructor (props) {
+        super(props);
 
-        this.state = { ...FaqAccordionsData };
+        if (AccordionsData.length > 0) {
+            AccordionsData.forEach(data => {
+                if (this.props.option === data.option) {
+                    this.state = { ...data };
+                }
+            });
+        }
     }
 
     openAccordion (accordion, timing) {
@@ -50,7 +58,7 @@ class FaqAccordions extends React.Component {
         if (e.type === 'click' ||
             (e.type === 'keydown' && e.key === 'Enter')
         ) {
-            const srcElement = !e.target.classList.contains('faq-accordion__link') ?
+            const srcElement = !e.target.classList.contains('accordion__link') ?
                 e.target.parentNode :
                 e.target
             ;
@@ -83,14 +91,14 @@ class FaqAccordions extends React.Component {
 
     getHeading (heading) {
         return (
-            <h2 className="faq__heading" dangerouslySetInnerHTML={{ __html: translator(heading) }}></h2>
+            <h2 className="accordions__heading" dangerouslySetInnerHTML={{ __html: translator(heading) }}></h2>
         );
     }
 
     getQuestion ({ en, sm }, index) {
         return (
-            <button className="faq-accordion__link" onClick={e => { this.toggleAccordion(e) }}>
-                <span className="faq-accordion__number">{index + 1}</span>
+            <button className="accordion__link" onClick={e => { this.toggleAccordion(e) }}>
+                <span className="accordion__number">{index + 1}</span>
                 <span className="english">{en}</span>
                 <span className="samoan">{sm}</span>
             </button>
@@ -99,7 +107,7 @@ class FaqAccordions extends React.Component {
 
     getAnswer (answer) {
         return (
-            <div className="faq-accordion__content" dangerouslySetInnerHTML={{ __html: translator(answer) }}></div>
+            <div className="accordion__content" dangerouslySetInnerHTML={{ __html: translator(answer) }}></div>
         );
     }
 
@@ -114,9 +122,9 @@ class FaqAccordions extends React.Component {
                 const answer = this.getAnswer(accordion.answer);
 
                 accordions.push(
-                    <article className="faq-accordion__item" key={index}>
-                        <div className="faq-accordion__item-header">{question}</div>
-                        <div className="faq-accordion__target"
+                    <article className="accordion__item" key={index}>
+                        <div className="accordion__item-header">{question}</div>
+                        <div className="accordion__target"
                             aria-hidden="true"
                             aria-expanded="false"
                         >{answer}</div>
@@ -133,14 +141,14 @@ class FaqAccordions extends React.Component {
         const heading = this.getHeading(this.state.heading);
 
         return (
-            <section className="faq">
+            <section className="accordions">
                 <Container>
                     <Row>
                         <Col sm={12}>
                             { heading }
                         </Col>
                         <Col sm={12}>
-                            <div className="faq-accordion">
+                            <div className="accordion">
                                 { accordions }
                             </div>
                         </Col>
@@ -151,4 +159,22 @@ class FaqAccordions extends React.Component {
     }
 }
 
-export default FaqAccordions;
+/**
+ * Defining the default props for the component.
+ *
+ * @type {Object}
+ */
+Accordions.defaultProps = {
+    option: 'test'
+};
+
+/**
+ * Define the prop property types.
+ *
+ * @type {Object}
+ */
+Accordions.propTypes = {
+    option: PropTypes.string
+};
+
+export default Accordions;

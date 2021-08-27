@@ -1,8 +1,8 @@
 import ReactHabitat from 'react-habitat';
 
 // React components
+import Accordions from '../modules/Accordions/Accordions';
 import Authentication from '../modules/Authentication/Authentication';
-import FaqAccordions from '../modules/FaqAccordions/FaqAccordions';
 import ImageText from '../modules/ImageText/ImageText';
 import ItemsSlider from '../modules/ItemsSlider/ItemsSlider';
 import LandingHero from '../modules/LandingHero/LandingHero';
@@ -51,8 +51,8 @@ class App extends ReactHabitat.Bootstrapper {
         const containerBuilder = new ReactHabitat.ContainerBuilder();
 
         // Register our components that we want to expose to the DOM
+        containerBuilder.register(Accordions).as('Accordions');
         containerBuilder.register(Authentication).as('Authentication');
-        containerBuilder.register(FaqAccordions).as('FaqAccordions');
         containerBuilder.register(ImageText).as('ImageText');
         containerBuilder.register(ItemsSlider).as('ItemsSlider');
         containerBuilder.register(LandingHero).as('LandingHero');

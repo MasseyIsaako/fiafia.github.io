@@ -5,9 +5,10 @@ The dist folder git code was found here: https://gist.github.com/joshuapekera/ef
 
 ### Stage
 `git checkout master && git branch -D env/stage && git checkout -b env/stage && npm run build && git add -f dist && git commit -m "env/stage: Deploying assets to stage." && git subtree push --prefix dist origin env/stage`
-Prior to running this script, we need to delete env/stage branch.
 
+Prior to running this script, we need to delete env/stage branch.
 
 ### Prod:
 `git checkout master && git branch -D env/prod && git checkout -b env/prod && npm run build && git add -f dist && git commit -m "env/prod: Deploying assets to prod." && git subtree push --prefix dist origin env/prod"`
+
 Prior to running this script, we need to delete env/prod branch.

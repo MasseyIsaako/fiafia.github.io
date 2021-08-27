@@ -1,0 +1,100 @@
+[
+    {
+        "option": "test",
+        "heading": {
+            "en": "Frequently Asked Questions",
+            "sm": "Test"
+        },
+        "accordions": [
+            {
+                "question": {
+                    "en": "In what orientation should the camera be in? Landscape or portait?",
+                    "sm": "Se fesili matagofie lava"
+                },
+                "answer": {
+                    "en": "<p>Please shoot your item in landscape orientation, rather than portait. This will ensure that the entire width of the screen is filled with video.</p>",
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                }
+            },
+            {
+                "question": {
+                    "en": "What resolution should my video be?",
+                    "sm": "Se fesili matagofie lava"
+                },
+                "answer": {
+                    "en": "<p>We would greatly appreciate that videos are between 720 to 1080 in resolutions. Videos that are shot in 4k may be too large to be streamed over Zoom.</p>",
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                }
+            },
+            {
+                "question": {
+                    "en": "How many items can I provide and how long can an item be?",
+                    "sm": "Se fesili matagofie lava"
+                },
+                "answer": {
+                    "en": "<p>Please provide one item and make sure it is at a maximum length of 5 minutes.</p>",
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                }
+            },
+            {
+                "question": {
+                    "en": "Is there a cutoff date for items to be submitted?",
+                    "sm": "Se fesili matagofie lava"
+                },
+                "answer": {
+                    "en": "<p>Yes there is! The cutoff date for items to be submitted is <strong>## September 2021</strong>.</p>",
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                }
+            },
+            {
+                "question": {
+                    "en": "Will my item be shown on the night of the fiafia?",
+                    "sm": "Se fesili matagofie lava"
+                },
+                "answer": {
+                    "en": "<p>We expect to receive a lot of items for the night! Many brothers and sisters will contribute to the evening, so we may not be able to showcase your item. However, should this discourage you from sending through your video? Not at all! Please send us your item!</p>",
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                }
+            }
+        ]
+    },
+    {
+        "option": "faq",
+        "heading": {
+            "en": "Frequently Asked Questions",
+            "sm": "Fesili e Masani Ona Lāgā"
+        },
+        "accordions": [
+            {
+                "question": {
+                    "en": "A frequently asked question?",
+                    "sm": "Se fesili matagofie lava"
+                },
+                "answer": {
+                    "en": "<p>Lorem ipsum Culpa aliquip dolor aliquip laboris Ut ea laboris consequat sit incididunt proident proident voluptate est elit labore Ut id cillum et irure.</p>",
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                }
+            },
+            {
+                "question": {
+                    "en": "A frequently asked question?",
+                    "sm": "Se fesili matagofie lava"
+                },
+                "answer": {
+                    "en": "<p>Lorem ipsum Culpa aliquip dolor aliquip laboris Ut ea laboris consequat sit incididunt proident proident voluptate est elit labore Ut id cillum et irure.</p>",
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                }
+            },
+            {
+                "question": {
+                    "en": "A frequently asked question?",
+                    "sm": "Se fesili matagofie lava"
+                },
+                "answer": {
+                    "en": "<p>Lorem ipsum Culpa aliquip dolor aliquip laboris Ut ea laboris consequat sit incididunt proident proident voluptate est elit labore Ut id cillum et irure.</p>",
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                }
+            }
+        ]
+    }
+]

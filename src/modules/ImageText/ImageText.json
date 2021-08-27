@@ -18,11 +18,11 @@
         "option": "submit",
         "color": "gold",
         "title": {
-            "en": "Ready to submit an item?",
+            "en": "Ready to contribute?",
             "sm": "Ua uma ona sauni sau item?"
         },
         "paragraph": {
-            "en": "Upload your item here! Did you RSVP already? If not, please <a href='#' class='rsvp-form-open'>RSVP</a> before uploading your item.",
+            "en": "Upload your item here! Please <a href='#' class='rsvp-form-open'>RSVP</a> before uploading your item. We will be reviewing all items, prior the to night of the fiafia.",
             "sm": "O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania."
         },
         "image": "https://images.unsplash.com/photo-1585834406350-744aaeaf491c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1481&q=80",
@@ -35,5 +35,20 @@
             },
             "buttonClasses": "fa fa-upload upload-items-form-open"
         }
+    },
+    {
+        "option": "fiafiaDef",
+        "color": "pink",
+        "title": {
+            "en": "What is a <i>fiafia</i>?",
+            "sm": "Matua"
+        },
+        "paragraph": {
+            "en": "The word <i>fiafia</i> is derived from the Samoan language, which means happy or happiness. A fiafia night means an evening of entertainment!",
+            "sm": "O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania."
+        },
+        "image": "https://images.unsplash.com/photo-1539470090907-7cc242c37af5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80",
+        "reverse": false,
+        "cta": false
     }
 ]

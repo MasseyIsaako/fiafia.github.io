@@ -41,16 +41,7 @@ class RSVPForm extends React.Component {
         });
     }
 
-    injectFormFacade () {
-        const s = document.createElement('script');
-        s.setAttribute("src", "https://formfacade.com/include/107715893633229583315/form/1FAIpQLSe_XAwoG9v5JDc2LhtkFIeS0W2CfoJGZQcT6Gqv1Ygf9ewUsg/bootstrap.js?div=rsvp-form-iframe");
-
-        document.body.appendChild(s);
-    }
-
     componentDidMount () {
-        this.injectFormFacade();
-
         window.addEventListener('load', () => {
             const close = document.querySelector('.rsvp-form__close');
             const form = document.querySelector('.rsvp-form');
@@ -72,12 +63,17 @@ class RSVPForm extends React.Component {
             <section className="rsvp-form">
                 <Container>
                     <Row>
-                        <Col sm={12} md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }} className="d-flex justify-content-end">
+                        <Col sm={12} className="d-flex justify-content-end">
                             <span className="rsvp-form__close"></span>
                         </Col>
                         <Col sm={12} md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
                             <div className="rsvp-form__inner">
-                                <div className="rsvp-form__iframe" id="rsvp-form-iframe"></div>
+                                <iframe
+                                    className="rsvp-form__iframe"
+                                    src="https://docs.google.com/forms/d/e/1FAIpQLSe_XAwoG9v5JDc2LhtkFIeS0W2CfoJGZQcT6Gqv1Ygf9ewUsg/viewform?embedded=true"
+                                    frameBorder="0"
+                                    title="RSVP Form"
+                                ></iframe>
                             </div>
                         </Col>
                     </Row>

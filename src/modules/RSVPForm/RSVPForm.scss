@@ -59,42 +59,8 @@
         }
     }
 
-    .ff-alert {
-        display: none;
-    }
-
-    .ff-form {
-        margin: 0;
-        max-width: none;
-    }
-
-    .ff-title {
-        color: $color-pink;
-    }
-
-    .ff-submit {
-        background-color: $color-pink;
-        border-color: $color-pink;
-        color: $color-white;
-        font-size: 16px;
-        margin-right: 10px;
-        
-        &:focus,
-        &:hover {
-            background-color: $color-white;
-            color: $color-pink;
-        }
-
-        &--no {
-            background-color: $color-white;
-            color: $color-pink;
-            margin-right: 0;
-
-            &:focus,
-            &:hover {
-                background-color: $color-pink;
-                color: $color-white;
-            }
-        }
+    &__iframe {
+        min-height: calc(100vh - 100px);
+        width: 100%;
     }
 }

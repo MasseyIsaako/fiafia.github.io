@@ -37,6 +37,7 @@ class RSVPBanner extends React.Component {
             <div className="rsvp-banner__image"
                 style={{ backgroundImage: `url('${this.state.img.src}')` }}
                 aria-label={this.state.img.alt}
+                role="img"
             ></div>
         );
     }

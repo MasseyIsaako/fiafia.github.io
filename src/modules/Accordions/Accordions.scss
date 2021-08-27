@@ -1,4 +1,4 @@
-.faq {
+.accordions {
     padding: 200px 0;
 
     &__heading {
@@ -14,7 +14,7 @@
     }
 }
 
-.faq-accordion {
+.accordion {
     padding: 15px 0;
 
     &__header {
@@ -49,7 +49,7 @@
         border: none;
         color: $color-charcoal;
         display: flex;
-        font-size: 16px;
+        font-size: 18px;
         padding: 15px 0;
         position: relative;
         text-align: left;
@@ -76,7 +76,7 @@
         }
 
         @include media-breakpoint-up ('md') {
-            font-size: 18px;
+            font-size: 20px;
         }
     }
 
@@ -109,7 +109,11 @@
     }
 
     &__content {
-        font-size: 16px;
+        font-size: 18px;
         padding: 0 30px 30px;
+
+        @include media-breakpoint-up ('md') {
+            font-size: 20px;
+        }
     }
 }
