@@ -1,9 +1,9 @@
 export const translator = ({ en, sm }) => (`
-    <span class="english">${en}</span>
-    <span class="samoan">${sm}</span>
+    <span class="english" data-lang="english" aria-hidden="true">${en}</span>
+    <span class="samoan" data-lang="samoan" aria-hidden="true">${sm}</span>
 `);
 
-export const getProfilePic = (img, images) => {
+export const getPic = (img, images) => {
     let pfp = false;
 
     if (images[img.slug]) {

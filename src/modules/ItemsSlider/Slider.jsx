@@ -2,7 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Glide from '@glidejs/glide';
-import { translator } from '../../js/utils/utils';
+import { translator, getPic } from '../../js/utils/utils';
+import ItemSlideImages from '../../images/ItemSlides/*.*';
 
 /**
  * Create the component.
@@ -23,12 +24,14 @@ class Slider extends React.Component {
             slides = [];
 
             this.props.slides.forEach((data, index) => {
+                const image = getPic(data.image, ItemSlideImages);
+
                 slides.push(
                     <li className="glide__slide" key={index}>
-                        <div className="items-slider__slide-inner video-button" data-src={data.video}>
+                        <div className="items-slider__slide-inner video-button" data-src={`${data.video}?rel=0`}>
                             <div
                                 className="items-slider__slide-image"
-                                style={{ backgroundImage: `url(${data.image.src})` }}
+                                style={{ backgroundImage: `url(${image.slug})` }}
                                 role="img"
                                 aria-label={data.image.alt}
                             ><i className="items-slider__slide-play"></i></div>

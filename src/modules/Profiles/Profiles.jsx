@@ -4,7 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import ProfileImages from '../../images/Profiles/*.*';
 import ProfilesData from './Profiles.json';
 import ProfilePopup from './ProfilePopup';
-import { getProfilePic } from '../../js/utils/utils';
+import { getPic } from '../../js/utils/utils';
 
 class Profiles extends React.Component {
     constructor () {
@@ -38,7 +38,7 @@ class Profiles extends React.Component {
             cards = [];
 
             orderedProfiles.forEach((profile, i) => {
-                const pfp = getProfilePic(profile.img, ProfileImages);
+                const pfp = getPic(profile.img, ProfileImages);
                 const colProps = {
                     sm: 12,
                     md: 6,

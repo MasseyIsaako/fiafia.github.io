@@ -24,30 +24,6 @@
         width: 100%;
     }
 
-    &__loader {
-        display: block;
-        height: 80px;
-        margin-top: 20%;
-        position: relative;
-        transform: rotate(45deg);
-        width: 80px;
-
-        &::before,
-        &::after {
-            animation: video-loader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-            border: 4px solid $color-white;
-            border-radius: 50%;
-            content: '';
-            display: block;
-            opacity: 1;
-            position: absolute;
-        }
-
-        &::after {
-            animation-delay: -0.5s;
-        }
-    }
-
     &__iframe {
         height: 100%;
         left: 0;

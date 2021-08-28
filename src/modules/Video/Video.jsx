@@ -96,7 +96,6 @@ class Video extends React.Component {
                         <Col sm={12}>
                             <div className="video__wrapper">
                                 <div className="video__inner">
-                                    <div className="video__loader"></div>
                                     <iframe className="video__iframe"
                                         title="YouTube video player"
                                         frameBorder="0"

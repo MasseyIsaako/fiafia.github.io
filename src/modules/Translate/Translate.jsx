@@ -31,8 +31,19 @@ class Translate extends React.Component {
      */
     setLang (lang) {
         const body = document.querySelector('body');
+        const langSpans = document.querySelectorAll(`[data-lang]`);
 
         body.classList = lang;
+
+        if (langSpans.length > 0) {
+            langSpans.forEach(span => {
+                if (span.dataset.lang === lang) {
+                    span.setAttribute('aria-hidden', false);
+                } else {
+                    span.setAttribute('aria-hidden', true);
+                }
+            });
+        }
     };
 
     /**
@@ -54,22 +65,24 @@ class Translate extends React.Component {
      * Component has mounted in the DOM.
      */
     componentDidMount () {
-        const localStorage = window.localStorage;
-        const defaultLang = localStorage.getItem('defaultLang');
-
-        if (defaultLang && defaultLang.length > 0) {
-            this.setLang(defaultLang);
-        } else {
-            localStorage.setItem('defaultLang', 'lang-en');
-        }
-
-        window.addEventListener('click', e => {
-            if (!e.target.classList.contains('translate')) {
-                const dropdown = document.querySelector('.translate__dropdown');
-
-                dropdown.classList.remove('translate__dropdown--active');
+        // window.addEventListener('load', () => {
+            const localStorage = window.localStorage;
+            const defaultLang = localStorage.getItem('defaultLang');
+    
+            if (defaultLang && defaultLang.length > 0) {
+                this.setLang(defaultLang);
+            } else {
+                localStorage.setItem('defaultLang', 'english');
             }
-        })
+    
+            window.addEventListener('click', e => {
+                if (!e.target.classList.contains('translate')) {
+                    const dropdown = document.querySelector('.translate__dropdown');
+    
+                    dropdown.classList.remove('translate__dropdown--active');
+                }
+            });
+        // })
     }
 
     render () {
@@ -87,8 +100,8 @@ class Translate extends React.Component {
                         <span className="sr-only">Select a language</span>
                     </button>
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <span className="dropdown-item" data-lang="lang-en" onClick={e => (this.toggleLanguage(e, localStorage))}>English</span>
-                        <span className="dropdown-item" data-lang="lang-sm" onClick={e => (this.toggleLanguage(e, localStorage))}>Samoan</span>
+                        <span className="dropdown-item" data-lang="english" onClick={e => (this.toggleLanguage(e, localStorage))}>English</span>
+                        <span className="dropdown-item" data-lang="samoan" onClick={e => (this.toggleLanguage(e, localStorage))}>Samoan</span>
                     </div>
                 </div>
             </div>
