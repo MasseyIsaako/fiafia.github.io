@@ -1,10 +1,10 @@
 {
     "heading": {
-        "en": "Lights, camera, action!",
-        "sm": "O ā nisi o items e mafai ona e faia?"
+        "en": "Looking for inspiration?",
+        "sm": "O ā nisi o aitema (items) e mafai ona e faia?"
     },
     "intro": {
-        "en": "Want to provide an item? Browse the video snippets below for inspiration!",
+        "en": "If you would like to provide a performance, browse the video snippets below!",
         "sm": "Silasila ane i vitiō o loo i lalo!"
     },
     "slides": [
@@ -13,7 +13,7 @@
                 "en": "Dancing",
                 "sm": "Siva"
             },
-            "video": "https://www.youtube.com/watch?v=aepbRDTXxAg",
+            "video": "https://www.youtube.com/watch?v=RvYDN-5b0-o",
             "image": {
                 "src": "https://images.unsplash.com/photo-1571975617551-9adb2acede66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=934&q=80",
                 "alt": "Dancing image",
@@ -25,7 +25,7 @@
                 "en": "Singing",
                 "sm": "Pese"
             },
-            "video": "https://www.youtube.com/watch?v=zlRl8sJU_4I",
+            "video": "https://www.youtube.com/watch?v=m9WgjQuqVH8",
             "image": {
                 "src": "https://images.unsplash.com/photo-1453738773917-9c3eff1db985?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2100&q=80",
                 "alt": "Singing image",
@@ -37,7 +37,7 @@
                 "en": "Poetry",
                 "sm": "Solo"
             },
-            "video": "https://www.youtube.com/watch?v=hnp1pt8biD4",
+            "video": "https://www.youtube.com/watch?v=1Rx-LwluuCc",
             "image": {
                 "src": "https://images.unsplash.com/photo-1597605953084-526402cea0ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=917&q=80",
                 "alt": "Poems image",
@@ -49,7 +49,7 @@
                 "en": "Acting",
                 "sm": "Tala"
             },
-            "video": "https://www.youtube.com/watch?v=hnp1pt8biD4",
+            "video": "https://www.youtube.com/watch?v=4TlRW900Ay4",
             "image": {
                 "src": "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
                 "alt": "Acting image",

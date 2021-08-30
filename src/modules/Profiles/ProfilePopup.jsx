@@ -2,7 +2,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import { getProfilePic } from '../../js/utils/utils';
+import { getPic } from '../../js/utils/utils';
 import { translator } from '../../js/utils/utils.js';
 
 class ProfilePopup extends React.Component {
@@ -25,7 +25,7 @@ class ProfilePopup extends React.Component {
             'profile-popup'
         ;
         const pfp = active ?
-            getProfilePic(this.props.profile.img, this.props.profileImages) :
+            getPic(this.props.profile.img, this.props.profileImages) :
             ''
         ;
 

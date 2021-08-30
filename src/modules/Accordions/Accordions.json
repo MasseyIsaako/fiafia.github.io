@@ -8,12 +8,12 @@
         "accordions": [
             {
                 "question": {
-                    "en": "In what orientation should the camera be in? Landscape or portait?",
+                    "en": "In what orientation should the camera be in, when I record my item?",
                     "sm": "Se fesili matagofie lava"
                 },
                 "answer": {
-                    "en": "<p>Please shoot your item in landscape orientation, rather than portait. This will ensure that the entire width of the screen is filled with video.</p>",
-                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                    "en": "<p>Please record your performance item in landscape orientation, rather than portait. This will ensure that the entire width of the screen is filled with video, so our brothers and sisters can enjoy your performance in full view :)</p>",
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
                 }
             },
             {
@@ -22,8 +22,8 @@
                     "sm": "Se fesili matagofie lava"
                 },
                 "answer": {
-                    "en": "<p>We would greatly appreciate that videos are between 720 to 1080 in resolutions. Videos that are shot in 4k may be too large to be streamed over Zoom.</p>",
-                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                    "en": "<p>We would greatly appreciate that videos are between 720 to 1080 in resolution. Videos that are shot in 4k may be too large to be streamed over Zoom.</p>",
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
                 }
             },
             {
@@ -32,8 +32,8 @@
                     "sm": "Se fesili matagofie lava"
                 },
                 "answer": {
-                    "en": "<p>Please provide one item and make sure it is at a maximum length of 5 minutes.</p>",
-                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                    "en": "<p>Please provide one 5 minute video. If you would like, you may provide more than one item in your video.</p>",
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
                 }
             },
             {
@@ -43,7 +43,7 @@
                 },
                 "answer": {
                     "en": "<p>Yes there is! The cutoff date for items to be submitted is <strong>## September 2021</strong>.</p>",
-                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
                 }
             },
             {
@@ -52,8 +52,18 @@
                     "sm": "Se fesili matagofie lava"
                 },
                 "answer": {
-                    "en": "<p>We want to include as many of your performances that we can. Please send through your songs, dances, skits, poetry readings and other talents! We hope that many brothers and sisters will contribute to the evening.</p>",
-                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                    "en": "<p>We want to include as many of your performances as we can. Please send through your songs, dances, skits, poetry readings and other talents! We hope that many brothers and sisters will contribute to the evening.</p>",
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
+                }
+            },
+            {
+                "question": {
+                    "en": "Can I do a live performance on the night?",
+                    "sm": "Se fesili matagofie lava"
+                },
+                "answer": {
+                    "en": "<p>Unfortuntely, doing a live performance presents a few hurdles, like sound and video streaming quality. Please record your performance item and send it through instead, we thank you for your understanding!</p>",
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
                 }
             }
         ]
@@ -72,7 +82,7 @@
                 },
                 "answer": {
                     "en": "<p>Lorem ipsum Culpa aliquip dolor aliquip laboris Ut ea laboris consequat sit incididunt proident proident voluptate est elit labore Ut id cillum et irure.</p>",
-                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
                 }
             },
             {
@@ -82,7 +92,7 @@
                 },
                 "answer": {
                     "en": "<p>Lorem ipsum Culpa aliquip dolor aliquip laboris Ut ea laboris consequat sit incididunt proident proident voluptate est elit labore Ut id cillum et irure.</p>",
-                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
                 }
             },
             {
@@ -92,7 +102,7 @@
                 },
                 "answer": {
                     "en": "<p>Lorem ipsum Culpa aliquip dolor aliquip laboris Ut ea laboris consequat sit incididunt proident proident voluptate est elit labore Ut id cillum et irure.</p>",
-                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e uso po o se tuafafine.</p>"
+                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
                 }
             }
         ]

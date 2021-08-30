@@ -41,7 +41,7 @@ class LandingHero extends React.Component {
             }}>
                 <Container>
                     <Row>
-                        <Col lg={{ span: 8, offset: 2 }}>
+                        <Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
                             <h1 className="landing-hero__heading"
                                 dangerouslySetInnerHTML={{ __html: translator(landing.title) }}
                             ></h1>

@@ -1,5 +1,9 @@
 .accordions {
-    padding: 200px 0;
+    padding: 100px 0;
+
+    @include media-breakpoint-up ('md') {
+        padding: 200px 0;
+    }
 
     &__heading {
         color: $color-pink;
@@ -50,14 +54,14 @@
         color: $color-charcoal;
         display: flex;
         font-size: 18px;
-        padding: 15px 0;
+        padding: 15px 25px 15px 15px;
         position: relative;
         text-align: left;
         text-decoration: none;
         width: 100%;
 
         &.active::after {
-            transform: rotate(225deg);
+            transform: translateY(-50%) rotate(225deg);
         }
 
         &::after {
@@ -69,8 +73,8 @@
             height: 12px;
             position: absolute;
             right: 5px;
-            top: calc(100% - 40px);
-            transform: rotate(45deg);
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
             transition: 0.2s transform ease-in;
             width: 12px;
         }
@@ -81,7 +85,6 @@
     }
 
     &__target {
-        color: #666;
         font-size: 14px;
         height: 0;
         letter-spacing: -0.3px;

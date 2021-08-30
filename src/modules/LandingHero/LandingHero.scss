@@ -1,7 +1,7 @@
 .landing-hero {
     background-position: center;
     background-size: cover;
-    padding: 200px 0;
+    padding: 200px 0 120px;
     position: relative;
 
     &::before {
@@ -21,6 +21,7 @@
 
     &__heading {
         color: $color-white;
+        margin-bottom: 15px;
         text-align: center;
 
         @include media-breakpoint-up ('md') {
