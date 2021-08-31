@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "clear && clear && parcel build index.html about-us.html",
-    "watch": "clear && clear && parcel index.html about-us.html tips-and-tricks.html"
+    "build": "clear && clear && parcel build index.html about-us.html frequently-asked-questions.html",
+    "watch": "clear && clear && parcel index.html about-us.html frequently-asked-questions.html"
   },
   "keywords": [],
   "author": "",

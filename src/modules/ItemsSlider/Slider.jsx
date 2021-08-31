@@ -28,7 +28,7 @@ class Slider extends React.Component {
 
                 slides.push(
                     <li className="glide__slide" key={index}>
-                        <div className="items-slider__slide-inner video-button" data-src={`${data.video}?rel=0`}>
+                        <div className="items-slider__slide-inner video-button" data-src={data.video}>
                             <div
                                 className="items-slider__slide-image"
                                 style={{ backgroundImage: `url(${image.slug})` }}

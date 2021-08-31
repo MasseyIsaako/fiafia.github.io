@@ -31,10 +31,12 @@ class Video extends React.Component {
         videoClose,
         videoIframe
     ) {
+        const additionalParams = '?rel=0&modestbranding=1&autoplay=1';
+
         // Open the video panel
         videoButtons.forEach(btn => {
             btn.addEventListener('click', e => {
-                const src = this.sanitizeSrc(btn.dataset.src);
+                const src = `${this.sanitizeSrc(btn.dataset.src)}${additionalParams}`;
 
                 e.stopPropagation();
                 e.preventDefault();
@@ -50,8 +52,10 @@ class Video extends React.Component {
 
         // Close the video panel
         videoClose.addEventListener('click', e => {
-            const src = this.sanitizeSrc(videoIframe.getAttribute('src'));
+            const src = `${this.sanitizeSrc(videoIframe.getAttribute('src'))}${additionalParams}`;
             e.stopPropagation();
+
+            console.log(src);
 
             tl.to(videoWrapper, 1, {
                 left: '-110%',
@@ -99,7 +103,7 @@ class Video extends React.Component {
                                     <iframe className="video__iframe"
                                         title="YouTube video player"
                                         frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; modestbranding=1;"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
                                         allowFullScreen
                                     ></iframe>
                                 </div>

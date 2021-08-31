@@ -1,11 +1,12 @@
 .landing-hero {
     background-position: center;
     background-size: cover;
+    filter: contrast(1.2);
     padding: 200px 0 120px;
     position: relative;
 
     &::before {
-        background-color: rgba($color-black, 0.2);
+        background-color: rgba($color-black, 0.4);
         content: '';
         height: 100%;
         left: 0;

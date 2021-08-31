@@ -12,13 +12,13 @@
         "backgroundImage": "https://images.unsplash.com/photo-1574614671614-95100635613c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
     },
     {
-        "option": "tipsandtricks",
+        "option": "faq",
         "title": {
-            "en": "Tips and Tricks",
-            "sm": "Fautuaga"
+            "en": "Frequently Asked Questions",
+            "sm": "Fesili e Masani ona Lāgā"
         },
         "summary": {
-            "en": "Useful tips on how to shoot your items, as well as answers to some frequently asked questions",
+            "en": "Looking for answers? Have a read below. If your question wasn't answered, please contact us!",
             "sm": "Faamatalaga Atili"
         },
         "backgroundImage": "https://images.unsplash.com/photo-1628412891357-1746831ec24d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
