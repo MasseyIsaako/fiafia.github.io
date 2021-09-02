@@ -5,9 +5,11 @@
     font-weight: $font-weight-normal;
 }
 
+a,
 i,
 strong {
     font-size: inherit;
+    color: inherit;
 }
 
 html,

@@ -44,6 +44,17 @@
         }
     },
     {
+        "option": "scriptureEcclesiastes",
+        "title": {
+            "en": "ECCLESIASTES 3:4",
+            "sm": "FAILAUGA 3:4"
+        },
+        "paragraph": {
+            "en": "\"A time to laugh...and a time to dance.\"",
+            "sm": "\"Le taimi e ʻataʻata ai...ma le taimi e osooso ai ma le fiafia.\""
+        }
+    },
+    {
         "option": "aboutus",
         "title": {
             "en": "The Night Before Productions",

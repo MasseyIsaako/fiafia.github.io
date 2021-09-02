@@ -1,6 +1,5 @@
 // Import dependencies
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-bootstrap';
 import ItemsSliderData from './ItemsSlider.json';
 import Slider from './Slider';

@@ -4,6 +4,7 @@ import ReactHabitat from 'react-habitat';
 import Accordions from '../modules/Accordions/Accordions';
 import Authentication from '../modules/Authentication/Authentication';
 import ImageText from '../modules/ImageText/ImageText';
+import ItemCards from '../modules/ItemCards/ItemCards';
 import ItemsSlider from '../modules/ItemsSlider/ItemsSlider';
 import LandingHero from '../modules/LandingHero/LandingHero';
 import Navigation from '../modules/Navigation/Navigation';
@@ -54,6 +55,7 @@ class App extends ReactHabitat.Bootstrapper {
         containerBuilder.register(Accordions).as('Accordions');
         containerBuilder.register(Authentication).as('Authentication');
         containerBuilder.register(ImageText).as('ImageText');
+        containerBuilder.register(ItemCards).as('ItemCards');
         containerBuilder.register(ItemsSlider).as('ItemsSlider');
         containerBuilder.register(LandingHero).as('LandingHero');
         containerBuilder.register(Navigation).as('Navigation');
@@ -77,8 +79,12 @@ export default instance;
 
 // Force user to scroll to the top on load
 window.addEventListener('load', () => {
-    window.scrollTo(0, 0);
+    const isHome = document.querySelector('.home');
 
-    AnimatedHero.init();
+    if (isHome instanceof HTMLElement) {
+        window.scrollTo(0, 0);
+        AnimatedHero.init();
+    }
+
     ParallaxImages.init();
 });

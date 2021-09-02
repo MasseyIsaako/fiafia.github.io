@@ -15,9 +15,16 @@
     },
     {
         "title": {
-            "en": "Frequently Asked Questions",
-            "sm": "Fautuaga"
+            "en": "FAQ",
+            "sm": "Fesili e Masani Ona Lāgā"
         },
         "slug": "/frequently-asked-questions.html"
+    },
+    {
+        "title": {
+            "en": "Recording An Item",
+            "sm": "Auala e Pu'e ai Lau Aitema"
+        },
+        "slug": "/recording-an-item.html"
     }
 ]

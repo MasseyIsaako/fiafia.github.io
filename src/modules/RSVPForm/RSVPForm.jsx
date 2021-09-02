@@ -66,7 +66,7 @@ class RSVPForm extends React.Component {
                         <Col sm={12} className="d-flex justify-content-end">
                             <span className="rsvp-form__close"></span>
                         </Col>
-                        <Col sm={12} md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
+                        <Col sm={12}>
                             <div className="rsvp-form__inner">
                                 <iframe
                                     className="rsvp-form__iframe"

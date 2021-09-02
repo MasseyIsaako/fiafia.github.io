@@ -150,6 +150,11 @@
         @include media-breakpoint-up ('md') {
             font-size: 22px;
         }
+
+        a:focus,
+        a:hover {
+            color: $color-white;
+        }
     }
 
     &__cta {
