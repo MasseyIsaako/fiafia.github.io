@@ -1,7 +1,11 @@
 {
-    "heading": "Item Cards",
+    "heading": "Tips on Recording Your Item",
     "cards": [
         {
+            "previewHeading": {
+                "en": "Camera Angle",
+                "sm": "Se fesili matagofie lava"
+            },
             "heading": {
                 "en": "Find the Right Angle",
                 "sm": "Se fesili matagofie lava"
@@ -12,6 +16,10 @@
             }
         },
         {
+            "previewHeading": {
+                "en": "Good Sound Quality",
+                "sm": "Se fesili matagofie lava"
+            },
             "heading": {
                 "en": "Find A Position That Works Best to Capture Good Sound",
                 "sm": "Se fesili matagofie lava"
@@ -22,6 +30,10 @@
             }
         },
         {
+            "previewHeading": {
+                "en": "The Atmosphere",
+                "sm": "Se fesili matagofie lava"
+            },
             "heading": {
                 "en": "Creating Your Perfect Atmosphere",
                 "sm": "Se fesili matagofie lava"
@@ -32,6 +44,10 @@
             }
         },
         {
+            "previewHeading": {
+                "en": "Having Fun!",
+                "sm": "Se fesili matagofie lava"
+            },
             "heading": {
                 "en": "Having Fun!",
                 "sm": "Se fesili matagofie lava"
