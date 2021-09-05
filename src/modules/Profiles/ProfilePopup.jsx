@@ -19,13 +19,17 @@ class ProfilePopup extends React.Component {
     }
 
     render() {
+        const image = this.props.profile.imgSecondary ?
+            this.props.profile.imgSecondary :
+            this.props.profile.img
+        ;
         const active = typeof this.props.profile === 'object';
         const popupClasses = active ?
             'profile-popup profile-popup-close active' :
             'profile-popup'
         ;
         const pfp = active ?
-            getPic(this.props.profile.img, this.props.profileImages) :
+            getPic(image, this.props.profileImages) :
             ''
         ;
 

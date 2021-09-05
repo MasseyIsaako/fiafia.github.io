@@ -4,10 +4,10 @@ export const translator = ({ en, sm }) => (`
 `);
 
 export const getPic = (img, images) => {
-    let pfp = false;
+    let image = false;
 
     if (images[img.slug]) {
-        pfp = {
+        image = {
             position: '',
             slug: ''
         };
@@ -15,19 +15,23 @@ export const getPic = (img, images) => {
         if (images[img.slug].jpeg &&
             images[img.slug].jpeg.length > 0
         ) {
-            pfp.slug = images[img.slug].jpeg;
+            image.slug = images[img.slug].jpeg;
         } else if (images[img.slug].jpg &&
             images[img.slug].jpg.length > 0
         ) {
-            pfp.slug = images[img.slug].jpg;
+            image.slug = images[img.slug].jpg;
         } else if (images[img.slug].png &&
             images[img.slug].png.length > 0
         ) {
-            pfp.slug = images[img.slug].png;
+            image.slug = images[img.slug].png;
+        } else if (images[img.slug].webp &&
+            images[img.slug].webp.length > 0
+        ) {
+            image.slug = images[img.slug].webp;
         }
 
-        pfp.position = img.position;
+        image.position = img.position ?? 'center';
     }
 
-    return pfp;
+    return image;
 }

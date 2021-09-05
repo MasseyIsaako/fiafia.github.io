@@ -30,10 +30,11 @@ class Translate extends React.Component {
      * @param {string} lang 
      */
     setLang (lang) {
+        const isHome = document.querySelector('.home');
         const body = document.querySelector('body');
         const langSpans = document.querySelectorAll(`[data-lang]`);
 
-        body.classList = lang;
+        body.classList = isHome instanceof HTMLElement ? `home ${lang}` : lang;
 
         if (langSpans.length > 0) {
             langSpans.forEach(span => {
