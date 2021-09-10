@@ -6,9 +6,9 @@ The dist folder git code was found here: https://gist.github.com/joshuapekera/ef
 ### Stage
 `git checkout master && git branch -D env/stage && git checkout -b env/stage && npm run build && git add -f dist && git commit -m "env/stage: Deploying assets to stage." && git subtree push --prefix dist origin env/stage`
 
-Prior to running this script, we need to delete env/stage branch.
+Prior to running this script, we need to delete the env/stage branch in Github. This branch is hosted on Github Pages.
 
 ### Prod:
-`git checkout master && git branch -D env/prod && git checkout -b env/prod && npm run build && git add -f dist && git commit -m "env/prod: Deploying assets to prod." && git subtree push --prefix dist origin env/prod"`
+`git merge master --no-commit && git add -A . && git commit -m "env/prod: Deploying assets to prod." && git push origin env/prod"`
 
-Prior to running this script, we need to delete env/prod branch.
+We are using Netlify to handle our deployments. All we need to do is push the code up to env/prod and run the deployment pipeline in Netlify. The site automatically gets updated for us.  This branch is hosted on Netlify.
