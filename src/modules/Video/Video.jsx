@@ -55,8 +55,6 @@ class Video extends React.Component {
             const src = `${this.sanitizeSrc(videoIframe.getAttribute('src'))}${additionalParams}`;
             e.stopPropagation();
 
-            console.log(src);
-
             tl.to(videoWrapper, 1, {
                 left: '-110%',
             });

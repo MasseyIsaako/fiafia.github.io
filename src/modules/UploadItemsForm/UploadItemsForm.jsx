@@ -26,7 +26,6 @@ class UploadItemsForm extends React.Component {
     }
 
     toggleUploadForm (action) {
-        console.log(action);
         if (action === 'toggle' ||
             action.target.classList.contains('upload-items-form-open') ||
             action.target.parentNode.classList.contains('upload-items-form-open') ||

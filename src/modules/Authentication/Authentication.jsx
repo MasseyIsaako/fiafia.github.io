@@ -103,10 +103,17 @@ class Authentication extends React.Component {
     }
 
     render () {
-        const env = AuthenticationData.env;
+        const currentEnv = AuthenticationData.currentEnv;
+        let forceAuth = false;
+
+        AuthenticationData.forceLoginEnv.forEach(env => {
+            if (env === currentEnv) {
+                forceAuth = true;
+            }
+        });
 
         return (
-            (!this.state.bypassLogin && env === 'stage') &&
+            (!this.state.bypassLogin && forceAuth) &&
             <section className="authentication">
                 <Container>
                     <Row>
