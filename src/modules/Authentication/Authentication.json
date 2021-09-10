@@ -1,5 +1,5 @@
 {
-    "currentEnv": "",
+    "currentEnv": "prod",
     "username": "thenightbeforeproductions",
     "password": "fiafia2021",
     "forceLoginEnv": ["stage", "prod"]
