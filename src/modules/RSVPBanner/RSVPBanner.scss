@@ -192,7 +192,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         height: 200px;
-        margin-left: -12px;
+        margin-left: -14px;
         width: 100vw;
 
         @include media-breakpoint-up ('xs') {
@@ -201,7 +201,7 @@
 
         @include media-breakpoint-up ('sm') {
             height: 400px;
-            margin-left: calc(((100vw - 516px) / 2) * -1);
+            margin-left: calc(((100vw - 512px) / 2) * -1);
         }
 
         @include media-breakpoint-up ('md') {
