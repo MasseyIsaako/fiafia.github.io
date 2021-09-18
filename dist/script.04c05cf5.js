@@ -59305,21 +59305,21 @@ ItemPopup.propTypes = {
 };
 var _default = ItemPopup;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","prop-types":"node_modules/prop-types/index.js","../../js/utils/utils.js":"src/js/utils/utils.js"}],"src/images/ItemPopup/atmosphere.jpeg":[function(require,module,exports) {
-module.exports = "/atmosphere.b0ac0456.jpeg";
-},{}],"src/images/ItemPopup/camera.webp":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","prop-types":"node_modules/prop-types/index.js","../../js/utils/utils.js":"src/js/utils/utils.js"}],"src/images/ItemPopup/camera.webp":[function(require,module,exports) {
 module.exports = "/camera.eada8617.webp";
+},{}],"src/images/ItemPopup/atmosphere.jpeg":[function(require,module,exports) {
+module.exports = "/atmosphere.b0ac0456.jpeg";
 },{}],"src/images/ItemPopup/fun.jpeg":[function(require,module,exports) {
 module.exports = "/fun.14ebf1fe.jpeg";
 },{}],"src/images/ItemPopup/sound.jpeg":[function(require,module,exports) {
 module.exports = "/sound.41e28c52.jpeg";
 },{}],"src/images/ItemPopup/*.*":[function(require,module,exports) {
 module.exports = {
-  "atmosphere": {
-    "jpeg": require("./atmosphere.jpeg")
-  },
   "camera": {
     "webp": require("./camera.webp")
+  },
+  "atmosphere": {
+    "jpeg": require("./atmosphere.jpeg")
   },
   "fun": {
     "jpeg": require("./fun.jpeg")
@@ -59328,7 +59328,7 @@ module.exports = {
     "jpeg": require("./sound.jpeg")
   }
 };
-},{"./atmosphere.jpeg":"src/images/ItemPopup/atmosphere.jpeg","./camera.webp":"src/images/ItemPopup/camera.webp","./fun.jpeg":"src/images/ItemPopup/fun.jpeg","./sound.jpeg":"src/images/ItemPopup/sound.jpeg"}],"src/modules/ItemCards/ItemCards.jsx":[function(require,module,exports) {
+},{"./camera.webp":"src/images/ItemPopup/camera.webp","./atmosphere.jpeg":"src/images/ItemPopup/atmosphere.jpeg","./fun.jpeg":"src/images/ItemPopup/fun.jpeg","./sound.jpeg":"src/images/ItemPopup/sound.jpeg"}],"src/modules/ItemCards/ItemCards.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -63900,22 +63900,20 @@ exports.default = _default;
 module.exports = "/annie.f9699f19.jpeg";
 },{}],"src/images/Profiles/chise-pale.jpeg":[function(require,module,exports) {
 module.exports = "/chise-pale.e34dc242.jpeg";
-},{}],"src/images/Profiles/chise-white.jpeg":[function(require,module,exports) {
-module.exports = "/chise-white.9138b95c.jpeg";
 },{}],"src/images/Profiles/faye.png":[function(require,module,exports) {
 module.exports = "/faye.e30f206d.png";
-},{}],"src/images/Profiles/freida.jpg":[function(require,module,exports) {
-module.exports = "/freida.a565d54b.jpg";
+},{}],"src/images/Profiles/chise-white.jpeg":[function(require,module,exports) {
+module.exports = "/chise-white.9138b95c.jpeg";
 },{}],"src/images/Profiles/jack.jpeg":[function(require,module,exports) {
 module.exports = "/jack.7f4f16d1.jpeg";
 },{}],"src/images/Profiles/lasi.png":[function(require,module,exports) {
 module.exports = "/lasi.f8ca8f82.png";
 },{}],"src/images/Profiles/manu.png":[function(require,module,exports) {
 module.exports = "/manu.1b37728a.png";
+},{}],"src/images/Profiles/freida.jpg":[function(require,module,exports) {
+module.exports = "/freida.a565d54b.jpg";
 },{}],"src/images/Profiles/placeholder.jpeg":[function(require,module,exports) {
 module.exports = "/placeholder.7fbee703.jpeg";
-},{}],"src/images/Profiles/profiles-group.png":[function(require,module,exports) {
-module.exports = "/profiles-group.fd24e173.png";
 },{}],"src/images/Profiles/taase.png":[function(require,module,exports) {
 module.exports = "/taase.c3155837.png";
 },{}],"src/images/Profiles/tana.jpeg":[function(require,module,exports) {
@@ -63926,6 +63924,8 @@ module.exports = "/thomas.4677c7b4.png";
 module.exports = "/tumema.81619a0c.jpeg";
 },{}],"src/images/Profiles/valasi.png":[function(require,module,exports) {
 module.exports = "/valasi.fc8292c7.png";
+},{}],"src/images/Profiles/profiles-group.png":[function(require,module,exports) {
+module.exports = "/profiles-group.fd24e173.png";
 },{}],"src/images/Profiles/*.*":[function(require,module,exports) {
 module.exports = {
   "annie": {
@@ -63934,14 +63934,11 @@ module.exports = {
   "chise-pale": {
     "jpeg": require("./chise-pale.jpeg")
   },
-  "chise-white": {
-    "jpeg": require("./chise-white.jpeg")
-  },
   "faye": {
     "png": require("./faye.png")
   },
-  "freida": {
-    "jpg": require("./freida.jpg")
+  "chise-white": {
+    "jpeg": require("./chise-white.jpeg")
   },
   "jack": {
     "jpeg": require("./jack.jpeg")
@@ -63952,11 +63949,11 @@ module.exports = {
   "manu": {
     "png": require("./manu.png")
   },
+  "freida": {
+    "jpg": require("./freida.jpg")
+  },
   "placeholder": {
     "jpeg": require("./placeholder.jpeg")
-  },
-  "profiles-group": {
-    "png": require("./profiles-group.png")
   },
   "taase": {
     "png": require("./taase.png")
@@ -63972,9 +63969,12 @@ module.exports = {
   },
   "valasi": {
     "png": require("./valasi.png")
+  },
+  "profiles-group": {
+    "png": require("./profiles-group.png")
   }
 };
-},{"./annie.jpeg":"src/images/Profiles/annie.jpeg","./chise-pale.jpeg":"src/images/Profiles/chise-pale.jpeg","./chise-white.jpeg":"src/images/Profiles/chise-white.jpeg","./faye.png":"src/images/Profiles/faye.png","./freida.jpg":"src/images/Profiles/freida.jpg","./jack.jpeg":"src/images/Profiles/jack.jpeg","./lasi.png":"src/images/Profiles/lasi.png","./manu.png":"src/images/Profiles/manu.png","./placeholder.jpeg":"src/images/Profiles/placeholder.jpeg","./profiles-group.png":"src/images/Profiles/profiles-group.png","./taase.png":"src/images/Profiles/taase.png","./tana.jpeg":"src/images/Profiles/tana.jpeg","./thomas.png":"src/images/Profiles/thomas.png","./tumema.jpeg":"src/images/Profiles/tumema.jpeg","./valasi.png":"src/images/Profiles/valasi.png"}],"src/modules/Profiles/Profiles.json":[function(require,module,exports) {
+},{"./annie.jpeg":"src/images/Profiles/annie.jpeg","./chise-pale.jpeg":"src/images/Profiles/chise-pale.jpeg","./faye.png":"src/images/Profiles/faye.png","./chise-white.jpeg":"src/images/Profiles/chise-white.jpeg","./jack.jpeg":"src/images/Profiles/jack.jpeg","./lasi.png":"src/images/Profiles/lasi.png","./manu.png":"src/images/Profiles/manu.png","./freida.jpg":"src/images/Profiles/freida.jpg","./placeholder.jpeg":"src/images/Profiles/placeholder.jpeg","./taase.png":"src/images/Profiles/taase.png","./tana.jpeg":"src/images/Profiles/tana.jpeg","./thomas.png":"src/images/Profiles/thomas.png","./tumema.jpeg":"src/images/Profiles/tumema.jpeg","./valasi.png":"src/images/Profiles/valasi.png","./profiles-group.png":"src/images/Profiles/profiles-group.png"}],"src/modules/Profiles/Profiles.json":[function(require,module,exports) {
 module.exports = [{
   "name": "Cochise Avei",
   "role": "Coordinator",
@@ -64023,8 +64023,8 @@ module.exports = [{
   "name": "Freida Isa'ako",
   "role": "Item Gatherer",
   "blurb": {
-    "en": "Kia ora everyone, my name is Freida. I am here for moral support and to gather items so if you are keen please let us know 👍 I am very excited to see what amazing ideas and items flow through so have fun with it....this is all for the enjoyment of our close friends and families as we all know we need encouragement during these times. Can't wait to see all your beautiful faces!",
-    "sm": "Kia ora everyone, my name is Freida. I am here for moral support and to gather items so if you are keen please let us know 👍 I am very excited to see what amazing ideas and items flow through so have fun with it....this is all for the enjoyment of our close friends and families as we all know we need encouragement during these times. Can't wait to see all your beautiful faces!"
+    "en": "Hello everyone, my name is Freida. I am here for moral support and to gather items so if you are keen please let us know 👍 I am very excited to see what amazing ideas and items flow through so have fun with it....this is all for the enjoyment of our close friends and families as we all know we need encouragement during these times. Can't wait to see all your beautiful faces!",
+    "sm": "Hello everyone, my name is Freida. I am here for moral support and to gather items so if you are keen please let us know 👍 I am very excited to see what amazing ideas and items flow through so have fun with it....this is all for the enjoyment of our close friends and families as we all know we need encouragement during these times. Can't wait to see all your beautiful faces!"
   },
   "img": {
     "slug": "freida",
@@ -64872,8 +64872,8 @@ module.exports = [{
     "sm": "O le ā o le a tupu?"
   },
   "paragraph": {
-    "en": "On <strong>6<sup>th</sup> November 2021 (AEST)</strong>, there will be a fiafia night for you, our dear brothers and sisters! A night of entertainment and encouragement, provided by our spiritual family from around the world. If you would like to contribute a performance item to this wonderful evening, please explore this site for ideas! 😊<br><br>3:00 pm — 6:00pm — AUS (MLB)<br>5:00 pm — 8:00 pm — NZ<br>6:00 pm - 9:00 pm — WST & AMSAM (Friday)<br>7:00 pm - 10:00 pm — RARO & HWI (Friday)<br>9:00 pm - 12:00 pm — VGS and STL (Friday)",
-    "sm": "I le aso <strong>6 Novema 2021</strong>, i le itula e 3pm <i>(taimi ma le aso a Melepone Ausetalia)</i>, o le a faia ai se fiafia mo outou uso ma tuafafine peleina! O se afiafi o faafiafiaga ma faalaeiauga ua saunia e lo tatou aiga faaleagaga mai vaipanoa eseese o le lalolagi.  Afai e te fia faafiafia i lea po, faamolemole fa’aauau ona faitau i isi itulau o lenei website mo nisi faamatalaga atili! 😊<br><br>3:00 pm — 6:00pm — AUS (MLB)<br>5:00 pm — 8:00 pm — NZ<br>6:00 pm - 9:00 pm — WST & AMSAM (Friday)<br>7:00 pm - 10:00 pm — RARO & HWI (Friday)<br>9:00 pm - 12:00 pm — VGS and STL (Friday)"
+    "en": "On <strong>6<sup>th</sup> November 2021 (AEST)</strong>, there will be a fiafia night for you, our dear brothers and sisters! A night of entertainment and encouragement, provided by our spiritual family from around the world. If you would like to contribute a performance item to this wonderful evening, please explore this site for ideas! 😊<br><br>3:00 pm — 6:00pm — AUS (MLB)<br>5:00 pm — 8:00 pm — NZ<br>6:00 pm - 9:00 pm (Samoa and American Samoa)<br>7:00 pm - 10:00 pm (Rarotonga and Hawaii)<br>9:00 pm - 12:00 am — (Las Vegas and Seattle)",
+    "sm": "I le aso <strong>6 Novema 2021</strong>, i le itula e 3pm <i>(taimi ma le aso a Melepone Ausetalia)</i>, o le a faia ai se fiafia mo outou uso ma tuafafine peleina! O se afiafi o faafiafiaga ma faalaeiauga ua saunia e lo tatou aiga faaleagaga mai vaipanoa eseese o le lalolagi.  Afai e te fia faafiafia i lea po, faamolemole fa’aauau ona faitau i isi itulau o lenei website mo nisi faamatalaga atili! 😊<br><br>3:00 pm — 6:00pm — AUS (MLB)<br>5:00 pm — 8:00 pm — NZ<br>6:00 pm - 9:00 pm (Samoa and American Samoa)<br>7:00 pm - 10:00 pm (Rarotonga and Hawaii)<br>9:00 pm - 12:00 am — (Las Vegas and Seattle)"
   }
 }, {
   "option": "scriptureMark",
@@ -66182,7 +66182,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63229" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64895" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

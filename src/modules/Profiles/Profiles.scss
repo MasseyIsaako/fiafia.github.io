@@ -107,7 +107,6 @@
     &__card-img {
         border-radius: 50%;
         display: block;
-        filter: grayscale(1);
         height: 250px;
         margin: auto;
         object-fit: cover;
@@ -125,6 +124,7 @@
         }
 
         @include media-breakpoint-up("lg") {
+            // filter: grayscale(1);
             height: 250px;
             width: 250px;
         }
