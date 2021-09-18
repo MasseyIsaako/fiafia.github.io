@@ -47204,8 +47204,8 @@ module.exports = [{
       "sm": "O le a le resolution e tatau ona pu’e ai la’u vitiō?"
     },
     "answer": {
-      "en": "<p>We would greatly appreciate that your video is between 720 to 1080 in resolution. A video shot in 4k resolution and above, may be too large to be streamed over Zoom.</p>",
-      "sm": "<p>E matou te talisapaia pe a mafai ona pu'eina lau vitiō I le va o le 720 - 1080 resolution. O se vitiō e pu'eina I le 4k resolution poo luga atu, e fai sina lapo’a tele ma e ono lē mafai ona faaali atu I luga o le Zoom.</p>"
+      "en": "<p>We would greatly appreciate that your video is between 720p to 1080p in resolution. A video shot in 4k resolution and above, may be too large to be streamed over Zoom.</p>",
+      "sm": "<p>E matou te talisapaia pe a mafai ona pu'eina lau vitiō I le va o le 720p - 1080p resolution. O se vitiō e pu'eina I le 4k resolution poo luga atu, e fai sina lapo’a tele ma e ono lē mafai ona faaali atu I luga o le Zoom.</p>"
     }
   }, {
     "question": {
@@ -58890,8 +58890,8 @@ module.exports = [{
     "sm": "Ua uma ona sauni sau item?"
   },
   "paragraph": {
-    "en": "Upload your item here! Please <a href='#' class='rsvp-form-open'>RSVP</a> before uploading your item. We will be reviewing all items prior to the evening.",
-    "sm": "Faaulu mai lau item i le itulau lenei! Faamolemole resitala muamua <a href='#' class='rsvp-form-open'>(RSVP)</a> a o le’i tuuina I luga (upload) lau item. O le a siakiina uma items a o le’i oo i le aso o le fiafia."
+    "en": "Upload your item here! Please <a href='#' class='rsvp-form-open'>RSVP</a> before uploading your item. We will be reviewing all items prior to the evening. If you are unable to submit your item here, please contact us for assistance.",
+    "sm": "Faaulu mai lau item i le itulau lenei! Faamolemole resitala muamua <a href='#' class='rsvp-form-open'>(RSVP)</a> a o le’i tuuina I luga (upload) lau item. O le a siakiina uma items a o le’i oo i le aso o le fiafia. Pe afai e le'i mafai ona lafo mai lau item e ala i lenei upega tafa'ilagi, faamolemole fesoota'i mai mo le fesoasoani."
   },
   "image": "https://images.unsplash.com/photo-1585834406350-744aaeaf491c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1481&q=80",
   "reverse": true,
@@ -58911,8 +58911,8 @@ module.exports = [{
     "sm": "Ua uma ona sauni sau item?"
   },
   "paragraph": {
-    "en": "Upload your item here! Please <a href='#' class='rsvp-form-open'>RSVP</a> before uploading your item. We will be reviewing all items prior to the evening.",
-    "sm": "Faaulu mai lau item i le itulau lenei! Faamolemole resitala muamua <a href='#' class='rsvp-form-open'>(RSVP)</a> a o le’i tuuina I luga (upload) lau item. O le a siakiina uma items a o le’i oo i le aso o le fiafia."
+    "en": "Upload your item here! Please <a href='#' class='rsvp-form-open'>RSVP</a> before uploading your item. We will be reviewing all items prior to the evening. If you are unable to submit your item here, please contact us for assistance.",
+    "sm": "Faaulu mai lau item i le itulau lenei! Faamolemole resitala muamua <a href='#' class='rsvp-form-open'>(RSVP)</a> a o le’i tuuina I luga (upload) lau item. O le a siakiina uma items a o le’i oo i le aso o le fiafia. Pe afai e le'i mafai ona lafo mai lau item e ala i lenei upega tafa'ilagi, faamolemole fesoota'i mai mo le fesoasoani."
   },
   "image": "https://images.unsplash.com/photo-1616674343403-ebd24b7f53a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2300&q=80",
   "reverse": true,
@@ -59476,7 +59476,7 @@ exports.default = _default;
 module.exports = {
   "heading": {
     "en": "Looking for inspiration?",
-    "sm": "O ā nisi o aitema (items) e mafai ona e faia?"
+    "sm": "O ā nisi o items e mafai ona e faia?"
   },
   "intro": {
     "en": "If you would like to provide a performance, browse the video snippets below for ideas!",
@@ -63398,7 +63398,7 @@ module.exports = [{
   "option": "rai",
   "title": {
     "en": "Recording An Item",
-    "sm": "Auala e Pu'eina ai Lau Aitema"
+    "sm": "Auala e Pu'eina ai Lau Item"
   },
   "summary": {
     "en": "Looking for advice on how to record your performance item? We've got you covered!",
@@ -63735,7 +63735,7 @@ module.exports = [{
 }, {
   "title": {
     "en": "Recording An Item",
-    "sm": "Auala e Pu'e ai Lau Aitema"
+    "sm": "Auala e Pu'e ai Lau Item"
   },
   "slug": "/recording-an-item.html"
 }];
@@ -64012,8 +64012,8 @@ module.exports = [{
   "name": "Tufulasi Isa'ako",
   "role": "MC / Zoom Event Planner",
   "blurb": {
-    "en": "Talofa lava friends! You can call me Lasi and I'll be working to help facilitate the evening. My roles in contributing to this wonderful evening include building this website, being an ideas guy and generally helping wherever I can :) I look forward to meeting you all the night of our Fiafia, stay safe until we meet!!!<br><br>Take care brothers and sisters <sup>*</sup>\\(^-^)/<sup>*</sup>",
-    "sm": "Talofa lava friends! You can call me Lasi and I'll be working to help facilitate the evening. My roles in contributing to this wonderful evening include building this website, being an ideas guy and generally helping wherever I can :) I look forward to meeting you all the night of our Fiafia, stay safe until we meet!!!<br><br>Take care brothers and sisters <sup>*</sup>\\(^-^)/<sup>*</sup>"
+    "en": "Talofa lava friends! You can call me Lasi and I'll be working to help facilitate the evening. My roles in contributing to this wonderful evening include building this website, being an ideas guy and generally helping wherever I can :) I look forward to meeting you all the night of our fiafia, stay safe until we meet!!!<br><br>Take care brothers and sisters <sup>*</sup>\\(^-^)/<sup>*</sup>",
+    "sm": "Talofa lava friends! You can call me Lasi and I'll be working to help facilitate the evening. My roles in contributing to this wonderful evening include building this website, being an ideas guy and generally helping wherever I can :) I look forward to meeting you all the night of our fiafia, stay safe until we meet!!!<br><br>Take care brothers and sisters <sup>*</sup>\\(^-^)/<sup>*</sup>"
   },
   "img": {
     "slug": "lasi",
@@ -64089,8 +64089,8 @@ module.exports = [{
   "name": "Jack Wilson",
   "role": "Marketing Coordinator",
   "blurb": {
-    "en": "Greetings everyone! I'm Tana's dad, and hope you all have a fun and eventful Fiafia night 🙂",
-    "sm": "Greetings everyone! I'm Tana's dad, and hope you all have a fun and eventful Fiafia night 🙂"
+    "en": "Greetings everyone! I'm Tana's dad, and hope you all have a fun and eventful fiafia night 🙂",
+    "sm": "Greetings everyone! I'm Tana's dad, and hope you all have a fun and eventful fiafia night 🙂"
   },
   "img": {
     "slug": "jack",
@@ -64100,8 +64100,8 @@ module.exports = [{
   "name": "Faye Wilson",
   "role": "Interior Design",
   "blurb": {
-    "en": "Talofa lava and hello to you all! I'm Tana's mom, and I look forward to seeing all of you wonderful brothers and sisters at the Fiafia night!",
-    "sm": "Talofa lava and hello to you all! I'm Tana's mom, and I look forward to seeing all of you wonderful brothers and sisters at the Fiafia night!"
+    "en": "Talofa lava and hello to you all! I'm Tana's mom, and I look forward to seeing all of you wonderful brothers and sisters at the fiafia night!",
+    "sm": "Talofa lava and hello to you all! I'm Tana's mom, and I look forward to seeing all of you wonderful brothers and sisters at the fiafia night!"
   },
   "img": {
     "slug": "faye",
@@ -64872,8 +64872,8 @@ module.exports = [{
     "sm": "O le ā o le a tupu?"
   },
   "paragraph": {
-    "en": "On <strong>6<sup>th</sup> November 2021 (AEST)</strong>, there will be a fiafia night for you, our dear brothers and sisters! A night of entertainment and encouragement, provided by our spiritual family from around the world. If you would like to contribute a performance item to this wonderful evening, please explore this site for ideas! 😊<br><br>3:00 pm — 6:00pm — AUS (MLB)<br>5:00 pm — 8:00 pm — NZ<br>6:00 pm - 9:00 pm (Samoa and American Samoa)<br>7:00 pm - 10:00 pm (Rarotonga and Hawaii)<br>9:00 pm - 12:00 am — (Las Vegas and Seattle)",
-    "sm": "I le aso <strong>6 Novema 2021</strong>, i le itula e 3pm <i>(taimi ma le aso a Melepone Ausetalia)</i>, o le a faia ai se fiafia mo outou uso ma tuafafine peleina! O se afiafi o faafiafiaga ma faalaeiauga ua saunia e lo tatou aiga faaleagaga mai vaipanoa eseese o le lalolagi.  Afai e te fia faafiafia i lea po, faamolemole fa’aauau ona faitau i isi itulau o lenei website mo nisi faamatalaga atili! 😊<br><br>3:00 pm — 6:00pm — AUS (MLB)<br>5:00 pm — 8:00 pm — NZ<br>6:00 pm - 9:00 pm (Samoa and American Samoa)<br>7:00 pm - 10:00 pm (Rarotonga and Hawaii)<br>9:00 pm - 12:00 am — (Las Vegas and Seattle)"
+    "en": "On <strong>6<sup>th</sup> November 2021 (AEST)</strong>, there will be a fiafia night for you, our dear brothers and sisters! A night of entertainment and encouragement, provided by our spiritual family from around the world. If you would like to contribute a performance item to this wonderful evening, please explore this site for ideas! 😊<div class='text-start d-flex justify-content-center' style='font-size: inherit;'><br><br>3:00 pm — 6:00 pm (Melbourne, Australia)<br>5:00 pm — 8:00 pm (NZ)<br>6:00 pm — 9:00 pm (American Samoa and Samoa)<br>7:00 pm — 10:00 pm (Hawaii and Rarotonga)<br>9:00 pm — till late (Las Vegas and Seattle)</div>",
+    "sm": "I le aso <strong>6 Novema 2021</strong>, i le itula e 3pm <i>(taimi ma le aso a Melepone Ausetalia)</i>, o le a faia ai se fiafia mo outou uso ma tuafafine peleina! O se afiafi o faafiafiaga ma faalaeiauga ua saunia e lo tatou aiga faaleagaga mai vaipanoa eseese o le lalolagi.  Afai e te fia faafiafia i lea po, faamolemole fa’aauau ona faitau i isi itulau o lenei website mo nisi faamatalaga atili! 😊<div class='text-start d-flex justify-content-center' style='font-size: inherit;'><br><br>3:00 pm — 6:00 pm (Melbourne, Australia)<br>5:00 pm — 8:00 pm (NZ)<br>6:00 pm — 9:00 pm (American Samoa and Samoa)<br>7:00 pm — 10:00 pm (Hawaii and Rarotonga)<br>9:00 pm — 12:00 am (Las Vegas and Seattle)</div>"
   }
 }, {
   "option": "scriptureMark",
@@ -65044,8 +65044,8 @@ module.exports = {
     "sm": "Ua e mautinoa e te mana'o e lafo atu lau item?"
   },
   "summary": {
-    "en": "Please ensure that you have read the tips and tricks found on the 'Recording an Item' page, prior to submitting your item.",
-    "sm": "Faamolemole, ia faamautinoa muamua na e mulimuli muamua i le auala e pu'e ai lau item, i le itulau ua faamatuaina: Auala e Pu'eina ai Lau Aitema."
+    "en": "Please ensure that you have read the tips and tricks found on the <a href='/recording-an-item.html'>Recording an Item</a> page, prior to submitting your item.",
+    "sm": "Faamolemole, ia faamautinoa muamua na e mulimuli muamua i le auala e pu'e ai lau item, i le itulau ua faamatuaina: <a href='/recording-an-item.html'>Auala e Pu'eina ai Lau Item</a>."
   },
   "btn": {
     "link": "https://forms.gle/P1jFgdURnTECzjV6A",
@@ -65117,13 +65117,6 @@ var UploadItemsForm = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(UploadItemsForm, [{
-    key: "injectFormFacade",
-    value: function injectFormFacade() {
-      var s = document.createElement('script');
-      s.setAttribute("src", "https://formfacade.com/include/107715893633229583315/form/1FAIpQLSeonv0ii6ScYc63mDI88NYHOKVDJgUpURX-w65f10N39JH8Ew/bootstrap.js?div=uploadItemsForm");
-      document.body.appendChild(s);
-    }
-  }, {
     key: "toggleWindowScroll",
     value: function toggleWindowScroll() {
       var body = document.querySelector('body');
@@ -65167,7 +65160,6 @@ var UploadItemsForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
-      // this.injectFormFacade();
       this.mountOpenUpload();
     }
   }, {

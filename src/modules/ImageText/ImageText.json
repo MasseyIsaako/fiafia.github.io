@@ -22,8 +22,8 @@
             "sm": "Ua uma ona sauni sau item?"
         },
         "paragraph": {
-            "en": "Upload your item here! Please <a href='#' class='rsvp-form-open'>RSVP</a> before uploading your item. We will be reviewing all items prior to the evening.",
-            "sm": "Faaulu mai lau item i le itulau lenei! Faamolemole resitala muamua <a href='#' class='rsvp-form-open'>(RSVP)</a> a o le’i tuuina I luga (upload) lau item. O le a siakiina uma items a o le’i oo i le aso o le fiafia."
+            "en": "Upload your item here! Please <a href='#' class='rsvp-form-open'>RSVP</a> before uploading your item. We will be reviewing all items prior to the evening. If you are unable to submit your item here, please contact us for assistance.",
+            "sm": "Faaulu mai lau item i le itulau lenei! Faamolemole resitala muamua <a href='#' class='rsvp-form-open'>(RSVP)</a> a o le’i tuuina I luga (upload) lau item. O le a siakiina uma items a o le’i oo i le aso o le fiafia. Pe afai e le'i mafai ona lafo mai lau item e ala i lenei upega tafa'ilagi, faamolemole fesoota'i mai mo le fesoasoani."
         },
         "image": "https://images.unsplash.com/photo-1585834406350-744aaeaf491c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1481&q=80",
         "reverse": true,
@@ -44,8 +44,8 @@
             "sm": "Ua uma ona sauni sau item?"
         },
         "paragraph": {
-            "en": "Upload your item here! Please <a href='#' class='rsvp-form-open'>RSVP</a> before uploading your item. We will be reviewing all items prior to the evening.",
-            "sm": "Faaulu mai lau item i le itulau lenei! Faamolemole resitala muamua <a href='#' class='rsvp-form-open'>(RSVP)</a> a o le’i tuuina I luga (upload) lau item. O le a siakiina uma items a o le’i oo i le aso o le fiafia."
+            "en": "Upload your item here! Please <a href='#' class='rsvp-form-open'>RSVP</a> before uploading your item. We will be reviewing all items prior to the evening. If you are unable to submit your item here, please contact us for assistance.",
+            "sm": "Faaulu mai lau item i le itulau lenei! Faamolemole resitala muamua <a href='#' class='rsvp-form-open'>(RSVP)</a> a o le’i tuuina I luga (upload) lau item. O le a siakiina uma items a o le’i oo i le aso o le fiafia. Pe afai e le'i mafai ona lafo mai lau item e ala i lenei upega tafa'ilagi, faamolemole fesoota'i mai mo le fesoasoani."
         },
         "image": "https://images.unsplash.com/photo-1616674343403-ebd24b7f53a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2300&q=80",
         "reverse": true,

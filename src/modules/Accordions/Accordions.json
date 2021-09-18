@@ -12,8 +12,8 @@
                     "sm": "O le a le resolution e tatau ona pu’e ai la’u vitiō?"
                 },
                 "answer": {
-                    "en": "<p>We would greatly appreciate that your video is between 720 to 1080 in resolution. A video shot in 4k resolution and above, may be too large to be streamed over Zoom.</p>",
-                    "sm": "<p>E matou te talisapaia pe a mafai ona pu'eina lau vitiō I le va o le 720 - 1080 resolution. O se vitiō e pu'eina I le 4k resolution poo luga atu, e fai sina lapo’a tele ma e ono lē mafai ona faaali atu I luga o le Zoom.</p>"
+                    "en": "<p>We would greatly appreciate that your video is between 720p to 1080p in resolution. A video shot in 4k resolution and above, may be too large to be streamed over Zoom.</p>",
+                    "sm": "<p>E matou te talisapaia pe a mafai ona pu'eina lau vitiō I le va o le 720p - 1080p resolution. O se vitiō e pu'eina I le 4k resolution poo luga atu, e fai sina lapo’a tele ma e ono lē mafai ona faaali atu I luga o le Zoom.</p>"
                 }
             },
             {

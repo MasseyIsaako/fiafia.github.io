@@ -12,13 +12,6 @@ class UploadItemsForm extends React.Component {
         };
     }
 
-    injectFormFacade () {
-        const s = document.createElement('script');
-        s.setAttribute("src", "https://formfacade.com/include/107715893633229583315/form/1FAIpQLSeonv0ii6ScYc63mDI88NYHOKVDJgUpURX-w65f10N39JH8Ew/bootstrap.js?div=uploadItemsForm");
-
-        document.body.appendChild(s);
-    }
-
     toggleWindowScroll () {
         const body = document.querySelector('body');
 
@@ -63,7 +56,6 @@ class UploadItemsForm extends React.Component {
     }
 
     componentDidMount() {
-        // this.injectFormFacade();
         this.mountOpenUpload();
     }
 

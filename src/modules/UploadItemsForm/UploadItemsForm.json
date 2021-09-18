@@ -4,8 +4,8 @@
         "sm": "Ua e mautinoa e te mana'o e lafo atu lau item?"
     },
     "summary": {
-        "en": "Please ensure that you have read the tips and tricks found on the 'Recording an Item' page, prior to submitting your item.",
-        "sm": "Faamolemole, ia faamautinoa muamua na e mulimuli muamua i le auala e pu'e ai lau item, i le itulau ua faamatuaina: Auala e Pu'eina ai Lau Aitema."
+        "en": "Please ensure that you have read the tips and tricks found on the <a href='/recording-an-item.html'>Recording an Item</a> page, prior to submitting your item.",
+        "sm": "Faamolemole, ia faamautinoa muamua na e mulimuli muamua i le auala e pu'e ai lau item, i le itulau ua faamatuaina: <a href='/recording-an-item.html'>Auala e Pu'eina ai Lau Item</a>."
     },
     "btn": {
         "link": "https://forms.gle/P1jFgdURnTECzjV6A",
