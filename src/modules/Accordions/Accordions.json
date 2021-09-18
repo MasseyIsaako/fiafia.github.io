@@ -22,8 +22,8 @@
                     "sm": "E fia ni a’u items e mafai ona faaulu, ma o le ā le umi?"
                 },
                 "answer": {
-                    "en": "<p>Please provide one 5 minute video. If you would like, you may provide more than one performance item in your video.</p>",
-                    "sm": "<p>E mafai ona faaulu sau item e lē sili atu ma le lima minute le umi. E mafai ona faaaofia ni au items se lua, i totonu o le Vitiō lenā e tasi.</p>"
+                    "en": "<p>Items longer than 5 minutes may present streaming issues. If you would like, you may provide more than one performance item in your video.</p>",
+                    "sm": "<p>E ono iai ni faafitauli i le streaming pe afai e sili atu i le 5 minute le umi o se vitiō item. E mafai ona faaaofia ni au items se lua, i totonu o le vitiō lenā e tasi.</p>"
                 }
             },
             {
@@ -32,7 +32,7 @@
                     "sm": "E iai se taimi faatupulaa e faaulu ai items?"
                 },
                 "answer": {
-                    "en": "<p>Yes there is! The cutoff date for items to be submitted is <strong>## October 2021</strong>.</p>",
+                    "en": "<p>Yes there is! The cutoff date for items to be submitted is <strong>25<sup>th</sup> October 2021</strong>.</p>",
                     "sm": "<p>Ioe. E faagata le faaulu mai o items I le aso <strong>## Oketopa 2021</strong>.</p>"
                 }
             },
@@ -52,8 +52,18 @@
                     "sm": "Pe e mafai ona live la’u item i le pō lena?"
                 },
                 "answer": {
-                    "en": "<p>Unfortunately, doing a live performance presents a few hurdles, like sound and video streaming quality. Please record your performance item and send it through instead, we thank you for your understanding!</p>",
+                    "en": "<p>Unfortunately, doing a live performance presents a few hurdles, like sound and video streaming quality. Please record your performance item and send it through instead, we thank you for your understanding! 😊</p>",
                     "sm": "<p>E leai. Ona o le tele o faafitauli e pei o le lē lelei o le ata, le leo, ma isi tulaga e fesootai ma le live, e manaomia ai le pu’e lelei o lau item ona upload lea. Faafetai lava le lagolagosua! 😊</p>"
+                }
+            },
+            {
+                "question": {
+                    "en": "May I invite others to this event?",
+                    "sm": "Pe e mafai ona ou valaaulia mai isi tagata i lenei faatasiga?"
+                },
+                "answer": {
+                    "en": "<p>This event is by invitation only, so please do not extend invitations to others.</p>",
+                    "sm": "<p>O lenei faatasiga e mō na o ē ua valaaulia, faamolemole aua le auina atu lenei valaaulia i isi.</p>"
                 }
             }
         ]
