@@ -28,9 +28,11 @@
     overflow: hidden;
     transition: 0.2s transform ease-in;
 
-    &:focus,
-    &:hover {
-        transform: scale(105%);
+    @include media-breakpoint-up ('lg') {
+        &:focus,
+        &:hover {
+            transform: scale(105%);
+        }
     }
 
     &__heading {

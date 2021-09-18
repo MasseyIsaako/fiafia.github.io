@@ -36,11 +36,11 @@
 
     &__heading {
         color: $color-white;
-        font-family: 'Kaushan Script', cursive;
+        font-family: 'Great Vibes', cursive;
         font-size: 60px;
 
         @include media-breakpoint-up ('lg') {
-            font-size: 100px;
+            font-size: 120px;
         }
     }
 

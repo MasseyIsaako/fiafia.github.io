@@ -17,8 +17,8 @@
             "sm": "O le ā o le a tupu?"
         },
         "paragraph": {
-            "en": "On <strong>6<sup>th</sup> November 2021 (AEST)</strong>, there will be a fiafia night for you, our dear brothers and sisters! A night of entertainment and encouragement, provided by our spiritual family from around the world. If you would like to contribute a performance item to this wonderful evening, please explore this site for ideas. 😊",
-            "sm": "I le aso <strong>Novema 6 2021 (AEST)</strong>, o le a faia ai se fiafia mo outou uso ma tuafafine peleina! O le a faatumulia i ni faafiafiaga ma ni faalaeiauga mai o tatou aiga faaleagaga mai vaipanoa eseese o le lalolagi. A fia fai sou sao i lenei faatasiga fiafia, faamolemole taga’i atili i lenei itulau. O le a iai nisi faamatalaga faaopoopo. 😊"
+            "en": "On <strong>6<sup>th</sup> November 2021 (AEST)</strong>, there will be a fiafia night for you, our dear brothers and sisters! A night of entertainment and encouragement, provided by our spiritual family from around the world. If you would like to contribute a performance item to this wonderful evening, please explore this site for ideas! 😊<br><br>3:00 pm — 6:00pm — AUS (MLB)<br>5:00 pm — 8:00 pm — NZ<br>6:00 pm - 9:00 pm — WST & AMSAM (Friday)<br>7:00 pm - 10:00 pm — RARO & HWI (Friday)<br>9:00 pm - 12:00 pm — VGS and STL (Friday)",
+            "sm": "I le aso <strong>6 Novema 2021</strong>, i le itula e 3pm <i>(taimi ma le aso a Melepone Ausetalia)</i>, o le a faia ai se fiafia mo outou uso ma tuafafine peleina! O se afiafi o faafiafiaga ma faalaeiauga ua saunia e lo tatou aiga faaleagaga mai vaipanoa eseese o le lalolagi.  Afai e te fia faafiafia i lea po, faamolemole fa’aauau ona faitau i isi itulau o lenei website mo nisi faamatalaga atili! 😊<br><br>3:00 pm — 6:00pm — AUS (MLB)<br>5:00 pm — 8:00 pm — NZ<br>6:00 pm - 9:00 pm — WST & AMSAM (Friday)<br>7:00 pm - 10:00 pm — RARO & HWI (Friday)<br>9:00 pm - 12:00 pm — VGS and STL (Friday)"
         }
     },
     {
@@ -63,6 +63,17 @@
         "paragraph": {
             "en": "Hello! We are your fellow brothers and sisters bringing to you this evening of entertainment. If you would like to contact us or have any questions not answered on this website, please send an email to <a href=\"mailto:webmaster@example.com\">thenightbeforeproductions@gmail.com</a>.",
             "sm": "Talofa lava! O i matou o uso ma tuafafine o lo’o saunia lenei faatasiga. Pe a iai sau fesili po o se mea e te fia malamalama iai e faatatau iā i matou faafesootai mai i le tuatusi lenei <a href=\"mailto:webmaster@example.com\">thenightbeforeproductions@gmail.com</a>"
+        },
+        "img": {
+            "slug": "profiles-group",
+            "position": "center",
+            "styles": {
+                "borderRadius": "5px",
+                "boxShadow": "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
+                "height": "auto",
+                "marginTop": "20px",
+                "width": "100%"
+            }
         }
     }
 ]

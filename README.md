@@ -9,6 +9,4 @@ The dist folder git code was found here: https://gist.github.com/joshuapekera/ef
 Prior to running this script, we need to delete the env/stage branch in Github. This branch is hosted on Github Pages.
 
 ### Prod:
-`git merge master --no-commit && git add -A . && git commit -m "env/prod: Deploying assets to prod." && git push origin env/prod"`
-
 We are using Netlify to handle our deployments. All we need to do is push the code up to env/prod and run the deployment pipeline in Netlify. The site automatically gets updated for us.  This branch is hosted on Netlify.

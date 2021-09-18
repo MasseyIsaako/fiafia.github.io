@@ -41,6 +41,7 @@
         background-color: $color-white;
         border-radius: 5px;
         box-shadow: 0 4px 8px 0 rgba($color-black, 0.2);
+        cursor: pointer;
         height: calc(100% - 24px);
         margin-bottom: 24px;
         overflow: hidden;
@@ -49,20 +50,9 @@
         text-align: center;
         transition: 0.5s transform ease;
 
-        &:focus,
-        &:hover {
-            cursor: pointer;
-            transform: scale(105%);
-
-            .profiles__card-img {
-                filter: none;
-            }
-        }
-
         @include media-breakpoint-up ('lg') {
             &:focus,
             &:hover {
-                cursor: pointer;
                 transform: scale(105%);
 
                 .profiles__card-img {
