@@ -76,7 +76,7 @@ const ImageText = props => {
         <section className={theme.wrapper}>
             <Container>
                 <Row className={theme.row}>
-                    <Col lg={5}>
+                    <Col lg={5} className='d-flex align-items-center'>
                         <div className="image-text__content">
                             <Title title={title} />
                             <Paragraph paragraph={paragraph} />

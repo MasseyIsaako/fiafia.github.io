@@ -24,10 +24,6 @@ export const getPic = (img, images) => {
             images[img.slug].png.length > 0
         ) {
             image.slug = images[img.slug].png;
-        } else if (images[img.slug].webp &&
-            images[img.slug].webp.length > 0
-        ) {
-            image.slug = images[img.slug].webp;
         }
 
         image.position = img.position ?? 'center';

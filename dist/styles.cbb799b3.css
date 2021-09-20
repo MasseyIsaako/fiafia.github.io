@@ -11420,7 +11420,6 @@ body {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
 }
 .image-text__heading {
@@ -11475,6 +11474,7 @@ body {
 }
 .image-text__image-inner {
   height: 100%;
+  left: 0;
   position: absolute;
   top: -60px;
   width: 100%;
@@ -11538,7 +11538,6 @@ body {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: space-between;
   overflow: hidden;
   transition: 0.2s transform ease-in;
@@ -11668,7 +11667,13 @@ body {
 
 .items-slider {
   background-color: #ffffff;
-  padding: 150px 0;
+  padding: 100px 0 150px;
+}
+@media (min-width: 992px) {
+  .items-slider {
+    font-size: 40px;
+    padding: 150px 0;
+  }
 }
 .items-slider__heading {
   color: #fe0f53;
@@ -11683,6 +11688,7 @@ body {
   }
 }
 .items-slider__intro {
+  font-size: 18px;
   margin-bottom: 80px;
   text-align: center;
 }
@@ -11697,12 +11703,6 @@ body {
   margin: 0 auto;
   overflow: visible !important;
   width: 100%;
-}
-.items-slider .glide__track {
-  height: 100%;
-}
-.items-slider .glide__slides {
-  height: 100%;
 }
 .items-slider .glide__slide {
   border-radius: 5px;
@@ -11727,7 +11727,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  height: 100%;
+  height: 250px;
   justify-content: center;
   transition: 1s transform ease;
   width: 100%;
@@ -11755,6 +11755,7 @@ body {
 }
 .items-slider__slide-content {
   background-color: #fe0f53;
+  height: 60px;
   padding: 15px;
   position: relative;
 }
@@ -11978,7 +11979,6 @@ body > div:first-child {
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  height: calc(100% - 24px);
   margin-bottom: 24px;
   overflow: hidden;
   padding: 30px 20px;
@@ -12146,6 +12146,19 @@ body > div:first-child {
 .rsvp-banner {
   background-color: #ffffff;
   overflow: hidden;
+}
+.rsvp-banner--ipad .rsvp-banner__content {
+  padding: 50px 0;
+}
+.rsvp-banner--ipad .rsvp-banner__content::after {
+  content: none;
+}
+@media (min-width: 768px) {
+  .rsvp-banner--ipad .rsvp-banner__image {
+    height: 400px;
+    margin-left: calc(((100vw - 100%) / 2) * -1);
+    width: 100vw;
+  }
 }
 .rsvp-banner--brown {
   background-color: #96481b;
@@ -12721,7 +12734,7 @@ body.samoan .translate .dropdown-item[data-lang=samoan]::after {
 }
 @media (min-width: 992px) {
   .hero__heading {
-    font-size: 120px;
+    font-size: 110px;
   }
 }
 .hero__summary {
@@ -12788,7 +12801,7 @@ body.samoan .translate .dropdown-item[data-lang=samoan]::after {
   border-bottom: 4px solid #ffffff;
   border-radius: 5px;
   border-right: 4px solid #ffffff;
-  bottom: 50px;
+  bottom: 100px;
   display: block;
   height: 20px;
   left: 50%;

@@ -47287,8 +47287,6 @@ var getPic = function getPic(img, images) {
       image.slug = images[img.slug].jpg;
     } else if (images[img.slug].png && images[img.slug].png.length > 0) {
       image.slug = images[img.slug].png;
-    } else if (images[img.slug].webp && images[img.slug].webp.length > 0) {
-      image.slug = images[img.slug].webp;
     }
 
     image.position = (_img$position = img.position) !== null && _img$position !== void 0 ? _img$position : 'center';
@@ -59051,7 +59049,8 @@ var ImageText = function ImageText(props) {
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
     className: theme.row
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
-    lg: 5
+    lg: 5,
+    className: "d-flex align-items-center"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "image-text__content"
   }, /*#__PURE__*/_react.default.createElement(Title, {
@@ -59305,21 +59304,21 @@ ItemPopup.propTypes = {
 };
 var _default = ItemPopup;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","prop-types":"node_modules/prop-types/index.js","../../js/utils/utils.js":"src/js/utils/utils.js"}],"src/images/ItemPopup/camera.webp":[function(require,module,exports) {
-module.exports = "/camera.eada8617.webp";
-},{}],"src/images/ItemPopup/atmosphere.jpeg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","prop-types":"node_modules/prop-types/index.js","../../js/utils/utils.js":"src/js/utils/utils.js"}],"src/images/ItemPopup/atmosphere.jpeg":[function(require,module,exports) {
 module.exports = "/atmosphere.b0ac0456.jpeg";
+},{}],"src/images/ItemPopup/camera.jpeg":[function(require,module,exports) {
+module.exports = "/camera.08f97e3a.jpeg";
 },{}],"src/images/ItemPopup/fun.jpeg":[function(require,module,exports) {
 module.exports = "/fun.14ebf1fe.jpeg";
 },{}],"src/images/ItemPopup/sound.jpeg":[function(require,module,exports) {
 module.exports = "/sound.41e28c52.jpeg";
 },{}],"src/images/ItemPopup/*.*":[function(require,module,exports) {
 module.exports = {
-  "camera": {
-    "webp": require("./camera.webp")
-  },
   "atmosphere": {
     "jpeg": require("./atmosphere.jpeg")
+  },
+  "camera": {
+    "jpeg": require("./camera.jpeg")
   },
   "fun": {
     "jpeg": require("./fun.jpeg")
@@ -59328,7 +59327,7 @@ module.exports = {
     "jpeg": require("./sound.jpeg")
   }
 };
-},{"./camera.webp":"src/images/ItemPopup/camera.webp","./atmosphere.jpeg":"src/images/ItemPopup/atmosphere.jpeg","./fun.jpeg":"src/images/ItemPopup/fun.jpeg","./sound.jpeg":"src/images/ItemPopup/sound.jpeg"}],"src/modules/ItemCards/ItemCards.jsx":[function(require,module,exports) {
+},{"./atmosphere.jpeg":"src/images/ItemPopup/atmosphere.jpeg","./camera.jpeg":"src/images/ItemPopup/camera.jpeg","./fun.jpeg":"src/images/ItemPopup/fun.jpeg","./sound.jpeg":"src/images/ItemPopup/sound.jpeg"}],"src/modules/ItemCards/ItemCards.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -63900,20 +63899,22 @@ exports.default = _default;
 module.exports = "/annie.f9699f19.jpeg";
 },{}],"src/images/Profiles/chise-pale.jpeg":[function(require,module,exports) {
 module.exports = "/chise-pale.e34dc242.jpeg";
-},{}],"src/images/Profiles/faye.png":[function(require,module,exports) {
-module.exports = "/faye.e30f206d.png";
 },{}],"src/images/Profiles/chise-white.jpeg":[function(require,module,exports) {
 module.exports = "/chise-white.9138b95c.jpeg";
+},{}],"src/images/Profiles/faye.png":[function(require,module,exports) {
+module.exports = "/faye.e30f206d.png";
+},{}],"src/images/Profiles/freida.jpg":[function(require,module,exports) {
+module.exports = "/freida.a565d54b.jpg";
 },{}],"src/images/Profiles/jack.jpeg":[function(require,module,exports) {
 module.exports = "/jack.7f4f16d1.jpeg";
 },{}],"src/images/Profiles/lasi.png":[function(require,module,exports) {
 module.exports = "/lasi.f8ca8f82.png";
 },{}],"src/images/Profiles/manu.png":[function(require,module,exports) {
 module.exports = "/manu.1b37728a.png";
-},{}],"src/images/Profiles/freida.jpg":[function(require,module,exports) {
-module.exports = "/freida.a565d54b.jpg";
 },{}],"src/images/Profiles/placeholder.jpeg":[function(require,module,exports) {
 module.exports = "/placeholder.7fbee703.jpeg";
+},{}],"src/images/Profiles/profiles-group.png":[function(require,module,exports) {
+module.exports = "/profiles-group.fd24e173.png";
 },{}],"src/images/Profiles/taase.png":[function(require,module,exports) {
 module.exports = "/taase.c3155837.png";
 },{}],"src/images/Profiles/tana.jpeg":[function(require,module,exports) {
@@ -63924,8 +63925,6 @@ module.exports = "/thomas.4677c7b4.png";
 module.exports = "/tumema.81619a0c.jpeg";
 },{}],"src/images/Profiles/valasi.png":[function(require,module,exports) {
 module.exports = "/valasi.fc8292c7.png";
-},{}],"src/images/Profiles/profiles-group.png":[function(require,module,exports) {
-module.exports = "/profiles-group.fd24e173.png";
 },{}],"src/images/Profiles/*.*":[function(require,module,exports) {
 module.exports = {
   "annie": {
@@ -63934,11 +63933,14 @@ module.exports = {
   "chise-pale": {
     "jpeg": require("./chise-pale.jpeg")
   },
+  "chise-white": {
+    "jpeg": require("./chise-white.jpeg")
+  },
   "faye": {
     "png": require("./faye.png")
   },
-  "chise-white": {
-    "jpeg": require("./chise-white.jpeg")
+  "freida": {
+    "jpg": require("./freida.jpg")
   },
   "jack": {
     "jpeg": require("./jack.jpeg")
@@ -63949,11 +63951,11 @@ module.exports = {
   "manu": {
     "png": require("./manu.png")
   },
-  "freida": {
-    "jpg": require("./freida.jpg")
-  },
   "placeholder": {
     "jpeg": require("./placeholder.jpeg")
+  },
+  "profiles-group": {
+    "png": require("./profiles-group.png")
   },
   "taase": {
     "png": require("./taase.png")
@@ -63969,12 +63971,9 @@ module.exports = {
   },
   "valasi": {
     "png": require("./valasi.png")
-  },
-  "profiles-group": {
-    "png": require("./profiles-group.png")
   }
 };
-},{"./annie.jpeg":"src/images/Profiles/annie.jpeg","./chise-pale.jpeg":"src/images/Profiles/chise-pale.jpeg","./faye.png":"src/images/Profiles/faye.png","./chise-white.jpeg":"src/images/Profiles/chise-white.jpeg","./jack.jpeg":"src/images/Profiles/jack.jpeg","./lasi.png":"src/images/Profiles/lasi.png","./manu.png":"src/images/Profiles/manu.png","./freida.jpg":"src/images/Profiles/freida.jpg","./placeholder.jpeg":"src/images/Profiles/placeholder.jpeg","./taase.png":"src/images/Profiles/taase.png","./tana.jpeg":"src/images/Profiles/tana.jpeg","./thomas.png":"src/images/Profiles/thomas.png","./tumema.jpeg":"src/images/Profiles/tumema.jpeg","./valasi.png":"src/images/Profiles/valasi.png","./profiles-group.png":"src/images/Profiles/profiles-group.png"}],"src/modules/Profiles/Profiles.json":[function(require,module,exports) {
+},{"./annie.jpeg":"src/images/Profiles/annie.jpeg","./chise-pale.jpeg":"src/images/Profiles/chise-pale.jpeg","./chise-white.jpeg":"src/images/Profiles/chise-white.jpeg","./faye.png":"src/images/Profiles/faye.png","./freida.jpg":"src/images/Profiles/freida.jpg","./jack.jpeg":"src/images/Profiles/jack.jpeg","./lasi.png":"src/images/Profiles/lasi.png","./manu.png":"src/images/Profiles/manu.png","./placeholder.jpeg":"src/images/Profiles/placeholder.jpeg","./profiles-group.png":"src/images/Profiles/profiles-group.png","./taase.png":"src/images/Profiles/taase.png","./tana.jpeg":"src/images/Profiles/tana.jpeg","./thomas.png":"src/images/Profiles/thomas.png","./tumema.jpeg":"src/images/Profiles/tumema.jpeg","./valasi.png":"src/images/Profiles/valasi.png"}],"src/modules/Profiles/Profiles.json":[function(require,module,exports) {
 module.exports = [{
   "name": "Cochise Avei",
   "role": "Coordinator",
@@ -64696,18 +64695,13 @@ var RSVPBanner = /*#__PURE__*/function (_React$Component) {
       }, this.state.cta.sm));
     }
   }, {
-    key: "render",
-    value: function render() {
-      var classTheme = "rsvp-banner rsvp-banner--".concat(this.state.theme);
-      var heading = this.getHeading();
-      var summary = this.getSummary();
-      var image = this.getImage();
-      var cta = this.getCTA();
-      return /*#__PURE__*/_react.default.createElement("section", {
-        className: classTheme
-      }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
-        className: "flex-column-reverse flex-md-row"
-      }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
+    key: "normalLayout",
+    value: function normalLayout(_ref) {
+      var heading = _ref.heading,
+          summary = _ref.summary,
+          image = _ref.image,
+          cta = _ref.cta;
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
         sm: 12,
         md: 5
       }, /*#__PURE__*/_react.default.createElement("div", {
@@ -64717,7 +64711,41 @@ var RSVPBanner = /*#__PURE__*/function (_React$Component) {
       }, heading, summary, cta))), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
         sm: 12,
         md: 7
-      }, image))));
+      }, image));
+    }
+  }, {
+    key: "iPadLayout",
+    value: function iPadLayout(_ref2) {
+      var heading = _ref2.heading,
+          summary = _ref2.summary,
+          image = _ref2.image,
+          cta = _ref2.cta;
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
+        sm: 12
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "rsvp-banner__content"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "rsvp-banner__text"
+      }, heading, summary, cta))), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
+        sm: 12
+      }, image));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var isIPad = navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2;
+      var classTheme = isIPad ? "rsvp-banner rsvp-banner--ipad rsvp-banner--".concat(this.state.theme) : "rsvp-banner rsvp-banner--".concat(this.state.theme);
+      var data = {
+        heading: this.getHeading(),
+        summary: this.getSummary(),
+        image: this.getImage(),
+        cta: this.getCTA()
+      };
+      return /*#__PURE__*/_react.default.createElement("section", {
+        className: classTheme
+      }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
+        className: "flex-column-reverse flex-md-row"
+      }, isIPad ? this.iPadLayout(data) : this.normalLayout(data))));
     }
   }]);
 
@@ -64912,7 +64940,7 @@ module.exports = [{
     "sm": "The Night Before Productions"
   },
   "paragraph": {
-    "en": "Hello! We are your fellow brothers and sisters bringing to you this evening of entertainment. If you would like to contact us or have any questions not answered on this website, please send an email to <a href=\"mailto:webmaster@example.com\">thenightbeforeproductions@gmail.com</a>.",
+    "en": "Hello! We are your fellow brothers and sisters bringing to you this evening of entertainment. If you would like to contact us or have any questions not answered on this website, please send an email to <a href=\"mailto:thenightbeforeproductions@gmail.com?subject=Enquiry\">thenightbeforeproductions@gmail.com</a>.",
     "sm": "Talofa lava! O i matou o uso ma tuafafine o lo’o saunia lenei faatasiga. Pe a iai sau fesili po o se mea e te fia malamalama iai e faatatau iā i matou faafesootai mai i le tuatusi lenei <a href=\"mailto:webmaster@example.com\">thenightbeforeproductions@gmail.com</a>"
   },
   "img": {
@@ -66174,7 +66202,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64895" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59909" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
