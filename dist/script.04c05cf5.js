@@ -59066,6 +59066,10 @@ module.exports = {
     "en": "Tips on Recording Your Item",
     "sm": "Pu'eina o se Item"
   },
+  "summary": {
+    "en": "For tips on how to record your item, click on the cards below.",
+    "sm": "Mo fautuaga i le auala e pu'eina ai lau item, kiliki i ata o loo mulimuli mai."
+  },
   "cards": [{
     "previewHeading": {
       "en": "Camera Angle",
@@ -59396,7 +59400,7 @@ var ItemCards = /*#__PURE__*/function (_React$Component) {
           cards.push( /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
             key: index,
             lg: 3,
-            className: "pb-3"
+            className: "pb-3 d-flex"
           }, /*#__PURE__*/_react.default.createElement("div", {
             className: "item-card",
             onClick: function onClick() {
@@ -59431,6 +59435,11 @@ var ItemCards = /*#__PURE__*/function (_React$Component) {
         className: "item-cards__heading",
         dangerouslySetInnerHTML: {
           __html: (0, _utils.translator)(_ItemCards.default.heading)
+        }
+      }), /*#__PURE__*/_react.default.createElement("h3", {
+        className: "item-cards__summary",
+        dangerouslySetInnerHTML: {
+          __html: (0, _utils.translator)(_ItemCards.default.summary)
         }
       }))), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, null, cards))), /*#__PURE__*/_react.default.createElement(_ItemPopup.default, {
         closeItem: this.closeItem,
@@ -66177,7 +66186,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63990" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53611" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

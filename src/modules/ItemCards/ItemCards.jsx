@@ -45,7 +45,7 @@ class ItemCards extends React.Component {
                 const image = getPic(card.image, ItemCardsImages);
 
                 cards.push(
-                    <Col key={index} lg={3} className="pb-3">
+                    <Col key={index} lg={3} className="pb-3 d-flex">
                         <div className="item-card" onClick={() => { this.openItem(card) }}>
                             <h2 className="item-card__heading">
                                 <span className="english">{`${index + 1}) ${card.previewHeading.en}`}</span>
@@ -74,6 +74,7 @@ class ItemCards extends React.Component {
                         <Row>
                             <Col sm={12}>
                                 <h1 className="item-cards__heading" dangerouslySetInnerHTML={{ __html: translator(ItemCardsData.heading) }}></h1>
+                                <h3 className="item-cards__summary" dangerouslySetInnerHTML={{ __html: translator(ItemCardsData.summary) }}></h3>
                             </Col>
                         </Row>
                         <Row>
