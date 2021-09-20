@@ -23571,18 +23571,18 @@ if ("development" !== "production") {
 
                   if (renderState.tail === null && renderState.tailMode === 'hidden' && !renderedTail.alternate && !getIsHydrating() // We don't cut it if we're hydrating.
                   ) {
-                    // We need to delete the row we just rendered.
-                    // Reset the effect list to what it was before we rendered this
-                    // child. The nested children have already appended themselves.
-                    var lastEffect = workInProgress.lastEffect = renderState.lastEffect; // Remove any effects that were appended after this point.
+                      // We need to delete the row we just rendered.
+                      // Reset the effect list to what it was before we rendered this
+                      // child. The nested children have already appended themselves.
+                      var lastEffect = workInProgress.lastEffect = renderState.lastEffect; // Remove any effects that were appended after this point.
 
-                    if (lastEffect !== null) {
-                      lastEffect.nextEffect = null;
-                    } // We're done.
+                      if (lastEffect !== null) {
+                        lastEffect.nextEffect = null;
+                      } // We're done.
 
 
-                    return null;
-                  }
+                      return null;
+                    }
                 } else if ( // The time it took to render last row is greater than the remaining
                 // time we have to render. So rendering one more row would likely
                 // exceed it.
@@ -36026,7 +36026,64 @@ var _enums = require("../enums.js");
 function getBasePlacement(placement) {
   return placement.split('-')[0];
 }
-},{"../enums.js":"node_modules/@popperjs/core/lib/enums.js"}],"node_modules/@popperjs/core/lib/dom-utils/getWindow.js":[function(require,module,exports) {
+},{"../enums.js":"node_modules/@popperjs/core/lib/enums.js"}],"node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = getBoundingClientRect;
+
+function getBoundingClientRect(element) {
+  var rect = element.getBoundingClientRect();
+  return {
+    width: rect.width,
+    height: rect.height,
+    top: rect.top,
+    right: rect.right,
+    bottom: rect.bottom,
+    left: rect.left,
+    x: rect.left,
+    y: rect.top
+  };
+}
+},{}],"node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = getLayoutRect;
+
+var _getBoundingClientRect = _interopRequireDefault(require("./getBoundingClientRect.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Returns the layout rect of an element relative to its offsetParent. Layout
+// means it doesn't take into account transforms.
+function getLayoutRect(element) {
+  var clientRect = (0, _getBoundingClientRect.default)(element); // Use the clientRect sizes if it's not been transformed.
+  // Fixes https://github.com/popperjs/popper-core/issues/1223
+
+  var width = element.offsetWidth;
+  var height = element.offsetHeight;
+
+  if (Math.abs(clientRect.width - width) <= 1) {
+    width = clientRect.width;
+  }
+
+  if (Math.abs(clientRect.height - height) <= 1) {
+    height = clientRect.height;
+  }
+
+  return {
+    x: element.offsetLeft,
+    y: element.offsetTop,
+    width: width,
+    height: height
+  };
+}
+},{"./getBoundingClientRect.js":"node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js"}],"node_modules/@popperjs/core/lib/dom-utils/getWindow.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36079,89 +36136,7 @@ function isShadowRoot(node) {
   var OwnElement = (0, _getWindow.default)(node).ShadowRoot;
   return node instanceof OwnElement || node instanceof ShadowRoot;
 }
-},{"./getWindow.js":"node_modules/@popperjs/core/lib/dom-utils/getWindow.js"}],"node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = getBoundingClientRect;
-
-var _instanceOf = require("./instanceOf.js");
-
-var round = Math.round;
-
-function getBoundingClientRect(element, includeScale) {
-  if (includeScale === void 0) {
-    includeScale = false;
-  }
-
-  var rect = element.getBoundingClientRect();
-  var scaleX = 1;
-  var scaleY = 1;
-
-  if ((0, _instanceOf.isHTMLElement)(element) && includeScale) {
-    var offsetHeight = element.offsetHeight;
-    var offsetWidth = element.offsetWidth; // Do not attempt to divide by 0, otherwise we get `Infinity` as scale
-    // Fallback to 1 in case both values are `0`
-
-    if (offsetWidth > 0) {
-      scaleX = rect.width / offsetWidth || 1;
-    }
-
-    if (offsetHeight > 0) {
-      scaleY = rect.height / offsetHeight || 1;
-    }
-  }
-
-  return {
-    width: round(rect.width / scaleX),
-    height: round(rect.height / scaleY),
-    top: round(rect.top / scaleY),
-    right: round(rect.right / scaleX),
-    bottom: round(rect.bottom / scaleY),
-    left: round(rect.left / scaleX),
-    x: round(rect.left / scaleX),
-    y: round(rect.top / scaleY)
-  };
-}
-},{"./instanceOf.js":"node_modules/@popperjs/core/lib/dom-utils/instanceOf.js"}],"node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = getLayoutRect;
-
-var _getBoundingClientRect = _interopRequireDefault(require("./getBoundingClientRect.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// Returns the layout rect of an element relative to its offsetParent. Layout
-// means it doesn't take into account transforms.
-function getLayoutRect(element) {
-  var clientRect = (0, _getBoundingClientRect.default)(element); // Use the clientRect sizes if it's not been transformed.
-  // Fixes https://github.com/popperjs/popper-core/issues/1223
-
-  var width = element.offsetWidth;
-  var height = element.offsetHeight;
-
-  if (Math.abs(clientRect.width - width) <= 1) {
-    width = clientRect.width;
-  }
-
-  if (Math.abs(clientRect.height - height) <= 1) {
-    height = clientRect.height;
-  }
-
-  return {
-    x: element.offsetLeft,
-    y: element.offsetTop,
-    width: width,
-    height: height
-  };
-}
-},{"./getBoundingClientRect.js":"node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js"}],"node_modules/@popperjs/core/lib/dom-utils/contains.js":[function(require,module,exports) {
+},{"./getWindow.js":"node_modules/@popperjs/core/lib/dom-utils/getWindow.js"}],"node_modules/@popperjs/core/lib/dom-utils/contains.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36178,17 +36153,17 @@ function contains(parent, child) {
     return true;
   } // then fallback to custom implementation with Shadow DOM support
   else if (rootNode && (0, _instanceOf.isShadowRoot)(rootNode)) {
-    var next = child;
+      var next = child;
 
-    do {
-      if (next && parent.isSameNode(next)) {
-        return true;
-      } // $FlowFixMe[prop-missing]: need a better way to handle this...
+      do {
+        if (next && parent.isSameNode(next)) {
+          return true;
+        } // $FlowFixMe[prop-missing]: need a better way to handle this...
 
 
-      next = next.parentNode || next.host;
-    } while (next);
-  } // Give up, the result is false
+        next = next.parentNode || next.host;
+      } while (next);
+    } // Give up, the result is false
 
 
   return false;
@@ -36564,18 +36539,7 @@ var _default = {
   requiresIfExists: ['preventOverflow']
 };
 exports.default = _default;
-},{"../utils/getBasePlacement.js":"node_modules/@popperjs/core/lib/utils/getBasePlacement.js","../dom-utils/getLayoutRect.js":"node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js","../dom-utils/contains.js":"node_modules/@popperjs/core/lib/dom-utils/contains.js","../dom-utils/getOffsetParent.js":"node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js","../utils/getMainAxisFromPlacement.js":"node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js","../utils/within.js":"node_modules/@popperjs/core/lib/utils/within.js","../utils/mergePaddingObject.js":"node_modules/@popperjs/core/lib/utils/mergePaddingObject.js","../utils/expandToHashMap.js":"node_modules/@popperjs/core/lib/utils/expandToHashMap.js","../enums.js":"node_modules/@popperjs/core/lib/enums.js","../dom-utils/instanceOf.js":"node_modules/@popperjs/core/lib/dom-utils/instanceOf.js"}],"node_modules/@popperjs/core/lib/utils/getVariation.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = getVariation;
-
-function getVariation(placement) {
-  return placement.split('-')[1];
-}
-},{}],"node_modules/@popperjs/core/lib/modifiers/computeStyles.js":[function(require,module,exports) {
+},{"../utils/getBasePlacement.js":"node_modules/@popperjs/core/lib/utils/getBasePlacement.js","../dom-utils/getLayoutRect.js":"node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js","../dom-utils/contains.js":"node_modules/@popperjs/core/lib/dom-utils/contains.js","../dom-utils/getOffsetParent.js":"node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js","../utils/getMainAxisFromPlacement.js":"node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js","../utils/within.js":"node_modules/@popperjs/core/lib/utils/within.js","../utils/mergePaddingObject.js":"node_modules/@popperjs/core/lib/utils/mergePaddingObject.js","../utils/expandToHashMap.js":"node_modules/@popperjs/core/lib/utils/expandToHashMap.js","../enums.js":"node_modules/@popperjs/core/lib/enums.js","../dom-utils/instanceOf.js":"node_modules/@popperjs/core/lib/dom-utils/instanceOf.js"}],"node_modules/@popperjs/core/lib/modifiers/computeStyles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36595,8 +36559,6 @@ var _getDocumentElement = _interopRequireDefault(require("../dom-utils/getDocume
 var _getComputedStyle = _interopRequireDefault(require("../dom-utils/getComputedStyle.js"));
 
 var _getBasePlacement = _interopRequireDefault(require("../utils/getBasePlacement.js"));
-
-var _getVariation = _interopRequireDefault(require("../utils/getVariation.js"));
 
 var _math = require("../utils/math.js");
 
@@ -36629,7 +36591,6 @@ function mapToStyles(_ref2) {
   var popper = _ref2.popper,
       popperRect = _ref2.popperRect,
       placement = _ref2.placement,
-      variation = _ref2.variation,
       offsets = _ref2.offsets,
       position = _ref2.position,
       gpuAcceleration = _ref2.gpuAcceleration,
@@ -36656,7 +36617,7 @@ function mapToStyles(_ref2) {
     if (offsetParent === (0, _getWindow.default)(popper)) {
       offsetParent = (0, _getDocumentElement.default)(popper);
 
-      if ((0, _getComputedStyle.default)(offsetParent).position !== 'static' && position === 'absolute') {
+      if ((0, _getComputedStyle.default)(offsetParent).position !== 'static') {
         heightProp = 'scrollHeight';
         widthProp = 'scrollWidth';
       }
@@ -36665,14 +36626,14 @@ function mapToStyles(_ref2) {
 
     offsetParent = offsetParent;
 
-    if (placement === _enums.top || (placement === _enums.left || placement === _enums.right) && variation === _enums.end) {
+    if (placement === _enums.top) {
       sideY = _enums.bottom; // $FlowFixMe[prop-missing]
 
       y -= offsetParent[heightProp] - popperRect.height;
       y *= gpuAcceleration ? 1 : -1;
     }
 
-    if (placement === _enums.left || (placement === _enums.top || placement === _enums.bottom) && variation === _enums.end) {
+    if (placement === _enums.left) {
       sideX = _enums.right; // $FlowFixMe[prop-missing]
 
       x -= offsetParent[widthProp] - popperRect.width;
@@ -36687,7 +36648,7 @@ function mapToStyles(_ref2) {
   if (gpuAcceleration) {
     var _Object$assign;
 
-    return Object.assign({}, commonStyles, (_Object$assign = {}, _Object$assign[sideY] = hasY ? '0' : '', _Object$assign[sideX] = hasX ? '0' : '', _Object$assign.transform = (win.devicePixelRatio || 1) <= 1 ? "translate(" + x + "px, " + y + "px)" : "translate3d(" + x + "px, " + y + "px, 0)", _Object$assign));
+    return Object.assign({}, commonStyles, (_Object$assign = {}, _Object$assign[sideY] = hasY ? '0' : '', _Object$assign[sideX] = hasX ? '0' : '', _Object$assign.transform = (win.devicePixelRatio || 1) < 2 ? "translate(" + x + "px, " + y + "px)" : "translate3d(" + x + "px, " + y + "px, 0)", _Object$assign));
   }
 
   return Object.assign({}, commonStyles, (_Object$assign2 = {}, _Object$assign2[sideY] = hasY ? y + "px" : '', _Object$assign2[sideX] = hasX ? x + "px" : '', _Object$assign2.transform = '', _Object$assign2));
@@ -36715,7 +36676,6 @@ function computeStyles(_ref4) {
 
   var commonStyles = {
     placement: (0, _getBasePlacement.default)(state.placement),
-    variation: (0, _getVariation.default)(state.placement),
     popper: state.elements.popper,
     popperRect: state.rects.popper,
     gpuAcceleration: gpuAcceleration
@@ -36753,7 +36713,7 @@ var _default = {
   data: {}
 };
 exports.default = _default;
-},{"../enums.js":"node_modules/@popperjs/core/lib/enums.js","../dom-utils/getOffsetParent.js":"node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js","../dom-utils/getWindow.js":"node_modules/@popperjs/core/lib/dom-utils/getWindow.js","../dom-utils/getDocumentElement.js":"node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js","../dom-utils/getComputedStyle.js":"node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js","../utils/getBasePlacement.js":"node_modules/@popperjs/core/lib/utils/getBasePlacement.js","../utils/getVariation.js":"node_modules/@popperjs/core/lib/utils/getVariation.js","../utils/math.js":"node_modules/@popperjs/core/lib/utils/math.js"}],"node_modules/@popperjs/core/lib/modifiers/eventListeners.js":[function(require,module,exports) {
+},{"../enums.js":"node_modules/@popperjs/core/lib/enums.js","../dom-utils/getOffsetParent.js":"node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js","../dom-utils/getWindow.js":"node_modules/@popperjs/core/lib/dom-utils/getWindow.js","../dom-utils/getDocumentElement.js":"node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js","../dom-utils/getComputedStyle.js":"node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js","../utils/getBasePlacement.js":"node_modules/@popperjs/core/lib/utils/getBasePlacement.js","../utils/math.js":"node_modules/@popperjs/core/lib/utils/math.js"}],"node_modules/@popperjs/core/lib/modifiers/eventListeners.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37193,7 +37153,18 @@ function getClippingRect(element, boundary, rootBoundary) {
   clippingRect.y = clippingRect.top;
   return clippingRect;
 }
-},{"../enums.js":"node_modules/@popperjs/core/lib/enums.js","./getViewportRect.js":"node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js","./getDocumentRect.js":"node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.js","./listScrollParents.js":"node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js","./getOffsetParent.js":"node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js","./getDocumentElement.js":"node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js","./getComputedStyle.js":"node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js","./instanceOf.js":"node_modules/@popperjs/core/lib/dom-utils/instanceOf.js","./getBoundingClientRect.js":"node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js","./getParentNode.js":"node_modules/@popperjs/core/lib/dom-utils/getParentNode.js","./contains.js":"node_modules/@popperjs/core/lib/dom-utils/contains.js","./getNodeName.js":"node_modules/@popperjs/core/lib/dom-utils/getNodeName.js","../utils/rectToClientRect.js":"node_modules/@popperjs/core/lib/utils/rectToClientRect.js","../utils/math.js":"node_modules/@popperjs/core/lib/utils/math.js"}],"node_modules/@popperjs/core/lib/utils/computeOffsets.js":[function(require,module,exports) {
+},{"../enums.js":"node_modules/@popperjs/core/lib/enums.js","./getViewportRect.js":"node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js","./getDocumentRect.js":"node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.js","./listScrollParents.js":"node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js","./getOffsetParent.js":"node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js","./getDocumentElement.js":"node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js","./getComputedStyle.js":"node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js","./instanceOf.js":"node_modules/@popperjs/core/lib/dom-utils/instanceOf.js","./getBoundingClientRect.js":"node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js","./getParentNode.js":"node_modules/@popperjs/core/lib/dom-utils/getParentNode.js","./contains.js":"node_modules/@popperjs/core/lib/dom-utils/contains.js","./getNodeName.js":"node_modules/@popperjs/core/lib/dom-utils/getNodeName.js","../utils/rectToClientRect.js":"node_modules/@popperjs/core/lib/utils/rectToClientRect.js","../utils/math.js":"node_modules/@popperjs/core/lib/utils/math.js"}],"node_modules/@popperjs/core/lib/utils/getVariation.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = getVariation;
+
+function getVariation(placement) {
+  return placement.split('-')[1];
+}
+},{}],"node_modules/@popperjs/core/lib/utils/computeOffsets.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37285,11 +37256,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = detectOverflow;
 
+var _getBoundingClientRect = _interopRequireDefault(require("../dom-utils/getBoundingClientRect.js"));
+
 var _getClippingRect = _interopRequireDefault(require("../dom-utils/getClippingRect.js"));
 
 var _getDocumentElement = _interopRequireDefault(require("../dom-utils/getDocumentElement.js"));
-
-var _getBoundingClientRect = _interopRequireDefault(require("../dom-utils/getBoundingClientRect.js"));
 
 var _computeOffsets = _interopRequireDefault(require("./computeOffsets.js"));
 
@@ -37326,10 +37297,11 @@ function detectOverflow(state, options) {
       padding = _options$padding === void 0 ? 0 : _options$padding;
   var paddingObject = (0, _mergePaddingObject.default)(typeof padding !== 'number' ? padding : (0, _expandToHashMap.default)(padding, _enums.basePlacements));
   var altContext = elementContext === _enums.popper ? _enums.reference : _enums.popper;
+  var referenceElement = state.elements.reference;
   var popperRect = state.rects.popper;
   var element = state.elements[altBoundary ? altContext : elementContext];
   var clippingClientRect = (0, _getClippingRect.default)((0, _instanceOf.isElement)(element) ? element : element.contextElement || (0, _getDocumentElement.default)(state.elements.popper), boundary, rootBoundary);
-  var referenceClientRect = (0, _getBoundingClientRect.default)(state.elements.reference);
+  var referenceClientRect = (0, _getBoundingClientRect.default)(referenceElement);
   var popperOffsets = (0, _computeOffsets.default)({
     reference: referenceClientRect,
     element: popperRect,
@@ -37359,7 +37331,7 @@ function detectOverflow(state, options) {
 
   return overflowOffsets;
 }
-},{"../dom-utils/getClippingRect.js":"node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js","../dom-utils/getDocumentElement.js":"node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js","../dom-utils/getBoundingClientRect.js":"node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js","./computeOffsets.js":"node_modules/@popperjs/core/lib/utils/computeOffsets.js","./rectToClientRect.js":"node_modules/@popperjs/core/lib/utils/rectToClientRect.js","../enums.js":"node_modules/@popperjs/core/lib/enums.js","../dom-utils/instanceOf.js":"node_modules/@popperjs/core/lib/dom-utils/instanceOf.js","./mergePaddingObject.js":"node_modules/@popperjs/core/lib/utils/mergePaddingObject.js","./expandToHashMap.js":"node_modules/@popperjs/core/lib/utils/expandToHashMap.js"}],"node_modules/@popperjs/core/lib/utils/computeAutoPlacement.js":[function(require,module,exports) {
+},{"../dom-utils/getBoundingClientRect.js":"node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js","../dom-utils/getClippingRect.js":"node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js","../dom-utils/getDocumentElement.js":"node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js","./computeOffsets.js":"node_modules/@popperjs/core/lib/utils/computeOffsets.js","./rectToClientRect.js":"node_modules/@popperjs/core/lib/utils/rectToClientRect.js","../enums.js":"node_modules/@popperjs/core/lib/enums.js","../dom-utils/instanceOf.js":"node_modules/@popperjs/core/lib/dom-utils/instanceOf.js","./mergePaddingObject.js":"node_modules/@popperjs/core/lib/utils/mergePaddingObject.js","./expandToHashMap.js":"node_modules/@popperjs/core/lib/utils/expandToHashMap.js"}],"node_modules/@popperjs/core/lib/utils/computeAutoPlacement.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37982,24 +37954,16 @@ var _isScrollParent = _interopRequireDefault(require("./isScrollParent.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function isElementScaled(element) {
-  var rect = element.getBoundingClientRect();
-  var scaleX = rect.width / element.offsetWidth || 1;
-  var scaleY = rect.height / element.offsetHeight || 1;
-  return scaleX !== 1 || scaleY !== 1;
-} // Returns the composite rect of an element relative to its offsetParent.
+// Returns the composite rect of an element relative to its offsetParent.
 // Composite means it takes into account transforms as well as layout.
-
-
 function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
   if (isFixed === void 0) {
     isFixed = false;
   }
 
-  var isOffsetParentAnElement = (0, _instanceOf.isHTMLElement)(offsetParent);
-  var offsetParentIsScaled = (0, _instanceOf.isHTMLElement)(offsetParent) && isElementScaled(offsetParent);
   var documentElement = (0, _getDocumentElement.default)(offsetParent);
-  var rect = (0, _getBoundingClientRect.default)(elementOrVirtualElement, offsetParentIsScaled);
+  var rect = (0, _getBoundingClientRect.default)(elementOrVirtualElement);
+  var isOffsetParentAnElement = (0, _instanceOf.isHTMLElement)(offsetParent);
   var scroll = {
     scrollLeft: 0,
     scrollTop: 0
@@ -38016,7 +37980,7 @@ function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
     }
 
     if ((0, _instanceOf.isHTMLElement)(offsetParent)) {
-      offsets = (0, _getBoundingClientRect.default)(offsetParent, true);
+      offsets = (0, _getBoundingClientRect.default)(offsetParent);
       offsets.x += offsetParent.clientLeft;
       offsets.y += offsetParent.clientTop;
     } else if (documentElement) {
@@ -38144,10 +38108,7 @@ var VALID_PROPERTIES = ['name', 'enabled', 'phase', 'fn', 'effect', 'requires', 
 
 function validateModifiers(modifiers) {
   modifiers.forEach(function (modifier) {
-    [].concat(Object.keys(modifier), VALID_PROPERTIES) // IE11-compatible replacement for `new Set(iterable)`
-    .filter(function (value, index, self) {
-      return self.indexOf(value) === index;
-    }).forEach(function (key) {
+    Object.keys(modifier).forEach(function (key) {
       switch (key) {
         case 'name':
           if (typeof modifier.name !== 'string') {
@@ -38160,8 +38121,6 @@ function validateModifiers(modifiers) {
           if (typeof modifier.enabled !== 'boolean') {
             console.error((0, _format.default)(INVALID_MODIFIER_ERROR, modifier.name, '"enabled"', '"boolean"', "\"" + String(modifier.enabled) + "\""));
           }
-
-          break;
 
         case 'phase':
           if (_enums.modifierPhases.indexOf(modifier.phase) < 0) {
@@ -38178,14 +38137,14 @@ function validateModifiers(modifiers) {
           break;
 
         case 'effect':
-          if (modifier.effect != null && typeof modifier.effect !== 'function') {
+          if (typeof modifier.effect !== 'function') {
             console.error((0, _format.default)(INVALID_MODIFIER_ERROR, modifier.name, '"effect"', '"function"', "\"" + String(modifier.fn) + "\""));
           }
 
           break;
 
         case 'requires':
-          if (modifier.requires != null && !Array.isArray(modifier.requires)) {
+          if (!Array.isArray(modifier.requires)) {
             console.error((0, _format.default)(INVALID_MODIFIER_ERROR, modifier.name, '"requires"', '"array"', "\"" + String(modifier.requires) + "\""));
           }
 
@@ -38353,8 +38312,7 @@ function popperGenerator(generatorOptions) {
     var isDestroyed = false;
     var instance = {
       state: state,
-      setOptions: function setOptions(setOptionsAction) {
-        var options = typeof setOptionsAction === 'function' ? setOptionsAction(state.options) : setOptionsAction;
+      setOptions: function setOptions(options) {
         cleanupModifierEffects();
         state.options = Object.assign({}, defaultOptions, state.options, options);
         state.scrollParents = {
@@ -40063,9 +40021,6 @@ function usePopperMarginModifiers() {
       name: 'popoverArrowMargins',
       enabled: true,
       phase: 'main',
-      fn: function fn() {
-        return undefined;
-      },
       requiresIfExists: ['arrow'],
       effect: function effect(_ref2) {
         var state = _ref2.state;
@@ -43730,7 +43685,7 @@ var Modal = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       return;
     }
 
-    onHide == null ? void 0 : onHide();
+    onHide();
   };
 
   var handleEscapeKeyDown = function handleEscapeKeyDown(e) {
@@ -43744,22 +43699,37 @@ var Modal = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
     }
   };
 
-  var handleEnter = function handleEnter(node, isAppearing) {
+  var handleEnter = function handleEnter(node) {
     if (node) {
       node.style.display = 'block';
       updateDialogStyle(node);
     }
 
-    onEnter == null ? void 0 : onEnter(node, isAppearing);
+    for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    if (onEnter) onEnter.apply(void 0, [node].concat(args));
   };
 
   var handleExit = function handleExit(node) {
-    removeStaticModalAnimationRef.current == null ? void 0 : removeStaticModalAnimationRef.current();
-    onExit == null ? void 0 : onExit(node);
+    if (removeStaticModalAnimationRef.current) {
+      removeStaticModalAnimationRef.current();
+    }
+
+    for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+      args[_key2 - 1] = arguments[_key2];
+    }
+
+    if (onExit) onExit.apply(void 0, [node].concat(args));
   };
 
-  var handleEntering = function handleEntering(node, isAppearing) {
-    onEntering == null ? void 0 : onEntering(node, isAppearing); // FIXME: This should work even when animation is disabled.
+  var handleEntering = function handleEntering(node) {
+    for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
+      args[_key3 - 1] = arguments[_key3];
+    }
+
+    if (onEntering) onEntering.apply(void 0, [node].concat(args)); // FIXME: This should work even when animation is disabled.
 
     (0, _addEventListener.default)(window, 'resize', handleWindowResize);
   };
@@ -43767,7 +43737,11 @@ var Modal = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var handleExited = function handleExited(node) {
     if (node) node.style.display = ''; // RHL removes it sometimes
 
-    onExited == null ? void 0 : onExited(node); // FIXME: This should work even when animation is disabled.
+    for (var _len4 = arguments.length, args = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {
+      args[_key4 - 1] = arguments[_key4];
+    }
+
+    if (onExited) onExited.apply(void 0, args); // FIXME: This should work even when animation is disabled.
 
     (0, _removeEventListener.default)(window, 'resize', handleWindowResize);
   };
@@ -58433,7 +58407,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -58678,7 +58652,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -59190,7 +59164,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -59363,7 +59337,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -63070,7 +63044,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -63294,7 +63268,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -63390,7 +63364,7 @@ module.exports = [{
   },
   "summary": {
     "en": "Looking for answers? Have a read below. If your question wasn't answered, please contact us!",
-    "sm": "O lo’o e su’e ni tali i sau fesili? Faamolemole taga’i i le pito i lalo. Afai e lē o iai se tali faamolemole faafeso’otai mai i matou."
+    "sm": "Pe o iai sau fesili? Faaauau lau silasila I fesili ma tali o loo mulimuli mai. Afai e lē o iai le tali o lau fesili I lea itulau, e mafai ona e fesoota’i mai."
   },
   "backgroundImage": "https://images.unsplash.com/photo-1558342840-6e011a069dc7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=932&q=80"
 }, {
@@ -63439,7 +63413,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -63564,7 +63538,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -63772,7 +63746,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -63847,11 +63821,12 @@ var Navigation = /*#__PURE__*/function (_React$Component) {
         _Navigation.default.forEach(function (item, index) {
           if (item.slug.length > 0 && item.title) {
             var link = "".concat(window.location.origin).concat(item.slug);
+            var isCurrentPage = window.location.pathname === item.slug;
             links.push( /*#__PURE__*/_react.default.createElement("li", {
               key: index,
               className: "nav-item"
             }, /*#__PURE__*/_react.default.createElement("a", {
-              className: "nav-link",
+              className: isCurrentPage ? "nav-link active" : "nav-link",
               href: link,
               dangerouslySetInnerHTML: {
                 __html: (0, _utils.translator)(item.title)
@@ -64141,7 +64116,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -64292,7 +64267,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -64528,8 +64503,8 @@ module.exports = [{
     "sm": "Ua e Sauni e RSVP?"
   },
   "summary": {
-    "en": "Please, we encourage you to join us for a wonderful evening, as we gather together with brothers and sisters from around the world!",
-    "sm": "Faamolemole, e faalaeiauina outou, tatou faatasi i lenei po matagofie, ma o tatou uso ma tuafafine i le lalolagi aoao!"
+    "en": "Please, we encourage you to join us for a wonderful evening, as we gather together with our friends!",
+    "sm": "Faamolemole, e faalaeiauina outou, tatou faatasi i lenei po matagofie, ma o tatou uō!"
   },
   "img": {
     "src": "https://images.unsplash.com/photo-1567090951376-3102157fa036?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80",
@@ -64547,8 +64522,8 @@ module.exports = [{
     "sm": "Ua e Sauni e RSVP?"
   },
   "summary": {
-    "en": "Please, we encourage you to join us for a wonderful evening, as we gather together with brothers and sisters from around the world!",
-    "sm": "Faamolemole, e faalaeiauina outou, tatou faatasi i lenei po matagofie, ma o tatou uso ma tuafafine i le lalolagi aoao!"
+    "en": "Please, we encourage you to join us for a wonderful evening, as we gather together with our friends!",
+    "sm": "Faamolemole, e faalaeiauina outou, tatou faatasi i lenei po matagofie, ma o tatou uō!"
   },
   "img": {
     "src": "https://images.unsplash.com/photo-1585465548431-ed8a205af7f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
@@ -64601,7 +64576,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -64782,7 +64757,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -64940,8 +64915,8 @@ module.exports = [{
     "sm": "The Night Before Productions"
   },
   "paragraph": {
-    "en": "Hello! We are your fellow brothers and sisters bringing to you this evening of entertainment. If you would like to contact us or have any questions not answered on this website, please send an email to <a href=\"mailto:thenightbeforeproductions@gmail.com?subject=Enquiry\">thenightbeforeproductions@gmail.com</a>.",
-    "sm": "Talofa lava! O i matou o uso ma tuafafine o lo’o saunia lenei faatasiga. Pe a iai sau fesili po o se mea e te fia malamalama iai e faatatau iā i matou faafesootai mai i le tuatusi lenei <a href=\"mailto:webmaster@example.com\">thenightbeforeproductions@gmail.com</a>"
+    "en": "Hello! We are your fellow brothers and sisters bringing to you this evening of entertainment. If you would like to contact us or have any questions not answered on this website, please send an email to <a href=\"mailto:thenightbeforeproductions@gmail.com?subject=Enquiry\">thenightbeforeproductions@gmail.com</a>. To learn more about us, click on our faces!",
+    "sm": "Talofa lava! O i matou o uso ma tuafafine o lo’o saunia lenei faatasiga. Pe a iai sau fesili po o se mea e te fia malamalama iai e faatatau iā i matou faafesootai mai i le tuatusi lenei <a href=\"mailto:thenightbeforeproductions@gmail.com?subject=Enquiry\">thenightbeforeproductions@gmail.com</a>. Ina ia iloa atili e faatatau iā i matou, kiliki i ā matou ata!"
   },
   "img": {
     "slug": "profiles-group",
@@ -65119,7 +65094,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -65282,7 +65257,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -66090,7 +66065,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -66202,7 +66177,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59909" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63990" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
