@@ -64474,8 +64474,8 @@ module.exports = [{
     "sm": "E na o ē ua valaaulia"
   },
   "summary": {
-    "en": "On the night of our fiafia, please be aware that you will only be admitted if you have completed the RSVP form. Please do not extend this invitation to others, as this is not an open invite event. Only brothers and sisters invited by the friends on the <a href='/about-us.html'>About Us</a> page may attend.",
-    "sm": "E mo lo outou silafia, e na o I latou ua faao’o mai a latou RSVP forms e faaulufaleina I lea po. Faamolemole o lenei faatasiga e mo na o I latou ua valaaulia, e lē o se fiafia fa’alaua’itele. O lea ua matou talosaga atu ai, e lē mafai ona e valaauliaina se isi e te masani ai.  E na o uso ma tuafafine e matou te valaauliaina e taliaina I lea po. Mo ni faamatalaga atili, faamolemole taga'i ane I le itulau <a href='/about-us.html'>O ai Matou</a>."
+    "en": "On the night of our fiafia, please be aware that you will only be admitted if you have completed the RSVP form. Please do not extend this invitation to others, as this is not an open invite event. Only brothers and sisters invited by the friends on the <a href='/about-us.html'>About Us</a> page may attend. RSVP cutoff date is 11:59pm (AEST), October 25<sup>th</sup> 2021.",
+    "sm": "E mo lo outou silafia, e na o I latou ua faao’o mai a latou RSVP forms e faaulufaleina I lea po. Faamolemole o lenei faatasiga e mo na o I latou ua valaaulia, e lē o se fiafia fa’alaua’itele. O lea ua matou talosaga atu ai, e lē mafai ona e valaauliaina se isi e te masani ai.  E na o uso ma tuafafine e matou te valaauliaina e taliaina I lea po. Mo ni faamatalaga atili, faamolemole taga'i ane I le itulau <a href='/about-us.html'>O ai Matou</a>. O le taimi e faagata ai RSVP o le 11:59pm (AEST), October 25<sup>th</sup> 2021."
   },
   "img": {
     "src": "https://images.unsplash.com/photo-1507290439931-a861b5a38200?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2380&q=80",
@@ -64493,8 +64493,8 @@ module.exports = [{
     "sm": "Ua e Sauni e RSVP?"
   },
   "summary": {
-    "en": "Join us for a beautiful night, full of encouragement, entertainment and laughs :)",
-    "sm": "Auai ma i matou mo se po matagofie, e tumu i faamalosiauga ma faafiafiaga :)"
+    "en": "Join us for a beautiful night, full of encouragement, entertainment and laughs :) RSVP cutoff date is 11:59pm (AEST), October 25<sup>th</sup> 2021.",
+    "sm": "Auai ma i matou mo se po matagofie, e tumu i faamalosiauga ma faafiafiaga :) O le taimi e faagata ai RSVP o le 11:59pm (AEST), October 25<sup>th</sup> 2021."
   },
   "img": {
     "src": "https://images.unsplash.com/photo-1628412891357-1746831ec24d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
@@ -64512,8 +64512,8 @@ module.exports = [{
     "sm": "Ua e Sauni e RSVP?"
   },
   "summary": {
-    "en": "Please, we encourage you to join us for a wonderful evening, as we gather together with our friends!",
-    "sm": "Faamolemole, e faalaeiauina outou, tatou faatasi i lenei po matagofie, ma o tatou uō!"
+    "en": "Please, we encourage you to join us for a wonderful evening, as we gather together with our friends! RSVP cutoff date is 11:59pm (AEST), October 25<sup>th</sup> 2021.",
+    "sm": "Faamolemole, e faalaeiauina outou, tatou faatasi i lenei po matagofie, ma o tatou uō! O le taimi e faagata ai RSVP o le 11:59pm (AEST), October 25<sup>th</sup> 2021."
   },
   "img": {
     "src": "https://images.unsplash.com/photo-1567090951376-3102157fa036?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80",
@@ -64531,8 +64531,8 @@ module.exports = [{
     "sm": "Ua e Sauni e RSVP?"
   },
   "summary": {
-    "en": "Please, we encourage you to join us for a wonderful evening, as we gather together with our friends!",
-    "sm": "Faamolemole, e faalaeiauina outou, tatou faatasi i lenei po matagofie, ma o tatou uō!"
+    "en": "Please, we encourage you to join us for a wonderful evening, as we gather together with our friends! RSVP cutoff date is 11:59pm (AEST), October 25<sup>th</sup> 2021.",
+    "sm": "Faamolemole, e faalaeiauina outou, tatou faatasi i lenei po matagofie, ma o tatou uō! O le taimi e faagata ai RSVP o le 11:59pm (AEST), October 25<sup>th</sup> 2021."
   },
   "img": {
     "src": "https://images.unsplash.com/photo-1585465548431-ed8a205af7f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
@@ -64884,8 +64884,8 @@ module.exports = [{
     "sm": "O le ā o le a tupu?"
   },
   "paragraph": {
-    "en": "On <strong>6<sup>th</sup> November 2021 (AEST)</strong>, there will be a fiafia night for you, our dear brothers and sisters! A night of entertainment and encouragement, provided by our spiritual family from around the world. If you would like to contribute a performance item to this wonderful evening, please explore this site for ideas! 😊<div class='text-start d-flex justify-content-center' style='font-size: inherit;'><br><br>3:00 pm — 6:00 pm (Melbourne, Australia)<br>5:00 pm — 8:00 pm (NZ)<br>6:00 pm — 9:00 pm (American Samoa and Samoa)<br>7:00 pm — 10:00 pm (Hawaii and Rarotonga)<br>9:00 pm — till late (Las Vegas and Seattle)</div>",
-    "sm": "I le aso <strong>6 Novema 2021</strong>, i le itula e 3pm <i>(taimi ma le aso a Melepone Ausetalia)</i>, o le a faia ai se fiafia mo outou uso ma tuafafine peleina! O se afiafi o faafiafiaga ma faalaeiauga ua saunia e lo tatou aiga faaleagaga mai vaipanoa eseese o le lalolagi.  Afai e te fia faafiafia i lea po, faamolemole fa’aauau ona faitau i isi itulau o lenei website mo nisi faamatalaga atili! 😊<div class='text-start d-flex justify-content-center' style='font-size: inherit;'><br><br>3:00 pm — 6:00 pm (Melbourne, Australia)<br>5:00 pm — 8:00 pm (NZ)<br>6:00 pm — 9:00 pm (American Samoa and Samoa)<br>7:00 pm — 10:00 pm (Hawaii and Rarotonga)<br>9:00 pm — 12:00 am (Las Vegas and Seattle)</div>"
+    "en": "On <strong>6<sup>th</sup> November 2021 (AEST)</strong>, there will be a fiafia night for you, our dear brothers and sisters! A night of entertainment and encouragement, provided by our spiritual family from around the world. If you would like to contribute a performance item to this wonderful evening, please explore this site for ideas! 😊<div class='text-start d-flex justify-content-center' style='font-size: inherit;'><br><br>3:00 pm — 6:00 pm (Melbourne, Australia)<br>5:00 pm — 8:00 pm (NZ and Samoa)<br>6:00 pm — 9:00 pm (American Samoa)<br>7:00 pm — 10:00 pm (Hawaii and Rarotonga)<br>9:00 pm — till late (Las Vegas and Seattle)</div>",
+    "sm": "I le aso <strong>6 Novema 2021</strong>, i le itula e 3pm <i>(taimi ma le aso a Melepone Ausetalia)</i>, o le a faia ai se fiafia mo outou uso ma tuafafine peleina! O se afiafi o faafiafiaga ma faalaeiauga ua saunia e lo tatou aiga faaleagaga mai vaipanoa eseese o le lalolagi.  Afai e te fia faafiafia i lea po, faamolemole fa’aauau ona faitau i isi itulau o lenei website mo nisi faamatalaga atili! 😊<div class='text-start d-flex justify-content-center' style='font-size: inherit;'><br><br>3:00 pm — 6:00 pm (Melbourne, Australia)<br>5:00 pm — 8:00 pm (NZ ma Samoa)<br>6:00 pm — 9:00 pm (American Samoa)<br>7:00 pm — 10:00 pm (Hawaii ma Rarotonga)<br>9:00 pm — 12:00 am (Las Vegas ma Seattle)</div>"
   }
 }, {
   "option": "scriptureMark",
@@ -66186,7 +66186,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53611" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51370" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

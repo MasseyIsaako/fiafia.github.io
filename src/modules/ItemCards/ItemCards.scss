@@ -87,7 +87,7 @@
 
 .item-popup {
     background-color: rgba($color-black, 0.8);
-    height: 100vh;
+    height: 102vh;
     left: 0;
     opacity: 0;
     overflow: scroll;
@@ -95,7 +95,7 @@
     position: fixed;
     top: 0;
     transition: 0.2s opacity ease-in;
-    width: 100vw;
+    width: 102vw;
     z-index: 99999;
 
     &.active {
