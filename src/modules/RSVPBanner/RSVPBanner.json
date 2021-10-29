@@ -4,11 +4,11 @@
         "theme": "purple",
         "heading": {
             "en": "By invitation only",
-            "sm": "Matua"
+            "sm": "E na o ē ua valaaulia"
         },
         "summary": {
-            "en": "On the night of our fiafia, please be aware that you will only be admitted if you have completed the RSVP form. Please do not extend this invitation to others, as this is not an open invite event. Only brothers and sisters invited by the committee members on the <a href='/about-us.html'>About Us</a> page may attend.",
-            "sm": "Palakalafa"
+            "en": "On the night of our fiafia, please be aware that you will only be admitted if you have completed the RSVP form. Please do not extend this invitation to others, as this is not an open invite event. Only brothers and sisters invited by the friends on the <a href='/about-us.html'>About Us</a> page may attend. RSVP cutoff date is 11:59pm (AEST), October 25<sup>th</sup> 2021.",
+            "sm": "E mo lo outou silafia, e na o I latou ua faao’o mai a latou RSVP forms e faaulufaleina I lea po. Faamolemole o lenei faatasiga e mo na o I latou ua valaaulia, e lē o se fiafia fa’alaua’itele. O lea ua matou talosaga atu ai, e lē mafai ona e valaauliaina se isi e te masani ai.  E na o uso ma tuafafine e matou te valaauliaina e taliaina I lea po. Mo ni faamatalaga atili, faamolemole taga'i ane I le itulau <a href='/about-us.html'>O ai Matou</a>. O le taimi e faagata ai RSVP o le 11:59pm (AEST), October 25<sup>th</sup> 2021."
         },
         "img": {
             "src": "https://images.unsplash.com/photo-1507290439931-a861b5a38200?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2380&q=80",
@@ -24,11 +24,11 @@
         "theme": "gold",
         "heading": {
             "en": "Ready to RSVP?",
-            "sm": "Matua"
+            "sm": "Ua e Sauni e RSVP?"
         },
         "summary": {
-            "en": "Join us for a beautiful night, full of encouragement, entertainment and laughs :)",
-            "sm": "Palakalafa"
+            "en": "Join us for a beautiful night, full of encouragement, entertainment and laughs :) RSVP cutoff date is 11:59pm (AEST), October 25<sup>th</sup> 2021.",
+            "sm": "Auai ma i matou mo se po matagofie, e tumu i faamalosiauga ma faafiafiaga :) O le taimi e faagata ai RSVP o le 11:59pm (AEST), October 25<sup>th</sup> 2021."
         },
         "img": {
             "src": "https://images.unsplash.com/photo-1628412891357-1746831ec24d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
@@ -44,11 +44,11 @@
         "theme": "purple",
         "heading": {
             "en": "Ready to RSVP?",
-            "sm": "Matua"
+            "sm": "Ua e Sauni e RSVP?"
         },
         "summary": {
-            "en": "Please, we encourage you to join us for a wonderful evening, as we gather together with brothers and sisters from around the world!",
-            "sm": "Palakalafa"
+            "en": "Please, we encourage you to join us for a wonderful evening, as we gather together with our friends! RSVP cutoff date is 11:59pm (AEST), October 25<sup>th</sup> 2021.",
+            "sm": "Faamolemole, e faalaeiauina outou, tatou faatasi i lenei po matagofie, ma o tatou uō! O le taimi e faagata ai RSVP o le 11:59pm (AEST), October 25<sup>th</sup> 2021."
         },
         "img": {
             "src": "https://images.unsplash.com/photo-1567090951376-3102157fa036?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80",
@@ -64,11 +64,11 @@
         "theme": "pink",
         "heading": {
             "en": "Ready to RSVP?",
-            "sm": "Matua"
+            "sm": "Ua e Sauni e RSVP?"
         },
         "summary": {
-            "en": "Please, we encourage you to join us for a wonderful evening, as we gather together with brothers and sisters from around the world!",
-            "sm": "Palakalafa"
+            "en": "Please, we encourage you to join us for a wonderful evening, as we gather together with our friends! RSVP cutoff date is 11:59pm (AEST), October 25<sup>th</sup> 2021.",
+            "sm": "Faamolemole, e faalaeiauina outou, tatou faatasi i lenei po matagofie, ma o tatou uō! O le taimi e faagata ai RSVP o le 11:59pm (AEST), October 25<sup>th</sup> 2021."
         },
         "img": {
             "src": "https://images.unsplash.com/photo-1585465548431-ed8a205af7f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",

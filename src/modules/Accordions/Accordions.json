@@ -3,57 +3,67 @@
         "option": "faq",
         "heading": {
             "en": "Ask and it shall be answered",
-            "sm": "Test"
+            "sm": "Fesili ona maua lea o le tali"
         },
         "accordions": [
             {
                 "question": {
                     "en": "What resolution should my video be?",
-                    "sm": "Se fesili matagofie lava"
+                    "sm": "O le a le resolution e tatau ona pu’e ai la’u vitiō?"
                 },
                 "answer": {
-                    "en": "<p>We would greatly appreciate that your video is between 720 to 1080 in resolution. A video shot in 4k resolution and above, may be too large to be streamed over Zoom.</p>",
-                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
+                    "en": "<p>We would greatly appreciate that your video is between 720p to 1080p in resolution. A video shot in 4k resolution and above, may be too large to be streamed over Zoom.</p>",
+                    "sm": "<p>E matou te talisapaia pe a mafai ona pu'eina lau vitiō I le va o le 720p - 1080p resolution. O se vitiō e pu'eina I le 4k resolution poo luga atu, e fai sina lapo’a tele ma e ono lē mafai ona faaali atu I luga o le Zoom.</p>"
                 }
             },
             {
                 "question": {
                     "en": "How many items can I provide and how long can an item be?",
-                    "sm": "Se fesili matagofie lava"
+                    "sm": "E fia ni a’u items e mafai ona faia, ma o le ā le umi?"
                 },
                 "answer": {
-                    "en": "<p>Please provide one 5 minute video. If you would like, you may provide more than one performance item in your video.</p>",
-                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
+                    "en": "<p>Items longer than 5 minutes may present streaming issues. If you would like, you may provide more than one performance item in your video.</p>",
+                    "sm": "<p>O le taimi faatulagaina mo le item e tasi e le sili atu I le 5 minute le umi. O lona uiga e pule lava oe I le tele o au items ae ia ofi uma I totonu o le 5 minute lea.</p>"
                 }
             },
             {
                 "question": {
                     "en": "Is there a cutoff date for items to be submitted?",
-                    "sm": "Se fesili matagofie lava"
+                    "sm": "Pe e iai se taimi faatulagaina e faagata ai ona avatu items I totonu?"
                 },
                 "answer": {
-                    "en": "<p>Yes there is! The cutoff date for items to be submitted is <strong>## September 2021</strong>.</p>",
-                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
+                    "en": "<p>Yes there is! The cutoff date for items to be submitted is <strong>25<sup>th</sup> October 2021</strong>.</p>",
+                    "sm": "<p>Ioe. O le aso mulimuli e faagata ai le faaoo mai o items o le aso <strong>25 Oketopa 2021</strong>.</p>"
                 }
             },
             {
                 "question": {
                     "en": "Will my item be shown on the night of the fiafia?",
-                    "sm": "Se fesili matagofie lava"
+                    "sm": "Pe o le a fa’aali la’u item I le pō o le fiafia?"
                 },
                 "answer": {
                     "en": "<p>We want to include as many of your beautiful performances as we can. Please send through your songs, dances, skits, poetry readings and other talents! We hope that many brothers and sisters will contribute to the evening.</p>",
-                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
+                    "sm": "<p>O le fuafuaga ia faaaofia uma sauniuniga matagofie a o tatou uso ma tuafafine pe a mafai ai. Faamolemole ia faaoo mai sau pese, siva, ata pupuu faitaga, sau solo po o se isi lava taleni! E matou te faamoemoe o le a to’atele uso ma tuafafine e faafiafia I lenei faatasiga matagofie!</p>"
                 }
             },
             {
                 "question": {
                     "en": "Can I do a live performance on the night?",
-                    "sm": "Se fesili matagofie lava"
+                    "sm": "Pe e mafai ona live la’u item i le pō lea?"
                 },
                 "answer": {
-                    "en": "<p>Unfortunately, doing a live performance presents a few hurdles, like sound and video streaming quality. Please record your performance item and send it through instead, we thank you for your understanding!</p>",
-                    "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
+                    "en": "<p>Unfortunately, doing a live performance presents a few hurdles, like sound and video streaming quality. Please record your performance item and send it through instead, we thank you for your understanding! 😊</p>",
+                    "sm": "<p>E leai. O faafitauli e pei o le faaletonu o le ata ma le lē lagona o le leo o le mafuaaga lea ua talosaga atu ai e pu’e lelei lau item ona auina mai lea. Talisapaia le lagolagosua mai! 😊</p>"
+                }
+            },
+            {
+                "question": {
+                    "en": "May I invite others to this event?",
+                    "sm": "Pe e mafai ona ou valaaulia mai isi tagata i lenei faatasiga?"
+                },
+                "answer": {
+                    "en": "<p>This event is by invitation only, so please do not extend invitations to others.</p>",
+                    "sm": "<p>O lenei faatasiga e mō na o ē ua valaaulia, faamolemole aua le auina atu lenei valaaulia i isi.</p>"
                 }
             }
         ]

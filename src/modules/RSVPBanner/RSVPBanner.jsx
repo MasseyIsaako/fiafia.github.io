@@ -82,29 +82,59 @@ class RSVPBanner extends React.Component {
         );
     }
 
+    normalLayout ({ heading, summary, image, cta }) {
+        return (
+            <>
+                <Col sm={12} md={5}>
+                    <div className="rsvp-banner__content">
+                        <div className="rsvp-banner__text">
+                            { heading }
+                            { summary }
+                            { cta }
+                        </div>
+                    </div>
+                </Col>
+                <Col sm={12} md={7}>
+                    { image }
+                </Col>
+            </>
+        );
+    }
+
+    iPadLayout({ heading, summary, image, cta }) {
+        return (
+            <>
+                <Col sm={12}>
+                    <div className="rsvp-banner__content">
+                        <div className="rsvp-banner__text">
+                            {heading}
+                            {summary}
+                            {cta}
+                        </div>
+                    </div>
+                </Col>
+                <Col sm={12}>
+                    {image}
+                </Col>
+            </>
+        );
+    }
+
     render() {
-        const classTheme = `rsvp-banner rsvp-banner--${this.state.theme}`;
-        const heading = this.getHeading();
-        const summary = this.getSummary();
-        const image = this.getImage();
-        const cta = this.getCTA();
+        const isIPad = navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2;
+        const classTheme = isIPad ? `rsvp-banner rsvp-banner--ipad rsvp-banner--${this.state.theme}` : `rsvp-banner rsvp-banner--${this.state.theme}`;
+        const data = {
+            heading: this.getHeading(),
+            summary: this.getSummary(),
+            image: this.getImage(),
+            cta: this.getCTA()
+        };
 
         return (
             <section className={classTheme}>
                 <Container>
                     <Row className="flex-column-reverse flex-md-row">
-                        <Col sm={12} md={5}>
-                            <div className="rsvp-banner__content">
-                                <div className="rsvp-banner__text">
-                                    { heading }
-                                    { summary }
-                                    { cta }
-                                </div>
-                            </div>
-                        </Col>
-                        <Col sm={12} md={7}>
-                            { image }
-                        </Col>
+                        {isIPad ? this.iPadLayout(data) : this.normalLayout(data)}
                     </Row>
                 </Container>
             </section>

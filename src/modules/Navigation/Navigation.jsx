@@ -59,10 +59,11 @@ class Navigation extends React.Component {
             NavigationLinks.forEach((item, index) => {
                 if (item.slug.length > 0 && item.title) {
                     const link = `${window.location.origin}${item.slug}`;
+                    const isCurrentPage = window.location.pathname === item.slug;
 
                     links.push(
                         <li key={index} className="nav-item">
-                            <a className="nav-link" href={link} dangerouslySetInnerHTML={{ __html: translator(item.title) }}></a>
+                            <a className={isCurrentPage ? "nav-link active" : "nav-link"} href={link} dangerouslySetInnerHTML={{ __html: translator(item.title) }}></a>
                         </li>
                     );
                 }

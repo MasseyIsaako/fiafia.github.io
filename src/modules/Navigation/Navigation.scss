@@ -73,6 +73,10 @@ body > div:first-child {
                 width: 100%;
             }
         }
+
+        &.active::after {
+            width: 100%;
+        }
     }
 
     &--scrolled {

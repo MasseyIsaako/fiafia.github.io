@@ -1,4 +1,4 @@
-.profiles  {
+.profiles {
     margin-top: -100px;
     padding: 0 0 150px;
 
@@ -41,7 +41,8 @@
         background-color: $color-white;
         border-radius: 5px;
         box-shadow: 0 4px 8px 0 rgba($color-black, 0.2);
-        height: calc(100% - 24px);
+        cursor: pointer;
+        // height: calc(100% - 24px);
         margin-bottom: 24px;
         overflow: hidden;
         padding: 30px 20px;
@@ -49,13 +50,14 @@
         text-align: center;
         transition: 0.5s transform ease;
 
-        &:focus,
-        &:hover {
-            cursor: pointer;
-            transform: scale(105%);
+        @include media-breakpoint-up ('lg') {
+            &:focus,
+            &:hover {
+                transform: scale(105%);
 
-            .profiles__card-img {
-                filter: none;
+                .profiles__card-img {
+                    filter: none;
+                }
             }
         }
     }
@@ -85,7 +87,7 @@
         &::after,
         &::before {
             background-color: $color-white;
-            content: '';
+            content: "";
             display: inline-block;
             height: 100%;
             transform: rotate(45deg);
@@ -105,31 +107,29 @@
     &__card-img {
         border-radius: 50%;
         display: block;
-        filter: grayscale(1);
         height: 250px;
         margin: auto;
         object-fit: cover;
-        transition: 0.2s transform ease-in,
-            0.2s filter ease-in
-        ;
+        transition: 0.2s transform ease-in, 0.2s filter ease-in;
         width: 250px;
 
-        @include media-breakpoint-up ('sm') {
+        @include media-breakpoint-up("sm") {
             height: 350px;
             width: 350px;
         }
 
-        @include media-breakpoint-up ('md') {
+        @include media-breakpoint-up("md") {
             height: 300px;
             width: 300px;
         }
 
-        @include media-breakpoint-up ('lg') {
+        @include media-breakpoint-up("lg") {
+            // filter: grayscale(1);
             height: 250px;
             width: 250px;
         }
 
-        @include media-breakpoint-up ('xl') {
+        @include media-breakpoint-up("xl") {
             height: 300px;
             width: 300px;
         }
@@ -142,7 +142,7 @@
     &__card-name {
         color: $color-pink;
     }
-    
+
     &__card-role {
         color: $color-charcoal;
     }
@@ -152,7 +152,7 @@
         margin-bottom: 0;
         text-align: left;
 
-        @include media-breakpoint-up ('sm') {
+        @include media-breakpoint-up("sm") {
             font-size: 18px;
         }
     }
@@ -163,17 +163,17 @@
 }
 
 .profile-popup {
-    align-items: center;
     background-color: rgba($color-black, 0.8);
     display: flex;
-    height: 100vh;
+    height: 102vh;
     left: 0;
     opacity: 0;
+    overflow: scroll;
     pointer-events: none;
     position: fixed;
     top: 0;
     transition: 0.2s opacity ease-in;
-    width: 100vw;
+    width: 102vw;
     z-index: 99999;
 
     &.active {
@@ -182,7 +182,8 @@
     }
 
     .profiles__card {
-        margin: 0;
+        height: auto;
+        margin: 40px 0;
 
         &:focus,
         &:hover {
@@ -203,7 +204,7 @@
 
         &::before {
             background-color: $color-pink;
-            content: '';
+            content: "";
             display: block;
             height: calc(50% + 30px);
             left: 0;

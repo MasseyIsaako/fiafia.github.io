@@ -1,21 +1,25 @@
 {
     "heading": {
         "en": "Tips on Recording Your Item",
-        "sm": "Le Matua"
+        "sm": "Pu'eina o se Item"
+    },
+    "summary": {
+        "en": "For tips on how to record your item, click on the cards below.",
+        "sm": "Mo fautuaga i le auala e pu'eina ai lau item, kiliki i ata o loo mulimuli mai."
     },
     "cards": [
         {
             "previewHeading": {
                 "en": "Camera Angle",
-                "sm": "Se fesili matagofie lava"
+                "sm": "Le auala e faatulaga ai le mea pu’e ata"
             },
             "heading": {
                 "en": "Find the Right Angle",
-                "sm": "Se fesili matagofie lava"
+                "sm": "Le auala e faatulaga ai le mea pu’e ata (video)"
             },
             "text": {
                 "en": "<p>When recording your item, it’s best to first get your camera ready and set it in a position where we can see all of the participants in your video’s nice faces. When setting up your camera, it’s good to make sure that your camera is steady and still. If your camera moves around too much, it can affect your video’s quality of sound and picture.</p><p>A tip to help get the best angle for your video is by recording horizontally so that your camera has a more widened view.</p><img src=\"https://static.wixstatic.com/media/1b52b2_a94cb27ac0404b60a2117dbfc0b48d60~mv2.jpg\" style=\"width: 100%; height: auto;\" alt=\"Record horizontally not vertically.\">",
-                "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
+                "sm": "<p>A o pu’eina lou item, ia faamautinoa ua ofi uma tagata i totonu o le vitio. Taumafai e aua le minoi solo, ia tumau i se mea se tasi ona o le minoi solo e lē lelei ai le ata ma le leo o lau faafiafiaga matagofie o lo’o pu’eina.</p><p>E lelei fo’i le pu’e faataatia/faalautele o le camera (horizontal) nai lo le faasa’o i luga (vertical) e mafai ona maua uma ai. </p>"
             },
             "image": {
                 "slug": "camera"
@@ -24,15 +28,15 @@
         {
             "previewHeading": {
                 "en": "Good Sound Quality",
-                "sm": "Se fesili matagofie lava"
+                "sm": "Lelei o le leo"
             },
             "heading": {
                 "en": "Find A Position That Works Best to Capture Good Sound",
-                "sm": "Se fesili matagofie lava"
+                "sm": "Saili se nofoaga e talafeagai e pu’ea lelei le leo o lau item"
             },
             "text": {
-                "en": "<p>Depending on your item, it benefits to position your camera based on what you are presenting. For example, if your item is singing a song, make sure that your camera is positioned at a distance where we can hear your wonderful voice(s)! If you are deciding to play a separate supporting instrumental while you sing your song, try to find the proper balance of volume between the music and your voice so that neither sound gets overshadowed by the other. These tips also apply for those who may be playing an instrument while they sing, and for those preparing other types of items as well! Furthermore, no matter what your item may be, if you are talking/singing in your video, it helps when you try your best to project your voice so that we as the audience don’t miss a single part of your lovely item. :-)</p>",
-                "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
+                "en": "<p>Depending on your item, it benefits to position your camera based on what you are presenting. For example, if your item is singing a song, make sure that your camera is positioned at a distance where we can hear your wonderful voice(s)! If you are deciding to play a separate supporting instrumental while you sing your song, try to find the proper balance of volume between the music and your voice so that neither sound gets overshadowed by the other.</p> <p>These tips also apply for those who may be playing an instrument while they sing, and for those preparing other types of items as well! Furthermore, no matter what your item may be, if you are talking/singing in your video, it helps when you try your best to project your voice so that we as the audience don’t miss a single part of your lovely item. :-)</p>",
+                "sm": "<p>E fua i le tulaga o lau item lea o le a fai. Mo se faata’ita’iga afai o se pese o se mea lelei le faatulaga o lau camera i se mamao e mafai ona manino ai lou siufofoga matagofie. Afai o e fuafua e ta se mea faifaili e pei o se kitara, ukulele, po o se piano faatasi ma lou pese taumafai e faapaleni le leotele o le meafaifaili ma lou siufofoga ina ia aua ne’i maualuga na’uā le mea faifaili i lou leo po o lou leo fo’i i le mea faifaili. O nei manatu e mafai fo’i ona faaaogā i so o se vala lava pe pese po o le talanoa fo’i ina ia aua ne’i misia le aofia se iota o lau faafiafiaga matagofie. :-)</p>"
             },
             "image": {
                 "slug": "sound"
@@ -41,15 +45,15 @@
         {
             "previewHeading": {
                 "en": "The Atmosphere",
-                "sm": "Se fesili matagofie lava"
+                "sm": "Siomaga"
             },
             "heading": {
                 "en": "Creating Your Perfect Atmosphere",
-                "sm": "Se fesili matagofie lava"
+                "sm": "Le siomaga"
             },
             "text": {
                 "en": "<p>When recording your item, make sure you are in a well-lit room where we can see your smiley face(s)! A tip that helps to create better lighting is recording with your flash on (if your camera has one), and/or setting up a light behind or next to your camera as you record. If you are recording during the day, another thing that helps is by opening up your blinds to create a more natural set of lighting when preparing your item.</p><p>Another way to create the perfect atmosphere is by limiting potential distractions if possible in your video. One tip to help regarding this topic is to examine your background for your item and making sure that there are no probable disturbances. This tip also applies to dressing for success and eliminating any unwanted noise that can be included in your video. In doing so, it is much appreciated and will help those in the audience to be able to get the full enjoyment in your wonderfully prepared item!</p>",
-                "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
+                "sm": "<p>Pe a pu’eina lau item, ia faamautinoa o lo’o i se siomaga e malamalama lelei ina ia iloa lelei au foliga matagofie ma aulelei! O se manatu atonu e fesoasoani iā te oe o le faaaogā o le flash o lau camera pe afai e iai po o le faatulaga o se mōlī i tua po o tafatafa o lau camera a o pu’eina lau item. Afai o lo’o e pu’eina lau item i le ao e mafai ona tatala ie faamalama e faasau i totonu le malamalama. </p>"
             },
             "image": {
                 "slug": "atmosphere"
@@ -58,18 +62,18 @@
         {
             "previewHeading": {
                 "en": "Having Fun!",
-                "sm": "Se fesili matagofie lava"
+                "sm": "Fai ma le fiafia!"
             },
             "heading": {
                 "en": "Having Fun!",
-                "sm": "Se fesili matagofie lava"
+                "sm": "Fai ma le fiafia!"
             },
             "text": {
-                "en": "<p>It is important to understand that your wonderful efforts in preparing an item are very well treasured and there is no need to strive for perfection (As there’s no such thing)! Giving your best through your expression of creativity and genuineness is the biggest part that is needed to create your special item.</p><p>We hope that these tips will help you to know where to start to record your item and that as you prepare you have loads of fun and happy times! If you have any additional questions regarding preparing your item or anything else, please feel free to contact any of the committee members for help. Thank You!</p>",
-                "sm": "<p>O se tali ua saunia e taliina ai le fesili ua lāgā e se uso po o se tuafafine.</p>"
+                "en": "<p>It is important to understand that your wonderful efforts in preparing an item are very well treasured and there is no need to strive for perfection (As there’s no such thing)! Giving your best through your expression of creativity and genuineness is the biggest part that is needed to create your special item.</p><p>We hope that these tips will help you to know where to start to record your item and that as you prepare you have loads of fun and happy times! If you have any additional questions regarding preparing your item or anything else, please feel free to contact any of the committee members for help.</p><p>Thank You!</p>",
+                "sm": "<p>E tāua le iloaina o au sauniuniga matagofie o le a talisapaia ma le faapelepele, e leai la se manaoga mo se lelei atoatoa (Ona e leai se mea faapena)! O le mea tāua o au taumafaiga filigā ma le lotoatoa na tapena ai lau faafiafiaga faapitoa.</p><p>O lo matou faanaunauga ia fesoasoani nai nei ta’iala pupu’u i le pu’eina o lau item ma a o faia au tapenaga e te maua ai le tele o le ollioil! A iai se fesili pe manaomia se fesoasoani faafesootai mai i matou.</p><p>Faafetai lava!</p>"
             },
             "image": {
-                "slug": "atmosphere"
+                "slug": "fun"
             }
         }
     ]

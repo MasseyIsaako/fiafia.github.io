@@ -4,7 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import ProfileImages from '../../images/Profiles/*.*';
 import ProfilesData from './Profiles.json';
 import ProfilePopup from './ProfilePopup';
-import { getPic } from '../../js/utils/utils';
+import { getPic, translator } from '../../js/utils/utils';
 
 class Profiles extends React.Component {
     constructor () {
@@ -100,10 +100,10 @@ class Profiles extends React.Component {
         return (
             <div className="profiles__search">
                 <div className="form-group">
-                    <label htmlFor="profiles-search-text">Search</label>
+                    <label htmlFor="profiles-search-text" dangerouslySetInnerHTML={{ __html: translator({ sm: 'Su\'e', en: 'Search' }) }}></label>
                     <input type="text"
                         className="form-control profiles__search-input"
-                        id="profiles-search-text"
+                        id="Searchprofiles-search-text"
                         placeholder="Type here..."
                         onKeyUp={(e) => {this.searchProfiles(e)}}
                     />

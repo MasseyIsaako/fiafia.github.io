@@ -22,10 +22,32 @@
             "sm": "Ua uma ona sauni sau item?"
         },
         "paragraph": {
-            "en": "Upload your item here! Please <a href='#' class='rsvp-form-open'>RSVP</a> before uploading your item. We will be reviewing all items prior to the evening.",
-            "sm": "O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania."
+            "en": "Upload your item here! Please <a href='#' class='rsvp-form-open'>RSVP</a> before uploading your item. We will be reviewing all items prior to the evening. If you are unable to submit your item here, please contact us for assistance.",
+            "sm": "Faaulu mai lau item i le itulau lenei! Faamolemole resitala muamua <a href='#' class='rsvp-form-open'>(RSVP)</a> a o le’i tuuina I luga (upload) lau item. O le a siakiina uma items a o le’i oo i le aso o le fiafia. Pe afai e le'i mafai ona lafo mai lau item e ala i lenei upega tafa'ilagi, faamolemole fesoota'i mai mo le fesoasoani."
         },
         "image": "https://images.unsplash.com/photo-1585834406350-744aaeaf491c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1481&q=80",
+        "reverse": true,
+        "cta": {
+            "link": "https://forms.gle/rSUTwvybTmFKrknFA",
+            "title": {
+                "en": "Upload item",
+                "sm": "Upload item"
+            },
+            "buttonClasses": "fa fa-upload upload-items-form-open"
+        }
+    },
+    {
+        "option": "submitRec",
+        "color": "pink",
+        "title": {
+            "en": "Ready to contribute?",
+            "sm": "Ua uma ona sauni sau item?"
+        },
+        "paragraph": {
+            "en": "Upload your item here! Please <a href='#' class='rsvp-form-open'>RSVP</a> before uploading your item. We will be reviewing all items prior to the evening. If you are unable to submit your item here, please contact us for assistance.",
+            "sm": "Faaulu mai lau item i le itulau lenei! Faamolemole resitala muamua <a href='#' class='rsvp-form-open'>(RSVP)</a> a o le’i tuuina I luga (upload) lau item. O le a siakiina uma items a o le’i oo i le aso o le fiafia. Pe afai e le'i mafai ona lafo mai lau item e ala i lenei upega tafa'ilagi, faamolemole fesoota'i mai mo le fesoasoani."
+        },
+        "image": "https://images.unsplash.com/photo-1616674343403-ebd24b7f53a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2300&q=80",
         "reverse": true,
         "cta": {
             "link": "https://forms.gle/rSUTwvybTmFKrknFA",
@@ -41,11 +63,11 @@
         "color": "pink",
         "title": {
             "en": "What is a <i>fiafia</i>?",
-            "sm": "Matua"
+            "sm": "O le a le uiga o le upu fiafia?"
         },
         "paragraph": {
             "en": "The word <i>fiafia</i> is derived from the Samoan language, which means happy or happiness. A fiafia night means an evening of entertainment!",
-            "sm": "O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania. O le gagana faasamoa lenei, ua sui a'e ai le gagana faaperetania."
+            "sm": "O le upu <i>fiafia</i> e fesootai atu I le ‘ata, lagona faamalieina ma le olioli o le loto ma le mafaufau.  O le po fiafia la, o lona uiga o se afiafi o faafiafiaga lea e maua mai ai le ‘ata ma evaevaga e faafouina ai."
         },
         "image": "https://images.unsplash.com/photo-1539470090907-7cc242c37af5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80",
         "reverse": false,
