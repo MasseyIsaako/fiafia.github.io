@@ -63881,14 +63881,12 @@ var _default = Navigation;
 exports.default = _default;
 },{"react":"node_modules/react/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","../Translate/Translate":"src/modules/Translate/Translate.jsx","./Navigation.json":"src/modules/Navigation/Navigation.json","../../js/utils/utils":"src/js/utils/utils.js"}],"src/images/Profiles/annie.jpeg":[function(require,module,exports) {
 module.exports = "/annie.f9699f19.jpeg";
-},{}],"src/images/Profiles/chise-pale.jpeg":[function(require,module,exports) {
-module.exports = "/chise-pale.e34dc242.jpeg";
 },{}],"src/images/Profiles/chise-white.jpeg":[function(require,module,exports) {
 module.exports = "/chise-white.9138b95c.jpeg";
-},{}],"src/images/Profiles/faye.png":[function(require,module,exports) {
-module.exports = "/faye.e30f206d.png";
 },{}],"src/images/Profiles/freida.jpg":[function(require,module,exports) {
 module.exports = "/freida.a565d54b.jpg";
+},{}],"src/images/Profiles/faye.png":[function(require,module,exports) {
+module.exports = "/faye.e30f206d.png";
 },{}],"src/images/Profiles/jack.jpeg":[function(require,module,exports) {
 module.exports = "/jack.7f4f16d1.jpeg";
 },{}],"src/images/Profiles/lasi.png":[function(require,module,exports) {
@@ -63901,30 +63899,29 @@ module.exports = "/placeholder.7fbee703.jpeg";
 module.exports = "/profiles-group.fd24e173.png";
 },{}],"src/images/Profiles/taase.png":[function(require,module,exports) {
 module.exports = "/taase.c3155837.png";
-},{}],"src/images/Profiles/tana.jpeg":[function(require,module,exports) {
-module.exports = "/tana.58a41481.jpeg";
-},{}],"src/images/Profiles/thomas.png":[function(require,module,exports) {
-module.exports = "/thomas.4677c7b4.png";
 },{}],"src/images/Profiles/tumema.jpeg":[function(require,module,exports) {
 module.exports = "/tumema.81619a0c.jpeg";
 },{}],"src/images/Profiles/valasi.png":[function(require,module,exports) {
 module.exports = "/valasi.fc8292c7.png";
+},{}],"src/images/Profiles/tana.jpeg":[function(require,module,exports) {
+module.exports = "/tana.58a41481.jpeg";
+},{}],"src/images/Profiles/chise-pale.jpeg":[function(require,module,exports) {
+module.exports = "/chise-pale.e34dc242.jpeg";
+},{}],"src/images/Profiles/thomas.png":[function(require,module,exports) {
+module.exports = "/thomas.4677c7b4.png";
 },{}],"src/images/Profiles/*.*":[function(require,module,exports) {
 module.exports = {
   "annie": {
     "jpeg": require("./annie.jpeg")
   },
-  "chise-pale": {
-    "jpeg": require("./chise-pale.jpeg")
-  },
   "chise-white": {
     "jpeg": require("./chise-white.jpeg")
   },
-  "faye": {
-    "png": require("./faye.png")
-  },
   "freida": {
     "jpg": require("./freida.jpg")
+  },
+  "faye": {
+    "png": require("./faye.png")
   },
   "jack": {
     "jpeg": require("./jack.jpeg")
@@ -63944,20 +63941,23 @@ module.exports = {
   "taase": {
     "png": require("./taase.png")
   },
-  "tana": {
-    "jpeg": require("./tana.jpeg")
-  },
-  "thomas": {
-    "png": require("./thomas.png")
-  },
   "tumema": {
     "jpeg": require("./tumema.jpeg")
   },
   "valasi": {
     "png": require("./valasi.png")
+  },
+  "tana": {
+    "jpeg": require("./tana.jpeg")
+  },
+  "chise-pale": {
+    "jpeg": require("./chise-pale.jpeg")
+  },
+  "thomas": {
+    "png": require("./thomas.png")
   }
 };
-},{"./annie.jpeg":"src/images/Profiles/annie.jpeg","./chise-pale.jpeg":"src/images/Profiles/chise-pale.jpeg","./chise-white.jpeg":"src/images/Profiles/chise-white.jpeg","./faye.png":"src/images/Profiles/faye.png","./freida.jpg":"src/images/Profiles/freida.jpg","./jack.jpeg":"src/images/Profiles/jack.jpeg","./lasi.png":"src/images/Profiles/lasi.png","./manu.png":"src/images/Profiles/manu.png","./placeholder.jpeg":"src/images/Profiles/placeholder.jpeg","./profiles-group.png":"src/images/Profiles/profiles-group.png","./taase.png":"src/images/Profiles/taase.png","./tana.jpeg":"src/images/Profiles/tana.jpeg","./thomas.png":"src/images/Profiles/thomas.png","./tumema.jpeg":"src/images/Profiles/tumema.jpeg","./valasi.png":"src/images/Profiles/valasi.png"}],"src/modules/Profiles/Profiles.json":[function(require,module,exports) {
+},{"./annie.jpeg":"src/images/Profiles/annie.jpeg","./chise-white.jpeg":"src/images/Profiles/chise-white.jpeg","./freida.jpg":"src/images/Profiles/freida.jpg","./faye.png":"src/images/Profiles/faye.png","./jack.jpeg":"src/images/Profiles/jack.jpeg","./lasi.png":"src/images/Profiles/lasi.png","./manu.png":"src/images/Profiles/manu.png","./placeholder.jpeg":"src/images/Profiles/placeholder.jpeg","./profiles-group.png":"src/images/Profiles/profiles-group.png","./taase.png":"src/images/Profiles/taase.png","./tumema.jpeg":"src/images/Profiles/tumema.jpeg","./valasi.png":"src/images/Profiles/valasi.png","./tana.jpeg":"src/images/Profiles/tana.jpeg","./chise-pale.jpeg":"src/images/Profiles/chise-pale.jpeg","./thomas.png":"src/images/Profiles/thomas.png"}],"src/modules/Profiles/Profiles.json":[function(require,module,exports) {
 module.exports = [{
   "name": "Cochise Avei",
   "role": "Coordinator",
@@ -64884,8 +64884,8 @@ module.exports = [{
     "sm": "O le ā o le a tupu?"
   },
   "paragraph": {
-    "en": "On <strong>6<sup>th</sup> November 2021 (AEST)</strong>, there will be a fiafia night for you, our dear brothers and sisters! A night of entertainment and encouragement, provided by our spiritual family from around the world. If you would like to contribute a performance item to this wonderful evening, please explore this site for ideas! 😊<div class='text-start d-flex justify-content-center' style='font-size: inherit;'><br><br>3:00 pm — 6:00 pm (Melbourne, Australia)<br>5:00 pm — 8:00 pm (NZ and Samoa)<br>6:00 pm — 9:00 pm (American Samoa)<br>7:00 pm — 10:00 pm (Hawaii and Rarotonga)<br>9:00 pm — till late (Las Vegas and Seattle)</div>",
-    "sm": "I le aso <strong>6 Novema 2021</strong>, i le itula e 3pm <i>(taimi ma le aso a Melepone Ausetalia)</i>, o le a faia ai se fiafia mo outou uso ma tuafafine peleina! O se afiafi o faafiafiaga ma faalaeiauga ua saunia e lo tatou aiga faaleagaga mai vaipanoa eseese o le lalolagi.  Afai e te fia faafiafia i lea po, faamolemole fa’aauau ona faitau i isi itulau o lenei website mo nisi faamatalaga atili! 😊<div class='text-start d-flex justify-content-center' style='font-size: inherit;'><br><br>3:00 pm — 6:00 pm (Melbourne, Australia)<br>5:00 pm — 8:00 pm (NZ ma Samoa)<br>6:00 pm — 9:00 pm (American Samoa)<br>7:00 pm — 10:00 pm (Hawaii ma Rarotonga)<br>9:00 pm — 12:00 am (Las Vegas ma Seattle)</div>"
+    "en": "On <strong>6<sup>th</sup> November 2021 (AEST)</strong>, there will be a fiafia night for you, our dear brothers and sisters! A night of entertainment and encouragement, provided by our spiritual family from around the world. If you would like to contribute a performance item to this wonderful evening, please explore this site for ideas! 😊<div class='text-start d-flex justify-content-center' style='font-size: inherit;'><br><br>3:00 pm — 6:00 pm » Saturday (Melbourne, Australia)<br>5:00 pm — 8:00 pm » Saturday (NZ and Samoa)<br>5:00 pm — 8:00 pm » Friday (American Samoa)<br>6:00 pm — 9:00 pm » Friday (Hawaii and Rarotonga)<br>9:00 pm — till late » Friday (Las Vegas and Seattle)</div>",
+    "sm": "I le aso <strong>6 Novema 2021</strong>, i le itula e 3pm <i>(taimi ma le aso a Melepone Ausetalia)</i>, o le a faia ai se fiafia mo outou uso ma tuafafine peleina! O se afiafi o faafiafiaga ma faalaeiauga ua saunia e lo tatou aiga faaleagaga mai vaipanoa eseese o le lalolagi.  Afai e te fia faafiafia i lea po, faamolemole fa’aauau ona faitau i isi itulau o lenei website mo nisi faamatalaga atili! 😊<div class='text-start d-flex justify-content-center' style='font-size: inherit;'><br><br>3:00 pm — 6:00 pm » Aso Toona'i (Melbourne, Australia)<br>5:00 pm — 8:00 pm » Aso Toona'i (NZ and Samoa)<br>5:00 pm — 8:00 pm » Aso Faraile (American Samoa)<br>6:00 pm — 9:00 pm » Aso Faraile (Hawaii and Rarotonga)<br>9:00 pm — till late » Aso Faraile (Las Vegas and Seattle)</div>"
   }
 }, {
   "option": "scriptureMark",
@@ -66186,7 +66186,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51370" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50989" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
