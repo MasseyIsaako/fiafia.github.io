@@ -58615,7 +58615,7 @@ var _default = Accordions;
 exports.default = _default;
 },{"react":"node_modules/react/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","./Accordions.json":"src/modules/Accordions/Accordions.json","../../js/utils/utils.js":"src/js/utils/utils.js","prop-types":"node_modules/prop-types/index.js","jquery":"node_modules/jquery/dist/jquery.js"}],"src/modules/Authentication/Authentication.json":[function(require,module,exports) {
 module.exports = {
-  "currentEnv": "",
+  "currentEnv": "prod",
   "username": "thenightbeforeproductions",
   "password": "fiafia2021",
   "forceLoginEnv": ["stage", "prod"]
@@ -63881,12 +63881,14 @@ var _default = Navigation;
 exports.default = _default;
 },{"react":"node_modules/react/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","../Translate/Translate":"src/modules/Translate/Translate.jsx","./Navigation.json":"src/modules/Navigation/Navigation.json","../../js/utils/utils":"src/js/utils/utils.js"}],"src/images/Profiles/annie.jpeg":[function(require,module,exports) {
 module.exports = "/annie.f9699f19.jpeg";
+},{}],"src/images/Profiles/chise-pale.jpeg":[function(require,module,exports) {
+module.exports = "/chise-pale.e34dc242.jpeg";
 },{}],"src/images/Profiles/chise-white.jpeg":[function(require,module,exports) {
 module.exports = "/chise-white.9138b95c.jpeg";
-},{}],"src/images/Profiles/freida.jpg":[function(require,module,exports) {
-module.exports = "/freida.a565d54b.jpg";
 },{}],"src/images/Profiles/faye.png":[function(require,module,exports) {
 module.exports = "/faye.e30f206d.png";
+},{}],"src/images/Profiles/freida.jpg":[function(require,module,exports) {
+module.exports = "/freida.a565d54b.jpg";
 },{}],"src/images/Profiles/jack.jpeg":[function(require,module,exports) {
 module.exports = "/jack.7f4f16d1.jpeg";
 },{}],"src/images/Profiles/lasi.png":[function(require,module,exports) {
@@ -63899,29 +63901,30 @@ module.exports = "/placeholder.7fbee703.jpeg";
 module.exports = "/profiles-group.fd24e173.png";
 },{}],"src/images/Profiles/taase.png":[function(require,module,exports) {
 module.exports = "/taase.c3155837.png";
+},{}],"src/images/Profiles/tana.jpeg":[function(require,module,exports) {
+module.exports = "/tana.58a41481.jpeg";
+},{}],"src/images/Profiles/thomas.png":[function(require,module,exports) {
+module.exports = "/thomas.4677c7b4.png";
 },{}],"src/images/Profiles/tumema.jpeg":[function(require,module,exports) {
 module.exports = "/tumema.81619a0c.jpeg";
 },{}],"src/images/Profiles/valasi.png":[function(require,module,exports) {
 module.exports = "/valasi.fc8292c7.png";
-},{}],"src/images/Profiles/tana.jpeg":[function(require,module,exports) {
-module.exports = "/tana.58a41481.jpeg";
-},{}],"src/images/Profiles/chise-pale.jpeg":[function(require,module,exports) {
-module.exports = "/chise-pale.e34dc242.jpeg";
-},{}],"src/images/Profiles/thomas.png":[function(require,module,exports) {
-module.exports = "/thomas.4677c7b4.png";
 },{}],"src/images/Profiles/*.*":[function(require,module,exports) {
 module.exports = {
   "annie": {
     "jpeg": require("./annie.jpeg")
   },
+  "chise-pale": {
+    "jpeg": require("./chise-pale.jpeg")
+  },
   "chise-white": {
     "jpeg": require("./chise-white.jpeg")
   },
-  "freida": {
-    "jpg": require("./freida.jpg")
-  },
   "faye": {
     "png": require("./faye.png")
+  },
+  "freida": {
+    "jpg": require("./freida.jpg")
   },
   "jack": {
     "jpeg": require("./jack.jpeg")
@@ -63941,23 +63944,20 @@ module.exports = {
   "taase": {
     "png": require("./taase.png")
   },
+  "tana": {
+    "jpeg": require("./tana.jpeg")
+  },
+  "thomas": {
+    "png": require("./thomas.png")
+  },
   "tumema": {
     "jpeg": require("./tumema.jpeg")
   },
   "valasi": {
     "png": require("./valasi.png")
-  },
-  "tana": {
-    "jpeg": require("./tana.jpeg")
-  },
-  "chise-pale": {
-    "jpeg": require("./chise-pale.jpeg")
-  },
-  "thomas": {
-    "png": require("./thomas.png")
   }
 };
-},{"./annie.jpeg":"src/images/Profiles/annie.jpeg","./chise-white.jpeg":"src/images/Profiles/chise-white.jpeg","./freida.jpg":"src/images/Profiles/freida.jpg","./faye.png":"src/images/Profiles/faye.png","./jack.jpeg":"src/images/Profiles/jack.jpeg","./lasi.png":"src/images/Profiles/lasi.png","./manu.png":"src/images/Profiles/manu.png","./placeholder.jpeg":"src/images/Profiles/placeholder.jpeg","./profiles-group.png":"src/images/Profiles/profiles-group.png","./taase.png":"src/images/Profiles/taase.png","./tumema.jpeg":"src/images/Profiles/tumema.jpeg","./valasi.png":"src/images/Profiles/valasi.png","./tana.jpeg":"src/images/Profiles/tana.jpeg","./chise-pale.jpeg":"src/images/Profiles/chise-pale.jpeg","./thomas.png":"src/images/Profiles/thomas.png"}],"src/modules/Profiles/Profiles.json":[function(require,module,exports) {
+},{"./annie.jpeg":"src/images/Profiles/annie.jpeg","./chise-pale.jpeg":"src/images/Profiles/chise-pale.jpeg","./chise-white.jpeg":"src/images/Profiles/chise-white.jpeg","./faye.png":"src/images/Profiles/faye.png","./freida.jpg":"src/images/Profiles/freida.jpg","./jack.jpeg":"src/images/Profiles/jack.jpeg","./lasi.png":"src/images/Profiles/lasi.png","./manu.png":"src/images/Profiles/manu.png","./placeholder.jpeg":"src/images/Profiles/placeholder.jpeg","./profiles-group.png":"src/images/Profiles/profiles-group.png","./taase.png":"src/images/Profiles/taase.png","./tana.jpeg":"src/images/Profiles/tana.jpeg","./thomas.png":"src/images/Profiles/thomas.png","./tumema.jpeg":"src/images/Profiles/tumema.jpeg","./valasi.png":"src/images/Profiles/valasi.png"}],"src/modules/Profiles/Profiles.json":[function(require,module,exports) {
 module.exports = [{
   "name": "Cochise Avei",
   "role": "Coordinator",
@@ -66186,7 +66186,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50989" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53978" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
